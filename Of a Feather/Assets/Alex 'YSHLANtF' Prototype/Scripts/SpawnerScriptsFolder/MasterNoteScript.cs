@@ -6,10 +6,15 @@ public class MasterNoteScript : MonoBehaviour {
 
 	bool keepOnGoing = true;
 	Vector2 oriPos;
+	GameObject gamBosObj;
+	TwoDGameManager gameBosScr;
 
 	// Use this for initialization
 	void Start () {
 		oriPos = transform.position;
+
+		gamBosObj = GameObject.FindGameObjectWithTag ("GameControl2D");
+		gameBosScr = gamBosObj.GetComponent<TwoDGameManager> ();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +26,7 @@ public class MasterNoteScript : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") {
 			transform.position = oriPos;
+			gameBosScr.IncreaseScore ();
 		}
 	}
 

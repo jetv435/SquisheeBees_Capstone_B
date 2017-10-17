@@ -14,6 +14,8 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 	public List<GameObject> classMoveTrigger = new List<GameObject> ();
 
+	public float initialDelaySec = 1.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -24,11 +26,31 @@ public class SpriteControllerSprite : MonoBehaviour {
 		
 	}
 
+	public void TurnOnFriendSpr ()
+	{
+		SpriteRenderer temp = friendSprite.GetComponent<SpriteRenderer> ();
+		temp.enabled = true;
+	}
+
 	public void PlayerChange(int listMark)
 	{
+		
+
+		StartCoroutine ("ActualChange", listMark);
+	}
+
+	IEnumerator ActualChange (int listMark)
+	{
+		yield return new WaitForSeconds (initialDelaySec);
+
 		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
 
+
 		temp.sprite = playerSpriteSheet [listMark];
+
+		temp = friendSprite.GetComponent<SpriteRenderer> ();
+		temp.sprite = friendSpriteSheet [listMark];
+
 	}
 
 	public void ClassChange(int listMark)

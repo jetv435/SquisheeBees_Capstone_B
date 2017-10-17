@@ -17,6 +17,10 @@ public class SpawnerMasterScript : MonoBehaviour {
 	ArrowToggle MasterSwitch;
 	bool noteToggle;
 
+	//Change Sprite
+	GameObject callSpriteBoss;
+	SpriteControllerSprite callSprScr;
+
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +36,9 @@ public class SpawnerMasterScript : MonoBehaviour {
 		if (noteToggle == true) {
 			mainNote.transform.position = new Vector2 (-20, -20);
 		}
+
+		callSpriteBoss = GameObject.FindGameObjectWithTag ("SpriteController");
+		callSprScr = callSpriteBoss.GetComponent<SpriteControllerSprite> ();
 	}
 	
 	// Update is called once per frame
@@ -54,6 +61,7 @@ public class SpawnerMasterScript : MonoBehaviour {
 				int randSpawner = Random.Range (0, playerArrowList.Count);
 
 				mainNote.transform.position = playerArrowList [randSpawner].transform.position;
+				callSprScr.ClassChange (randSpawner);
 			}
 
 			mainTimer -= Time.deltaTime;

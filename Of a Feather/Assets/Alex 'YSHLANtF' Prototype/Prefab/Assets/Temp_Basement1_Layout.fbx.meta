@@ -3,7 +3,7 @@ guid: f87f5ae71039d254391621d3adc3cca4
 timeCreated: 1505971893
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: areaLight1
     100002: couchCushion1
@@ -24,6 +24,26 @@ ModelImporter:
     100032: pPlane1
     100034: tableLong
     100036: //RootNode
+    100038: balletShoes_0010:pCube1
+    100040: balletShoes_0010:pCube2
+    100042: Chair_Main
+    100044: computer_chair1
+    100046: desk:pCube1
+    100048: group1
+    100050: group5
+    100052: group6
+    100054: group7
+    100056: latop:pCube1
+    100058: Pc:pCube1
+    100060: Pc:pCube2
+    100062: Pc:pSphere1
+    100064: pCube14
+    100066: pCube3
+    100068: pCube8
+    100070: pCube9
+    100072: polySurface1
+    100074: polySurface2
+    100076: television
     400000: areaLight1
     400002: couchCushion1
     400004: couchCushion2
@@ -43,6 +63,26 @@ ModelImporter:
     400032: pPlane1
     400034: tableLong
     400036: //RootNode
+    400038: balletShoes_0010:pCube1
+    400040: balletShoes_0010:pCube2
+    400042: Chair_Main
+    400044: computer_chair1
+    400046: desk:pCube1
+    400048: group1
+    400050: group5
+    400052: group6
+    400054: group7
+    400056: latop:pCube1
+    400058: Pc:pCube1
+    400060: Pc:pCube2
+    400062: Pc:pSphere1
+    400064: pCube14
+    400066: pCube3
+    400068: pCube8
+    400070: pCube9
+    400072: polySurface1
+    400074: polySurface2
+    400076: television
     2300000: couchCushion1
     2300002: couchCushion2
     2300004: couchCushion3
@@ -56,6 +96,21 @@ ModelImporter:
     2300020: pictureFrame3
     2300022: pPlane1
     2300024: tableLong
+    2300026: balletShoes_0010:pCube1
+    2300028: balletShoes_0010:pCube2
+    2300030: Chair_Main
+    2300032: computer_chair1
+    2300034: desk:pCube1
+    2300036: latop:pCube1
+    2300038: Pc:pCube1
+    2300040: Pc:pCube2
+    2300042: Pc:pSphere1
+    2300044: pCube3
+    2300046: pCube8
+    2300048: pCube9
+    2300050: polySurface1
+    2300052: polySurface2
+    2300054: television
     3300000: couchCushion1
     3300002: couchCushion2
     3300004: couchCushion3
@@ -69,6 +124,21 @@ ModelImporter:
     3300020: pictureFrame3
     3300022: pPlane1
     3300024: tableLong
+    3300026: balletShoes_0010:pCube1
+    3300028: balletShoes_0010:pCube2
+    3300030: Chair_Main
+    3300032: computer_chair1
+    3300034: desk:pCube1
+    3300036: latop:pCube1
+    3300038: Pc:pCube1
+    3300040: Pc:pCube2
+    3300042: Pc:pSphere1
+    3300044: pCube3
+    3300046: pCube8
+    3300048: pCube9
+    3300050: polySurface1
+    3300052: polySurface2
+    3300054: television
     4300000: pPlane1
     4300002: couchFoundation
     4300004: couchCushion1
@@ -82,15 +152,122 @@ ModelImporter:
     4300020: pictureFrame2
     4300022: pictureFrame3
     4300024: photoBook
+    4300026: latop:pCube1
+    4300028: television
+    4300030: balletShoes_0010:pCube2
+    4300032: balletShoes_0010:pCube1
+    4300034: computer_chair1
+    4300036: desk:pCube1
+    4300038: Pc:pCube1
+    4300040: Pc:pCube2
+    4300042: Pc:pSphere1
+    4300044: pCube3
+    4300046: Chair_Main
+    4300048: pCube8
+    4300050: pCube9
+    4300052: polySurface2
+    4300054: polySurface1
     9500000: //RootNode
     10800000: areaLight1
     10800002: pointLight1
     10800004: pointLight2
     10800006: pointLight3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Chair_Main
+    second: {fileID: 2100000, guid: d56386022ad4ab849aaf9c63c859643e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Chair_Secondary
+    second: {fileID: 2100000, guid: d56386022ad4ab849aaf9c63c859643e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface11
+    second: {fileID: 2100000, guid: b45588e6e7e346a4faaf116e460cfadf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: balletshoes
+    second: {fileID: 2100000, guid: ed593c928028bcd44b1d4eee7748f082, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: d5b6602e644c90e41bd4f897e0ebe3b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black_blinn
+    second: {fileID: 2100000, guid: c94640821b051254588a0941c666490a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coffeeTable
+    second: {fileID: 2100000, guid: e8253bd329e97e341a8d4179b384e38d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: compChair
+    second: {fileID: 2100000, guid: d6473a502b2896249baa0c743969a7f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: computerdesk
+    second: {fileID: 2100000, guid: 093d7339ebd90dc46adb204a1469efd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: couch
+    second: {fileID: 2100000, guid: 24d48b486eaab764d98b75799e58194b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desktop
+    second: {fileID: 2100000, guid: 6b1a6a08c9acc5249be6dad5e2ec93f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dresserVanity
+    second: {fileID: 2100000, guid: 6d1f758b9faff9244a14b29ff49af861, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 7b9b32b292e54ed46aec78b86929bc27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: ef552cf43268b0246bd67bc39acad1a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: radio
+    second: {fileID: 2100000, guid: e90670e2e04a990498aa118e4f114e3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shelfingCubbies
+    second: {fileID: 2100000, guid: 31c6f2b0e1d573a4fbd2c693ae5ac004, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: speakerScreen
+    second: {fileID: 2100000, guid: 75ba2c8379af8b24e820806e84ab28af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: television90
+    second: {fileID: 2100000, guid: b558f5d6db2c5744ba60bedce1736646, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -103,6 +280,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
