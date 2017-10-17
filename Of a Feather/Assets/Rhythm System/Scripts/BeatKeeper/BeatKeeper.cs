@@ -25,7 +25,7 @@ public class BeatKeeper : MonoBehaviour
     {
         this.beatListeners = new List<BeatListener>();
 
-        Invoke("OnBeat", this.CalculateSecondsPerLine());
+        Invoke("OnBeat", this.SecondsPerLine());
 	}
 
     //// Update is called once per frame
@@ -41,7 +41,7 @@ public class BeatKeeper : MonoBehaviour
         return false;
     }
 
-    // Invoked periodically based on given time parameters
+    // Invoked periodically
     private void OnBeat()
     {
         BeatInfo placeholderInfo = new BeatInfo();
@@ -52,10 +52,10 @@ public class BeatKeeper : MonoBehaviour
             listener.BeatNotify(placeholderInfo);
         }
 
-        Invoke("OnBeat", this.CalculateSecondsPerLine());
+        Invoke("OnBeat", this.SecondsPerLine());
     }
 
-    private float CalculateSecondsPerLine()
+    private float SecondsPerLine()
     {
         return (60.0f * this.ticksPerLine) / (24.0f * this.beatsPerMinute);
     }
