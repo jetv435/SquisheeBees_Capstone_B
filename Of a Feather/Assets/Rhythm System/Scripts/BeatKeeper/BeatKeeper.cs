@@ -17,35 +17,23 @@ public class BeatKeeper : MonoBehaviour
         public float beatTime;
     }
 
-    public uint beatsPerMinute;
-    public uint ticksPerLine;
-
 	// Use this for initialization
 	void Start ()
     {
-        this.beatListeners = new List<BeatListener>();
-
         Invoke("OnBeat", this.SecondsPerLine());
 	}
-
-    //// Update is called once per frame
-    //void Update ()
-    //{
-    //	
-    //}
 
     public bool RegisterBeatListener(ref BeatListener listener)
     {
         this.beatListeners.Add(listener);
-
-        return false;
+        return true;
     }
 
     // Invoked periodically
     private void OnBeat()
     {
         BeatInfo placeholderInfo = new BeatInfo();
-        placeholderInfo.beatTime = 1.0f;
+        placeholderInfo.beatTime = Time.timeSinceLevelLoad;
 
         foreach(BeatListener listener in this.beatListeners)
         {
@@ -57,9 +45,15 @@ public class BeatKeeper : MonoBehaviour
 
     private float SecondsPerLine()
     {
+        if(this.beatsPerMinute == 0)
+        {
+            Debug.LogError("BeatKeeper time parameter(s) invalid");
+        }
+
         return (60.0f * this.ticksPerLine) / (24.0f * this.beatsPerMinute);
     }
 
-    private List<BeatListener> beatListeners;
-
+    public uint beatsPerMinute = 125;
+    public uint ticksPerLine = 6;
+    public List<BeatListener> beatListeners = new List<BeatListener>();
 }

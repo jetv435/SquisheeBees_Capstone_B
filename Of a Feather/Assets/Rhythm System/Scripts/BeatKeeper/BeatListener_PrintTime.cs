@@ -13,6 +13,6 @@ public class BeatListener_PrintTime : BeatListener
 {
     public override void BeatNotify(BeatKeeper.BeatInfo beatInfo)
     {
-        Debug.Log("Beat...");
+        Debug.Log("Beat " + beatInfo.beatTime);
     }
 }
