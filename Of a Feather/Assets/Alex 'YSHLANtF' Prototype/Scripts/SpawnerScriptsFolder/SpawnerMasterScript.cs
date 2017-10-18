@@ -21,6 +21,12 @@ public class SpawnerMasterScript : MonoBehaviour {
 	GameObject callSpriteBoss;
 	SpriteControllerSprite callSprScr;
 
+	//Lazy arrow call script
+	public GameObject arrowObj;
+	ArrowTurnScript arrowScr;
+
+	int prevCall = 2;
+
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +45,9 @@ public class SpawnerMasterScript : MonoBehaviour {
 
 		callSpriteBoss = GameObject.FindGameObjectWithTag ("SpriteController");
 		callSprScr = callSpriteBoss.GetComponent<SpriteControllerSprite> ();
+
+		//Really lazy code work
+		arrowScr = arrowObj.GetComponent<ArrowTurnScript>();
 	}
 	
 	// Update is called once per frame
@@ -60,8 +69,16 @@ public class SpawnerMasterScript : MonoBehaviour {
 				mainTimer = timerCoolDownSecret + Random.Range (3, 5);
 				int randSpawner = Random.Range (0, playerArrowList.Count);
 
+				while (randSpawner == prevCall) {
+					randSpawner = Random.Range (0, playerArrowList.Count);
+				}
+
+				prevCall = randSpawner;
+
 				mainNote.transform.position = playerArrowList [randSpawner].transform.position;
 				callSprScr.ClassChange (randSpawner);
+
+				arrowScr.TurnArrow (randSpawner);
 			}
 
 			mainTimer -= Time.deltaTime;

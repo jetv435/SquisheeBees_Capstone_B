@@ -9,12 +9,17 @@ public class MasterNoteScript : MonoBehaviour {
 	GameObject gamBosObj;
 	TwoDGameManager gameBosScr;
 
+	public GameObject arrowObj;
+	ArrowTurnScript arrowScr;
+
 	// Use this for initialization
 	void Start () {
 		oriPos = transform.position;
 
 		gamBosObj = GameObject.FindGameObjectWithTag ("GameControl2D");
 		gameBosScr = gamBosObj.GetComponent<TwoDGameManager> ();
+
+		arrowScr = arrowObj.GetComponent<ArrowTurnScript>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +32,7 @@ public class MasterNoteScript : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			transform.position = oriPos;
 			gameBosScr.IncreaseScore ();
+			arrowScr.disableArrow ();
 		}
 	}
 
