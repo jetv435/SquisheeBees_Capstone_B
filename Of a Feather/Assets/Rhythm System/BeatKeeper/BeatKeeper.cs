@@ -17,13 +17,23 @@ public class BeatKeeper : MonoBehaviour
         public float beatTime;
     }
 
+    [System.Serializable]
+    public struct TimeInfo
+    {
+        public uint beatsPerMinute;
+        public uint ticksPerLine;
+    }
+
+    public TimeInfo timeSettings = new TimeInfo();
+    private List<BeatListener> beatListeners = new List<BeatListener>();
+
 	// Use this for initialization
 	void Start ()
     {
         Invoke("OnBeat", this.SecondsPerLine());
 	}
 
-    public bool RegisterBeatListener(ref BeatListener listener)
+    public bool RegisterBeatListener(BeatListener listener)
     {
         this.beatListeners.Add(listener);
         return true;
@@ -45,15 +55,11 @@ public class BeatKeeper : MonoBehaviour
 
     private float SecondsPerLine()
     {
-        if(this.beatsPerMinute == 0)
+        if(this.timeSettings.beatsPerMinute == 0)
         {
             Debug.LogError("BeatKeeper time parameter(s) invalid");
         }
 
-        return (60.0f * this.ticksPerLine) / (24.0f * this.beatsPerMinute);
+        return (60.0f * this.timeSettings.ticksPerLine) / (24.0f * this.timeSettings.beatsPerMinute);
     }
-
-    public uint beatsPerMinute = 125;
-    public uint ticksPerLine = 6;
-    public List<BeatListener> beatListeners = new List<BeatListener>();
 }
