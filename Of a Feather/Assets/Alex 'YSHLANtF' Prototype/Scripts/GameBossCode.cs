@@ -11,18 +11,23 @@ public class GameBossCode : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Keypad1)) {
 			SceneManager.LoadScene ("Room_1");
 		}
-		if (Input.GetKeyDown (KeyCode.Keypad2)) {
-			SceneManager.LoadScene ("Room_1_Mid");
-		}
+		//if (Input.GetKeyDown (KeyCode.Keypad2)) {
+		//	SceneManager.LoadScene ("Room_1_Mid");
+		//}
 		if (Input.GetKeyDown (KeyCode.Keypad3)) {
 			SceneManager.LoadScene ("Room_2");
 		}
-		if (Input.GetKeyDown (KeyCode.Keypad4)) {
-			SceneManager.LoadScene ("Room_2_Mid");
-		}
-		if (Input.GetKeyDown (KeyCode.Keypad5)) {
-			SceneManager.LoadScene ("Room_3");
-		}
+		//if (Input.GetKeyDown (KeyCode.Keypad4)) {
+		//	SceneManager.LoadScene ("Room_2_Mid");
+		//}
+		//if (Input.GetKeyDown (KeyCode.Keypad5)) {
+		//	SceneManager.LoadScene ("Room_3");
+	//	}
 	
+	}
+
+	public void GoToBasement(int RoomNum)
+	{
+		SceneManager.LoadScene ("Room_1");
 	}
 }

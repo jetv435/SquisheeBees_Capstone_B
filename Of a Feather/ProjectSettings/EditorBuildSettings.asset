@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_1.unity
+    guid: f50d2235676630741b03fcb7fa97bd4f
+  - enabled: 1
+    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_2.unity
+    guid: ac87bea726c0f2845b39c0183e5846e0
