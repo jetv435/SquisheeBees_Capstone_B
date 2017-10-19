@@ -5,6 +5,7 @@ using UnityEngine;
 public class RhythmCore : MonoBehaviour
 {
     public BeatKeeper.TimeInfo timeSettings = new BeatKeeper.TimeInfo();
+    //public Command hitCommand;
     private BeatKeeper bKeeper;
     private readonly BeatListener bListener = new BeatListener_PrintTime();
 

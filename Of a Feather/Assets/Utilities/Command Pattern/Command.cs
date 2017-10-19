@@ -14,7 +14,7 @@ using UnityEngine;
 //
 // -----------------------------------------------------------------------------
 
-abstract public class Command
+abstract public class Command : ScriptableObject
 {
     // Implement this in your concrete class
     abstract public void Execute();

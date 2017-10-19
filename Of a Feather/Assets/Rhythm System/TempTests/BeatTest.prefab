@@ -54,3 +54,4 @@ MonoBehaviour:
   timeSettings:
     beatsPerMinute: 125
     ticksPerLine: 6
+  hitCommand: {fileID: 0}
