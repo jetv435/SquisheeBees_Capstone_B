@@ -42,9 +42,8 @@ public class RhythmCore : MonoBehaviour
     private static readonly BeatTimingSettings defaultBeatTiming = new BeatTimingSettings(60, 24);
     public BeatTimingSettings beatTiming = defaultBeatTiming;
     public float beatWindowDuration = 0.5f;
-    public GameObject[] beatListeners;
-    public GameObject[] rhythmQueueEventListeners;
-    public GameObject[] rhythmFeedbackListeners;
+    public GameObject[] promptListeners;
+    public GameObject[] feedbackListeners;
     private readonly ABeatGenerationStrategy beatGenStrat = new RandomArrowGenStrat();
     private RhythmExpectedEventInfo currExpectedEvent;
     private bool bBeatQueued = false;
@@ -52,6 +51,9 @@ public class RhythmCore : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // Adjust the beat window if it exceeds the time between beats
+        this.beatWindowDuration = Mathf.Min(this.beatWindowDuration, this.SecondsPerLine());
+
         this.Invoke("OnBeat", this.SecondsPerLine());
     }
 
@@ -59,7 +61,7 @@ public class RhythmCore : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if(this.currExpectedEvent.expectedKey == KeyCode.UpArrow)
+            if(this.bBeatQueued == true && this.currExpectedEvent.expectedKey == KeyCode.UpArrow)
             {
                 this.NotifyHitListeners();
             }
@@ -68,12 +70,10 @@ public class RhythmCore : MonoBehaviour
                 this.NotifyMissListeners();
             }
             this.bBeatQueued = false;
-            // Expire the current expected event, and notify listeners
-            this.NotifyEventExpiredListeners(this.currExpectedEvent);
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if(this.currExpectedEvent.expectedKey == KeyCode.DownArrow)
+            if(this.bBeatQueued == true && this.currExpectedEvent.expectedKey == KeyCode.DownArrow)
             {
                 this.NotifyHitListeners();
             }
@@ -82,12 +82,10 @@ public class RhythmCore : MonoBehaviour
                 this.NotifyMissListeners();
             }
             this.bBeatQueued = false;
-            // Expire the current expected event, and notify listeners
-            this.NotifyEventExpiredListeners(this.currExpectedEvent);
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if(this.currExpectedEvent.expectedKey == KeyCode.LeftArrow)
+            if(this.bBeatQueued == true && this.currExpectedEvent.expectedKey == KeyCode.LeftArrow)
             {
                 this.NotifyHitListeners();
             }
@@ -96,12 +94,10 @@ public class RhythmCore : MonoBehaviour
                 this.NotifyMissListeners();
             }
             this.bBeatQueued = false;
-            // Expire the current expected event, and notify listeners
-            this.NotifyEventExpiredListeners(this.currExpectedEvent);
         }
         else if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if(this.currExpectedEvent.expectedKey == KeyCode.RightArrow)
+            if(this.bBeatQueued == true && this.currExpectedEvent.expectedKey == KeyCode.RightArrow)
             {
                 this.NotifyHitListeners();
             }
@@ -110,21 +106,16 @@ public class RhythmCore : MonoBehaviour
                 this.NotifyMissListeners();
             }
             this.bBeatQueued = false;
-            // Expire the current expected event, and notify listeners
-            this.NotifyEventExpiredListeners(this.currExpectedEvent);
         }
     }
 
     // Invoked periodically
     private void OnBeat()
     {
-        // Notify specified BeatListeners that a beat has happened
-        this.NotifyAllBeatListeners();
-
         // Generate an expected event for this beat frame via a strategy object, and notify listeners
         this.currExpectedEvent = this.beatGenStrat.GenerateExpectedEvent();
         this.bBeatQueued = true;
-        this.NotifyEventQueuedListeners(this.currExpectedEvent);
+        this.NotifyPromptListeners(this.currExpectedEvent);
         this.Invoke("OffBeat", beatWindowDuration);
 
         // Invoke OnBeat after delay
@@ -139,66 +130,21 @@ public class RhythmCore : MonoBehaviour
             this.NotifyTimeoutListeners();
 
             // Expire the current expected event, and notify listeners
-            this.NotifyEventExpiredListeners(this.currExpectedEvent);
             this.bBeatQueued = false;
         }
     }
 
-    private void NotifyAllBeatListeners()
+    private void NotifyPromptListeners(RhythmCore.RhythmExpectedEventInfo eventInfo)
     {
-        BeatInfo placeholderInfo = new BeatInfo
+        foreach (GameObject listenerObject in this.promptListeners)
         {
-            beatTime = Time.timeSinceLevelLoad
-        };
-        foreach (GameObject listenerObject in this.beatListeners)
-        {
-            IBeatListener[] listenerComponents = listenerObject.GetComponents<IBeatListener>();
+            IRhythmPromptListener[] listenerComponents = listenerObject.GetComponents<IRhythmPromptListener>();
 
             if (listenerComponents.Length != 0)
             {
-                foreach (IBeatListener listenerComponent in listenerComponents)
+                foreach (IRhythmPromptListener listenerComponent in listenerComponents)
                 {
-                    listenerComponent.BeatNotify(placeholderInfo);
-                }
-            }
-            else
-            {
-                Debug.LogError("GameObject indicated in RhythmCore missing IBeatListener component(s)");
-            }
-        }
-    }
-
-    private void NotifyEventQueuedListeners(RhythmCore.RhythmExpectedEventInfo eventInfo)
-    {
-        foreach (GameObject listenerObject in this.rhythmQueueEventListeners)
-        {
-            IRhythmQueueEventListener[] listenerComponents = listenerObject.GetComponents<IRhythmQueueEventListener>();
-
-            if (listenerComponents.Length != 0)
-            {
-                foreach (IRhythmQueueEventListener listenerComponent in listenerComponents)
-                {
-                    listenerComponent.EventQueuedNotify(eventInfo);
-                }
-            }
-            else
-            {
-                Debug.LogError("GameObject indicated in BeatKeeper missing IRhythmQueueEventListener component(s)");
-            }
-        }
-    }
-
-    private void NotifyEventExpiredListeners(RhythmCore.RhythmExpectedEventInfo eventInfo)
-    {
-        foreach (GameObject listenerObject in this.rhythmQueueEventListeners)
-        {
-            IRhythmQueueEventListener[] listenerComponents = listenerObject.GetComponents<IRhythmQueueEventListener>();
-
-            if (listenerComponents.Length != 0)
-            {
-                foreach (IRhythmQueueEventListener beatListenerComponent in listenerComponents)
-                {
-                    beatListenerComponent.EventExpiredNotify(eventInfo);
+                    listenerComponent.PromptNotify(eventInfo);
                 }
             }
             else
@@ -210,7 +156,7 @@ public class RhythmCore : MonoBehaviour
 
     private void NotifyHitListeners()
     {
-        foreach (GameObject listenerObject in this.rhythmFeedbackListeners)
+        foreach (GameObject listenerObject in this.feedbackListeners)
         {
             IRhythmFeedbackListener[] listenerComponents = listenerObject.GetComponents<IRhythmFeedbackListener>();
 
@@ -230,7 +176,7 @@ public class RhythmCore : MonoBehaviour
 
     private void NotifyMissListeners()
     {
-        foreach (GameObject listenerObject in this.rhythmFeedbackListeners)
+        foreach (GameObject listenerObject in this.feedbackListeners)
         {
             IRhythmFeedbackListener[] listenerComponents = listenerObject.GetComponents<IRhythmFeedbackListener>();
 
@@ -250,7 +196,7 @@ public class RhythmCore : MonoBehaviour
 
     private void NotifyTimeoutListeners()
     {
-        foreach (GameObject listenerObject in this.rhythmFeedbackListeners)
+        foreach (GameObject listenerObject in this.feedbackListeners)
         {
             IRhythmFeedbackListener[] listenerComponents = listenerObject.GetComponents<IRhythmFeedbackListener>();
 

@@ -6,7 +6,7 @@ public class RandomArrowGenStrat : ABeatGenerationStrategy
 {
     override public RhythmCore.RhythmExpectedEventInfo GenerateExpectedEvent()
     {
-        int keyRandomizer = Random.Range(0, 3);
+        int keyRandomizer = Random.Range(0, 4);
 
         KeyCode selectedKey = KeyCode.UpArrow;
         switch(keyRandomizer)
