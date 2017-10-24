@@ -30,9 +30,14 @@ public class TestRhythmCube : MonoBehaviour
 		
 	}
 
-    public void BackToDefault()
+    public void ResetDefaultColor()
     {
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.baseColor;
+    }
+
+    private void ResetPosition()
+    {
+        this.transform.position = this.originalPos;
     }
 
     public void HitNotify()
@@ -40,8 +45,8 @@ public class TestRhythmCube : MonoBehaviour
         // Do something when user hits correct input
         //Debug.Log("Hit");
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.successColor;
-        Invoke("BackToDefault", this.stayColorTime);
-        this.transform.position = this.originalPos;
+        Invoke("ResetDefaultColor", this.stayColorTime);
+        this.ResetPosition();
     }
 
     public void MissNotify()
@@ -49,8 +54,8 @@ public class TestRhythmCube : MonoBehaviour
         // Do something when user hits incorrect input
         //Debug.Log("Miss");
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.missColor;
-        Invoke("BackToDefault", this.stayColorTime);
-        this.transform.position = this.originalPos;
+        Invoke("ResetDefaultColor", this.stayColorTime);
+        this.ResetPosition();
     }
 
     public void TimeoutNotify()
@@ -58,8 +63,8 @@ public class TestRhythmCube : MonoBehaviour
         // Do something when beat times out
         //Debug.Log("Timeout");
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.timeoutColor;
-        Invoke("BackToDefault", this.stayColorTime);
-        this.transform.position = this.originalPos;
+        Invoke("ResetDefaultColor", this.stayColorTime);
+        this.ResetPosition();
     }
 
     public void PromptNotify(RhythmCore.RhythmExpectedEventInfo eventInfo)
@@ -67,7 +72,7 @@ public class TestRhythmCube : MonoBehaviour
         // Do something when a beat is queued up (we enter a beat window)
         //Debug.Log("Prompt");
 
-        this.transform.position = this.originalPos;
+        this.ResetPosition();
 
         Vector3 offset = new Vector3(0.0f, 0.0f, -16.0f);
         switch(eventInfo.expectedKey)

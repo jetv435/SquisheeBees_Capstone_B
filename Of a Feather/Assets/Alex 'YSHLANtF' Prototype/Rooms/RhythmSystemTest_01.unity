@@ -303,9 +303,9 @@ MonoBehaviour:
     beatsPerMinute: 60
     ticksPerLine: 24
   beatWindowDuration: 1.5
-  promptListeners:
+  promptListenerObjects:
   - {fileID: 846766289}
-  feedbackListeners:
+  feedbackListenerObjects:
   - {fileID: 846766289}
 --- !u!4 &1559021246
 Transform:

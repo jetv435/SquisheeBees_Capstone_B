@@ -42,9 +42,11 @@ public class RhythmCore : MonoBehaviour
     private static readonly BeatTimingSettings defaultBeatTiming = new BeatTimingSettings(60, 24);
     public BeatTimingSettings beatTiming = defaultBeatTiming;
     public float beatWindowDuration = 0.5f;
-    public GameObject[] promptListeners;
-    public GameObject[] feedbackListeners;
+    public GameObject[] promptListenerObjects;
+    public GameObject[] feedbackListenerObjects;
     private readonly ABeatGenerationStrategy beatGenStrat = new RandomArrowGenStrat();
+    private List<IRhythmPromptListener> promptListeners = new List<IRhythmPromptListener>();
+    private List<IRhythmFeedbackListener> feedbackListeners = new List<IRhythmFeedbackListener>();
     private RhythmExpectedEventInfo currExpectedEvent;
     private bool bBeatQueued = false;
 
@@ -53,6 +55,12 @@ public class RhythmCore : MonoBehaviour
     {
         // Adjust the beat window if it exceeds the time between beats
         this.beatWindowDuration = Mathf.Min(this.beatWindowDuration, this.SecondsPerLine());
+
+        // Get IRhythmPromptListener components from objects in this.promptListenerObjects
+        this.CompontsOfTypeFromObjects<IRhythmPromptListener>(this.promptListenerObjects, this.promptListeners);
+
+        // Get IRhythmFeedbackListener components from objects in this.feedbackListenerObjects
+        this.CompontsOfTypeFromObjects<IRhythmFeedbackListener>(this.feedbackListenerObjects, this.feedbackListeners);
 
         this.Invoke("OnBeat", this.SecondsPerLine());
     }
@@ -129,88 +137,59 @@ public class RhythmCore : MonoBehaviour
             // If beat is still queued, then it wasn't hit and should timeout
             this.NotifyTimeoutListeners();
 
-            // Expire the current expected event, and notify listeners
             this.bBeatQueued = false;
+        }
+    }
+
+    private void CompontsOfTypeFromObjects<T>(GameObject[] sourceGameObjects, List<T> destList)
+    {
+        foreach (GameObject objects in sourceGameObjects)
+        {
+            T[] components = objects.GetComponents<T>();
+
+            if (components.Length != 0)
+            {
+                foreach (T component in components)
+                {
+                    destList.Add(component);
+                }
+            }
+            else
+            {
+                Debug.LogError("Component of given type not found in ComponentsFromObjects");
+            }
         }
     }
 
     private void NotifyPromptListeners(RhythmCore.RhythmExpectedEventInfo eventInfo)
     {
-        foreach (GameObject listenerObject in this.promptListeners)
+        foreach(IRhythmPromptListener listenerComponent in this.promptListeners)
         {
-            IRhythmPromptListener[] listenerComponents = listenerObject.GetComponents<IRhythmPromptListener>();
-
-            if (listenerComponents.Length != 0)
-            {
-                foreach (IRhythmPromptListener listenerComponent in listenerComponents)
-                {
-                    listenerComponent.PromptNotify(eventInfo);
-                }
-            }
-            else
-            {
-                Debug.LogError("GameObject indicated in BeatKeeper missing IRhythmQueueEventListener component(s)");
-            }
+            listenerComponent.PromptNotify(eventInfo);
         }
     }
 
     private void NotifyHitListeners()
     {
-        foreach (GameObject listenerObject in this.feedbackListeners)
+        foreach (IRhythmFeedbackListener listenerComponent in this.feedbackListeners)
         {
-            IRhythmFeedbackListener[] listenerComponents = listenerObject.GetComponents<IRhythmFeedbackListener>();
-
-            if (listenerComponents.Length != 0)
-            {
-                foreach (IRhythmFeedbackListener listenerComponent in listenerComponents)
-                {
-                    listenerComponent.HitNotify();
-                }
-            }
-            else
-            {
-                Debug.LogError("GameObject indicated in BeatKeeper missing IRhythmFeedbackListener component(s)");
-            }
+            listenerComponent.HitNotify();
         }
     }
 
     private void NotifyMissListeners()
     {
-        foreach (GameObject listenerObject in this.feedbackListeners)
+        foreach (IRhythmFeedbackListener listenerComponent in this.feedbackListeners)
         {
-            IRhythmFeedbackListener[] listenerComponents = listenerObject.GetComponents<IRhythmFeedbackListener>();
-
-            if (listenerComponents.Length != 0)
-            {
-                foreach (IRhythmFeedbackListener listenerComponent in listenerComponents)
-                {
-                    listenerComponent.MissNotify();
-                }
-            }
-            else
-            {
-                Debug.LogError("GameObject indicated in BeatKeeper missing IRhythmFeedbackListener component(s)");
-            }
+            listenerComponent.MissNotify();
         }
     }
 
     private void NotifyTimeoutListeners()
     {
-        foreach (GameObject listenerObject in this.feedbackListeners)
+        foreach (IRhythmFeedbackListener listenerComponent in this.feedbackListeners)
         {
-            IRhythmFeedbackListener[] listenerComponents = listenerObject.GetComponents<IRhythmFeedbackListener>();
-
-            if (listenerComponents.Length != 0)
-            {
-                foreach (IRhythmFeedbackListener listenerComponent in listenerComponents)
-                {
-                    listenerComponent.TimeoutNotify();
-                }
-            }
-            else
-            {
-                Debug.LogError("GameObject indicated in BeatKeeper missing IRhythmFeedbackListener component(s)");
-            }
+            listenerComponent.TimeoutNotify();
         }
     }
 
