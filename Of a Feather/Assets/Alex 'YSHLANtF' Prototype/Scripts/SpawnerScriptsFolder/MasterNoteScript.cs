@@ -6,11 +6,11 @@ public class MasterNoteScript : MonoBehaviour {
 
 	bool keepOnGoing = true;
 	Vector2 oriPos;
+	//Gets the main 2D controller
 	GameObject gamBosObj;
 	TwoDGameManager gameBosScr;
 
-	public GameObject arrowObj;
-	ArrowTurnScript arrowScr;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +19,7 @@ public class MasterNoteScript : MonoBehaviour {
 		gamBosObj = GameObject.FindGameObjectWithTag ("GameControl2D");
 		gameBosScr = gamBosObj.GetComponent<TwoDGameManager> ();
 
-		arrowScr = arrowObj.GetComponent<ArrowTurnScript>();
+
 	}
 	
 	// Update is called once per frame
@@ -27,21 +27,26 @@ public class MasterNoteScript : MonoBehaviour {
 		
 	}
 
+	//If it collides, it sets the master note back into original pos.
 	void OnCollisionEnter2D(Collision2D other)
 	{
+		//Also increases score and hides the arrows
 		if (other.gameObject.tag == "Player") {
 			transform.position = oriPos;
-			gameBosScr.IncreaseScore ();
-			arrowScr.disableArrow ();
+			gameBosScr.IncreaseScore (1);
+
 		}
 	}
 
+	//Gives information on the bool "keepOnGoing". It is used as a master variable to SpawnerMasterScript
 	public bool giveGoing()
 	{
 
 		return keepOnGoing;
 
 	}
+
+	//A void that makes the bool false. 
 	public void stopGoing()
 	{
 		keepOnGoing = false;

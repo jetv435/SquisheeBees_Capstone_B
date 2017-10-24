@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpriteControllerSprite : MonoBehaviour {
 
+	//Controls all the sprites. It's like a big sprite sheet
 	public GameObject playerSprite;
 	public GameObject classSprite;
 	public GameObject friendSprite;
@@ -32,6 +33,14 @@ public class SpriteControllerSprite : MonoBehaviour {
 		temp.enabled = true;
 	}
 
+	//This has the player rapidly change instead of waiting for the delay
+	public void PlayerInstantChange(int listMark)
+	{
+		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
+
+		temp.sprite = playerSpriteSheet [listMark];
+	}
+
 	public void PlayerChange(int listMark)
 	{
 		
@@ -48,9 +57,14 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 		temp.sprite = playerSpriteSheet [listMark];
 
-		temp = friendSprite.GetComponent<SpriteRenderer> ();
-		temp.sprite = friendSpriteSheet [listMark];
 
+
+	}
+
+	public void FriendChange(int listMark)
+	{
+		SpriteRenderer temp = friendSprite.GetComponent<SpriteRenderer> ();
+		temp.sprite = friendSpriteSheet [listMark];
 	}
 
 	public void ClassChange(int listMark)

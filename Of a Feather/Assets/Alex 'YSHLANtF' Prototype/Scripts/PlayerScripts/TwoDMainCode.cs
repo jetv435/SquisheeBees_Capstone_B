@@ -20,8 +20,13 @@ public class TwoDMainCode : MonoBehaviour {
 	SpriteRenderer rightSprite;
 	BoxCollider2D rightCollider;
 
+	//Calls the main sprite script to change sprites
 	GameObject callSpriteBoss;
 	SpriteControllerSprite callSprScr;
+
+	//Calls the controller of the 2D scenes
+	GameObject gamBosObj;
+	TwoDGameManager gameBosScr;
 
 
 
@@ -45,6 +50,9 @@ public class TwoDMainCode : MonoBehaviour {
 		callSpriteBoss = GameObject.FindGameObjectWithTag ("SpriteController");
 		callSprScr = callSpriteBoss.GetComponent<SpriteControllerSprite> ();
 
+		gamBosObj = GameObject.FindGameObjectWithTag ("GameControl2D");
+		gameBosScr = gamBosObj.GetComponent<TwoDGameManager> ();
+
 		
 	}
 	
@@ -58,10 +66,10 @@ public class TwoDMainCode : MonoBehaviour {
 	void InputControlArrows()
 	{
 		//Uparrow
-		if (Input.GetKey (KeyCode.UpArrow) == true) {
+		if (Input.GetKeyDown (KeyCode.UpArrow) == true) {
 			upSprite.color = Color.red;
 			upCollider.enabled = true;
-			callSprScr.PlayerChange (0);
+			SpriteChangerFunc (0);
 		} else if(Input.GetKey (KeyCode.UpArrow) == false){
 			upSprite.color = Color.white;
 			upCollider.enabled = false;
@@ -69,33 +77,47 @@ public class TwoDMainCode : MonoBehaviour {
 		}
 
 		//Downarrow
-		if (Input.GetKey (KeyCode.DownArrow) == true) {
+		if (Input.GetKeyDown (KeyCode.DownArrow) == true) {
 			downSprite.color = Color.red;
 			downCollider.enabled = true;
-			callSprScr.PlayerChange (2);
+			SpriteChangerFunc (2);
 		} else if(Input.GetKey (KeyCode.DownArrow) == false){
 			downSprite.color = Color.white;
 			downCollider.enabled = false;
 		}
 
 		//leftarrow
-		if (Input.GetKey (KeyCode.LeftArrow) == true) {
+		if (Input.GetKeyDown (KeyCode.LeftArrow) == true) {
 			leftSprite.color = Color.red;
 			leftCollider.enabled = true;
-			callSprScr.PlayerChange (1);
+			SpriteChangerFunc (1);
 		} else if(Input.GetKey (KeyCode.LeftArrow) == false){
 			leftSprite.color = Color.white;
 			leftCollider.enabled = false;
 		}
 
 		//Rightarrow
-		if (Input.GetKey (KeyCode.RightArrow) == true) {
+		if (Input.GetKeyDown (KeyCode.RightArrow) == true) {
 			rightSprite.color = Color.red;
 			rightCollider.enabled = true;
-			callSprScr.PlayerChange (3);
+			SpriteChangerFunc (3);
 		} else if(Input.GetKey (KeyCode.RightArrow) == false){
 			rightSprite.color = Color.white;
 			rightCollider.enabled = false;
+		}
+	}
+
+	//A function to clean up a little bit
+	void SpriteChangerFunc(int sendListMark)
+	{
+		//If friend's number and PC's number match, instantly change
+		if (gameBosScr.SendFriendsNumber() == sendListMark) {
+			callSprScr.PlayerInstantChange (sendListMark);
+			gameBosScr.IncreaseScore (2);
+		}
+		//Or else delay
+		else {
+			callSprScr.PlayerChange (sendListMark);
 		}
 	}
 		
