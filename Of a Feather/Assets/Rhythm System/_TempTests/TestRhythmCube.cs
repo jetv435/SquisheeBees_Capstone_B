@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TestRhythmCube : MonoBehaviour
-                            , IBeatListener
                             , IRhythmFeedbackListener
-                            , IRhythmQueueEventListener
+                            , IRhythmPromptListener
 {
     private static readonly float offsetMagnitude = 0.25f;
     private readonly Vector3 uOffset = new Vector3( 0.0f,  offsetMagnitude,  0.0f);
     private readonly Vector3 dOffset = new Vector3( 0.0f, -offsetMagnitude,  0.0f);
-    private readonly Vector3 lOffset = new Vector3( offsetMagnitude,  0.0f,  0.0f);
-    private readonly Vector3 rOffset = new Vector3(-offsetMagnitude,  0.0f,  0.0f);
+    private readonly Vector3 lOffset = new Vector3(-offsetMagnitude,  0.0f,  0.0f);
+    private readonly Vector3 rOffset = new Vector3( offsetMagnitude,  0.0f,  0.0f);
     private Vector3 originalPos;
     public Color baseColor = Color.gray;
     public Color successColor = Color.green;
     public Color missColor = Color.red;
+    public Color timeoutColor = Color.blue;
     public float stayColorTime = 0.125f;
 
 	// Use this for initialization
@@ -35,18 +35,13 @@ public class TestRhythmCube : MonoBehaviour
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.baseColor;
     }
 
-    public void BeatNotify(RhythmCore.BeatInfo beatInfo)
-    {
-        // Do something when on beat
-        //Debug.Log("Beat");
-    }
-
     public void HitNotify()
     {
         // Do something when user hits correct input
         //Debug.Log("Hit");
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.successColor;
         Invoke("BackToDefault", this.stayColorTime);
+        this.transform.position = this.originalPos;
     }
 
     public void MissNotify()
@@ -55,18 +50,24 @@ public class TestRhythmCube : MonoBehaviour
         //Debug.Log("Miss");
         this.gameObject.GetComponent<MeshRenderer>().material.color = this.missColor;
         Invoke("BackToDefault", this.stayColorTime);
+        this.transform.position = this.originalPos;
     }
 
     public void TimeoutNotify()
     {
         // Do something when beat times out
         //Debug.Log("Timeout");
+        this.gameObject.GetComponent<MeshRenderer>().material.color = this.timeoutColor;
+        Invoke("BackToDefault", this.stayColorTime);
+        this.transform.position = this.originalPos;
     }
 
-    public void EventQueuedNotify(RhythmCore.RhythmExpectedEventInfo eventInfo)
+    public void PromptNotify(RhythmCore.RhythmExpectedEventInfo eventInfo)
     {
         // Do something when a beat is queued up (we enter a beat window)
-        //Debug.Log("Event Queued");
+        //Debug.Log("Prompt");
+
+        this.transform.position = this.originalPos;
 
         Vector3 offset = new Vector3(0.0f, 0.0f, -16.0f);
         switch(eventInfo.expectedKey)
@@ -99,12 +100,5 @@ public class TestRhythmCube : MonoBehaviour
         }
 
         this.transform.position += offset;
-    }
-
-    public void EventExpiredNotify(RhythmCore.RhythmExpectedEventInfo eventInfo)
-    {
-        // Do something when a beat expires (we exit/cancel a beat window)
-        //Debug.Log("Event Expired");
-        this.transform.position = this.originalPos;
     }
 }

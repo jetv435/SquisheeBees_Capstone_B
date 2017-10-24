@@ -270,6 +270,7 @@ MonoBehaviour:
   baseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   successColor: {r: 0, g: 1, b: 0, a: 1}
   missColor: {r: 1, g: 0, b: 0, a: 1}
+  timeoutColor: {r: 0, g: 0, b: 1, a: 1}
   stayColorTime: 0.25
 --- !u!1 &1559021243
 GameObject:
@@ -299,14 +300,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatTiming:
-    beatsPerMinute: 120
+    beatsPerMinute: 60
     ticksPerLine: 24
   beatWindowDuration: 1.5
-  beatListeners:
+  promptListeners:
   - {fileID: 846766289}
-  rhythmQueueEventListeners:
-  - {fileID: 846766289}
-  rhythmFeedbackListeners:
+  feedbackListeners:
   - {fileID: 846766289}
 --- !u!4 &1559021246
 Transform:
