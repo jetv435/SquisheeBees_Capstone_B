@@ -31,6 +31,12 @@ public class SpawnerMasterScript : MonoBehaviour {
 	int prevCall = 2;
 	int prevCallFriend = 1;
 
+	//used to get the audio source, instead of requesting a public audiosource
+	GameObject MCamera;
+	AudioSource Maudio;
+
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +54,10 @@ public class SpawnerMasterScript : MonoBehaviour {
 		//Really lazy code work
 		arrowScr = arrowObj.GetComponent<ArrowTurnScript>();
 		arrowScrFrnd = arrowObjFrnd.GetComponent<ArrowTurnScript> ();
+
+		//also lazy code copier right here
+		MCamera = GameObject.FindGameObjectWithTag ("MainCamera");
+		Maudio = MCamera.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -57,6 +67,7 @@ public class SpawnerMasterScript : MonoBehaviour {
 			mainTimer = timerCoolDownSecret + Random.Range (3, 5);
 			int randSpawner = Random.Range (0, playerArrowList.Count);
 			int randFriend = Random.Range (0, playerArrowList.Count);
+			Maudio.UnPause ();
 
 			while (randSpawner == prevCall) {
 				randSpawner = Random.Range (0, playerArrowList.Count);

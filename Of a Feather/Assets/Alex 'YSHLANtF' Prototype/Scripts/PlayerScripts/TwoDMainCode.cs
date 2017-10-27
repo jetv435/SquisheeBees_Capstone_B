@@ -20,6 +20,12 @@ public class TwoDMainCode : MonoBehaviour {
 	SpriteRenderer rightSprite;
 	BoxCollider2D rightCollider;
 
+	//Playing & stopping music variables
+	public AudioSource wrongnote;
+	GameObject MCamera;
+	AudioSource Maudio;
+
+
 	//Calls the main sprite script to change sprites
 	GameObject callSpriteBoss;
 	SpriteControllerSprite callSprScr;
@@ -52,6 +58,9 @@ public class TwoDMainCode : MonoBehaviour {
 
 		gamBosObj = GameObject.FindGameObjectWithTag ("GameControl2D");
 		gameBosScr = gamBosObj.GetComponent<TwoDGameManager> ();
+
+		MCamera = GameObject.FindGameObjectWithTag ("MainCamera");
+		Maudio = MCamera.GetComponent<AudioSource> ();
 
 		
 	}
@@ -118,6 +127,10 @@ public class TwoDMainCode : MonoBehaviour {
 		//Or else delay
 		else {
 			callSprScr.PlayerChange (sendListMark);
+			if (Maudio.isPlaying == true) {
+				Maudio.Pause ();
+				wrongnote.Play ();
+			}
 		}
 	}
 		
