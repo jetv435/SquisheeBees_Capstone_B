@@ -51,6 +51,7 @@ public class TwoDGameManager : MonoBehaviour {
 		if (Score >= maxScoreFriend && friendSprOn == false) {
 			callSprScr.TurnOnFriendSpr ();
 			ArrowOn = true;
+			friendSprOn = true;
 		}
 
 		if (Score >= maxScoreNeededInTotal) {
@@ -85,7 +86,10 @@ public class TwoDGameManager : MonoBehaviour {
 		if (friendSprOn == false) {
 			Score += scoreIncrease;
 		} else {
-			Score += scoreIncrease - 1;
+			if (scoreIncrease == 2) {
+				scoreIncrease = 1;
+				Score += scoreIncrease;
+			}
 		}
 		arrowScr.disableArrow ();
 		arrowScrFrd.disableArrow ();

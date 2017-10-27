@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1699302491893326}
+  m_IsPrefabParent: 1
+--- !u!1 &1699302491893326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4472730115652652}
+  - component: {fileID: 114665534706204676}
+  m_Layer: 0
+  m_Name: SpriteControlObj
+  m_TagString: SpriteController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4472730115652652
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699302491893326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8155116, y: 3.8231697, z: -15.216693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114665534706204676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699302491893326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7f31afdcfbc784294e0bec3c6ec43e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSprite: {fileID: 0}
+  classSprite: {fileID: 0}
+  friendSprite: {fileID: 0}
+  playerSpriteSheet:
+  - {fileID: 21300000, guid: ec0cce5d831767f4f950d9eeaaef29a0, type: 3}
+  - {fileID: 21300000, guid: 3be385537bb5e894ab9cb46d0c0507b1, type: 3}
+  - {fileID: 21300000, guid: 51c426596a02ef44aaad446ae7e8ba98, type: 3}
+  - {fileID: 21300000, guid: 01055720f78daa84c877b5ddac20f54c, type: 3}
+  classSpriteSheet:
+  - {fileID: 21300000, guid: bb21da5bb69cb6a48a61c56491ed1301, type: 3}
+  - {fileID: 21300000, guid: b23397edf548b3e439946f7428764467, type: 3}
+  - {fileID: 21300000, guid: 5ae0a87289a9d734eb3af2f2d15865d2, type: 3}
+  - {fileID: 21300000, guid: dd2d1e8d7b7ce9342b56670faaf81bda, type: 3}
+  friendSpriteSheet:
+  - {fileID: 21300000, guid: cfb99d8561d033840950dacf9962cdd2, type: 3}
+  - {fileID: 21300000, guid: d075ce3e03478c4439b774e5d4b473e7, type: 3}
+  - {fileID: 21300000, guid: 906001027a9407c4583dffac7c8504b3, type: 3}
+  - {fileID: 21300000, guid: 49eafdb7e9493674dbec7d9a1b70783b, type: 3}
+  classMoveTrigger: []
+  initialDelaySec: 0.5
