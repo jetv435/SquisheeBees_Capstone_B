@@ -22,6 +22,7 @@ public class TwoDMainCode : MonoBehaviour {
 
 	//Playing & stopping music variables
 	public AudioSource wrongnote;
+	public AudioSource correctnote;
 	GameObject MCamera;
 	AudioSource Maudio;
 
@@ -123,13 +124,21 @@ public class TwoDMainCode : MonoBehaviour {
 		if (gameBosScr.SendFriendsNumber() == sendListMark) {
 			callSprScr.PlayerInstantChange (sendListMark);
 			gameBosScr.IncreaseScore (2);
+			if (Maudio.isPlaying == true) {
+				Maudio.Pause ();
+				correctnote.Play ();
+			}
+
 		}
 		//Or else delay
 		else {
 			callSprScr.PlayerChange (sendListMark);
 			if (Maudio.isPlaying == true) {
 				Maudio.Pause ();
-				wrongnote.Play ();
+				if (gameBosScr.friendenter.isPlaying == true) {
+					wrongnote.Stop ();
+				} else
+					wrongnote.Play ();
 			}
 		}
 	}

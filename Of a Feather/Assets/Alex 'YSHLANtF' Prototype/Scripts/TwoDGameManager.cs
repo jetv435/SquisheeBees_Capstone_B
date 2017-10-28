@@ -8,6 +8,7 @@ public class TwoDGameManager : MonoBehaviour {
 	public int maxScoreFriend = 3;
 	public int maxScoreNeededInTotal = 10;
 	bool friendSprOn = false;
+	public AudioSource friendenter;
 
 	//Change Sprite
 	GameObject callSpriteBoss;
@@ -56,6 +57,7 @@ public class TwoDGameManager : MonoBehaviour {
 			callSprScr.TurnOnFriendSpr ();
 			ArrowOn = true;
 			friendSprOn = true;
+			friendenter.Play ();
 		}
 
 		if (Score >= maxScoreNeededInTotal) {
