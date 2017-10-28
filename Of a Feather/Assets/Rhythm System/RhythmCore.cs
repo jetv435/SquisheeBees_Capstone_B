@@ -50,9 +50,17 @@ public class RhythmCore : MonoBehaviour
     private RhythmExpectedEventInfo currExpectedEvent;
     private bool bBeatQueued = false;
 
+	//Code that allows it to call the main control of the game.
+	GameObject TwoDGameManObj;
+	TwoDGameManager TwoDGameManScr;
+
     // Use this for initialization
     void Start()
     {
+		//To set it up.
+		TwoDGameManObj = GameObject.FindGameObjectWithTag ("GameControl2D");
+		TwoDGameManScr = TwoDGameManObj.GetComponent<TwoDGameManager> ();
+
         // Adjust the beat window if it exceeds the time between beats
         this.beatWindowDuration = Mathf.Min(this.beatWindowDuration, this.SecondsPerLine());
 
@@ -115,6 +123,8 @@ public class RhythmCore : MonoBehaviour
             }
             this.bBeatQueued = false;
         }
+
+
     }
 
     // Invoked periodically
@@ -122,6 +132,9 @@ public class RhythmCore : MonoBehaviour
     {
         // Generate an expected event for this beat frame via a strategy object, and notify listeners
         this.currExpectedEvent = this.beatGenStrat.GenerateExpectedEvent();
+		while (currExpectedEvent.expectedKey == TwoDGameManScr.GivePrevClassNum()) {
+			currExpectedEvent = beatGenStrat.GenerateExpectedEvent ();
+		}
         this.bBeatQueued = true;
         this.NotifyPromptListeners(this.currExpectedEvent);
         this.Invoke("OffBeat", beatWindowDuration);

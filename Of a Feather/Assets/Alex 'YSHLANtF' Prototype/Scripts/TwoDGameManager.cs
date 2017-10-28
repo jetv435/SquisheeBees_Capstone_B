@@ -26,6 +26,10 @@ public class TwoDGameManager : MonoBehaviour {
 	//A bool to send to SpawnMaster.
 	bool ArrowOn = false;
 
+	//Previous calls from the arrows
+	int classArrNumPrev = 0;
+	int friendArrNumPrev = -1;
+
 
 	//This code calls on the friend's mark, allowing it to be sent to the TwoMainCode later.
 	//SpawnerMaster gives the friends number.
@@ -57,6 +61,8 @@ public class TwoDGameManager : MonoBehaviour {
 		if (Score >= maxScoreNeededInTotal) {
 			sceneControl.GoToBasement (1);
 		}
+
+
 		
 	}
 
@@ -93,5 +99,48 @@ public class TwoDGameManager : MonoBehaviour {
 		}
 		arrowScr.disableArrow ();
 		arrowScrFrd.disableArrow ();
+	}
+
+	//New score func that checks on the arrow type now
+	public void IncreaseScore(ARROW_TYPE arrowEnum)
+	{
+
+		if (friendSprOn == false) {
+			Score++;
+		} else {
+			if(arrowEnum == ARROW_TYPE.FRIEND)
+			{
+				Score++;
+			}
+		}
+		arrowScr.disableArrow ();
+		arrowScrFrd.disableArrow ();
+	}
+
+	//A call from the arrow script to give the angle of the arrow.
+	//Can be reused with the ARROW_TYPE enum, with it also changing the friend arrow previous arrow.
+	public void ChangeArrowNumber(int change, ARROW_TYPE arrowClass)
+	{
+		if (arrowClass == ARROW_TYPE.CLASS) {
+			classArrNumPrev = change;
+			callSprScr.ClassChange (classArrNumPrev);
+		} else if (arrowClass == ARROW_TYPE.FRIEND) {
+			friendArrNumPrev = change;
+		}
+	}
+
+	//Gives the randomizer code in Rhythmcore the previous number of the class
+	public KeyCode GivePrevClassNum()
+	{
+		if (classArrNumPrev == 0)
+			return KeyCode.UpArrow;
+		else if (classArrNumPrev == 1)
+			return KeyCode.LeftArrow;
+		else if (classArrNumPrev == 2)
+			return KeyCode.DownArrow;
+		else if (classArrNumPrev == 3)
+			return KeyCode.RightArrow;
+
+		return KeyCode.A;
 	}
 }

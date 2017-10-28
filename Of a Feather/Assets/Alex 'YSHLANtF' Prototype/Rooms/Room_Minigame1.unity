@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f2e6956d236844a980338476599fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowTag: 1
 --- !u!212 &907515811
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -453,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f2e6956d236844a980338476599fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowTag: 0
 --- !u!212 &1137749491
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -696,9 +698,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatTiming:
-    beatsPerMinute: 60
+    beatsPerMinute: 30
     ticksPerLine: 24
-  beatWindowDuration: 1.5
+  beatWindowDuration: 3
   promptListenerObjects:
   - {fileID: 1137749489}
   feedbackListenerObjects:

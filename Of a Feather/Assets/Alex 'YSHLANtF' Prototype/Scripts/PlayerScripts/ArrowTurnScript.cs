@@ -2,11 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowTurnScript : MonoBehaviour {
+
+public enum ARROW_TYPE
+{
+	CLASS,
+	FRIEND,
+	SELF
+}
+
+public class ArrowTurnScript : MonoBehaviour 
+
+, IRhythmFeedbackListener
+, IRhythmPromptListener
+{
 
 	SpriteRenderer ownRender;
 	GameObject TwoDGameManObj;
 	TwoDGameManager TwoDGameManScr;
+
+	//Change Sprite
+	GameObject callSpriteBoss;
+	SpriteControllerSprite callSprScr;
+
+	//Use this to distinguish which type of arrow it is.
+	public ARROW_TYPE arrowTag;
+
+	//So we can store arrowTurn
+	int arrowNumber;
 
 
 	// Use this for initialization
@@ -14,6 +36,9 @@ public class ArrowTurnScript : MonoBehaviour {
 
 		TwoDGameManObj = GameObject.FindGameObjectWithTag ("GameControl2D");
 		TwoDGameManScr = TwoDGameManObj.GetComponent<TwoDGameManager> ();
+
+		callSpriteBoss = GameObject.FindGameObjectWithTag ("SpriteController");
+		callSprScr = callSpriteBoss.GetComponent<SpriteControllerSprite> ();
 
 		ownRender = gameObject.GetComponent<SpriteRenderer> ();
 
@@ -36,6 +61,10 @@ public class ArrowTurnScript : MonoBehaviour {
 
 		transform.eulerAngles = new Vector3 (transform.eulerAngles.x, transform.eulerAngles.y, turnDegree);
 
+		//Sends the manager the current number, which will be used later, as well as the enum tag of the arrow.
+		TwoDGameManScr.ChangeArrowNumber(arrowTurn, arrowTag);
+		arrowNumber = arrowTurn;
+
 	}
 
 	public void disableArrow()
@@ -49,7 +78,8 @@ public class ArrowTurnScript : MonoBehaviour {
 		// Do something when user hits correct input
 		//Debug.Log("Hit");
 
-		TwoDGameManScr.IncreaseScore (2);
+		TwoDGameManScr.IncreaseScore (arrowTag);
+		callSprScr.masterPlayerSpriteChange (arrowNumber, arrowTag);
 
 	}
 
@@ -57,7 +87,7 @@ public class ArrowTurnScript : MonoBehaviour {
 	{
 		// Do something when user hits incorrect input
 		//Debug.Log("Miss");
-		;
+
 	}
 
 	public void TimeoutNotify()
@@ -81,7 +111,7 @@ public class ArrowTurnScript : MonoBehaviour {
 			}
 		case KeyCode.LeftArrow:
 			{
-				TurnArrow (3);
+				TurnArrow (1);
 				break;
 			}
 
@@ -92,7 +122,7 @@ public class ArrowTurnScript : MonoBehaviour {
 			}
 		case KeyCode.RightArrow:
 			{
-				TurnArrow (1);
+				TurnArrow (3);
 				break;
 			}
 		default:

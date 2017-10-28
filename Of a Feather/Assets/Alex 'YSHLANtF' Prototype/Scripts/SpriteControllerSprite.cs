@@ -74,4 +74,27 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 		temp.sprite = classSpriteSheet [listMark];
 	}
+
+	//A new changing function that either randomizes the player movement, or perfectly matches.
+	public void masterPlayerSpriteChange(int listMark, ARROW_TYPE arrowClassification)
+	{
+
+		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
+
+		//If arrow_type is class, it is randomized
+		if (arrowClassification == ARROW_TYPE.CLASS) {
+			int rand = Random.Range (0, 4);
+
+			while (rand == listMark)
+				rand = Random.Range (0, 4);
+
+			temp.sprite = playerSpriteSheet [rand];
+		}
+		else
+		{
+			temp.sprite = playerSpriteSheet [listMark];
+		}
+
+
+	}
 }
