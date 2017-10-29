@@ -123,12 +123,14 @@ public class TwoDGameManager : MonoBehaviour {
 	//Can be reused with the ARROW_TYPE enum, with it also changing the friend arrow previous arrow.
 	public void ChangeArrowNumber(int change, ARROW_TYPE arrowClass)
 	{
-		if (arrowClass == ARROW_TYPE.CLASS) {
+		if (arrowClass == ARROW_TYPE.FRIEND) {
+			friendArrNumPrev = change;
+			callSprScr.FriendChange (friendArrNumPrev);
+		}
+		else if (arrowClass == ARROW_TYPE.CLASS) {
 			classArrNumPrev = change;
 			callSprScr.ClassChange (classArrNumPrev);
-		} else if (arrowClass == ARROW_TYPE.FRIEND) {
-			friendArrNumPrev = change;
-		}
+		} 
 	}
 
 	//Gives the randomizer code in Rhythmcore the previous number of the class

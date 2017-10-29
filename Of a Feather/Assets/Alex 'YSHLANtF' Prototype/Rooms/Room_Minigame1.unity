@@ -138,7 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxScoreFriend: 1
-  maxScoreNeededInTotal: 8
+  maxScoreNeededInTotal: 50
+  friendenter: {fileID: 0}
   arrowObj: {fileID: 1137749489}
   arrowObjFriend: {fileID: 907515809}
 --- !u!4 &330219046
@@ -307,7 +308,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &991705024
 Prefab:
@@ -346,7 +347,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012561672442, guid: 419820372b1022b47933f04de0a39ed5, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1000014173469732, guid: 419820372b1022b47933f04de0a39ed5, type: 2}
       propertyPath: m_TagString
@@ -508,7 +509,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266945724
 GameObject:
@@ -705,6 +706,7 @@ MonoBehaviour:
   - {fileID: 1137749489}
   feedbackListenerObjects:
   - {fileID: 1137749489}
+  whatIsCoreOf: 0
 --- !u!4 &1597389007
 Transform:
   m_ObjectHideFlags: 0
@@ -717,6 +719,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1631707424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1631707426}
+  - component: {fileID: 1631707425}
+  m_Layer: 0
+  m_Name: RhythmBlinker2_Friend
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1631707425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631707424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3b04766a949406195e316b098761a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatTiming:
+    beatsPerMinute: 30
+    ticksPerLine: 24
+  beatWindowDuration: 3
+  promptListenerObjects:
+  - {fileID: 907515809}
+  feedbackListenerObjects:
+  - {fileID: 907515809}
+  whatIsCoreOf: 1
+--- !u!4 &1631707426
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631707424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861730533
 GameObject:
@@ -820,7 +871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4472730115652652, guid: afb40b9d82a6cab43b0da7d812f7748c, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
         type: 2}

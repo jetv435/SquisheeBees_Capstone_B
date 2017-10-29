@@ -17,6 +17,9 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 	public float initialDelaySec = 1.0f;
 
+	//Allows a bool to prevent the class from messing with the friend's sprite change
+	bool friendMove = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +28,9 @@ public class SpriteControllerSprite : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//Every new frame, friendMove is set to false
+		friendMove = false;
 		
 	}
 
@@ -81,8 +87,12 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
 
+		/*if (arrowClassification == ARROW_TYPE.FRIEND)
+		{
+			temp.sprite = playerSpriteSheet [listMark];
+		}*/
 		//If arrow_type is class, it is randomized
-		if (arrowClassification == ARROW_TYPE.CLASS) {
+		if (arrowClassification == ARROW_TYPE.CLASS && friendMove == false) {
 			int rand = Random.Range (0, 4);
 
 			while (rand == listMark)
@@ -90,9 +100,11 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 			temp.sprite = playerSpriteSheet [rand];
 		}
-		else
+		else if (arrowClassification == ARROW_TYPE.FRIEND)
 		{
 			temp.sprite = playerSpriteSheet [listMark];
+			friendMove = true;
+
 		}
 
 

@@ -54,6 +54,9 @@ public class RhythmCore : MonoBehaviour
 	GameObject TwoDGameManObj;
 	TwoDGameManager TwoDGameManScr;
 
+	//Tells what arrow this core controls
+	public ARROW_TYPE whatIsCoreOf;
+
     // Use this for initialization
     void Start()
     {
@@ -132,6 +135,8 @@ public class RhythmCore : MonoBehaviour
     {
         // Generate an expected event for this beat frame via a strategy object, and notify listeners
         this.currExpectedEvent = this.beatGenStrat.GenerateExpectedEvent();
+
+
 		while (currExpectedEvent.expectedKey == TwoDGameManScr.GivePrevClassNum()) {
 			currExpectedEvent = beatGenStrat.GenerateExpectedEvent ();
 		}
