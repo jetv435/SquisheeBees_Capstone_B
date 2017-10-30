@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class TwoDGameManager : MonoBehaviour {
 
+	//So we can keep the base code with some levels, as well as have some
+	//new stuff leading to the next.
+	public enum LEVEL_2D_NAMES
+	{
+		STAGE_1,
+		STAGE_2,
+		STAGE_3,
+		STAGE_4,
+	}
+
+
+
 	int Score = 0;
 	public int maxScoreFriend = 3;
 	public int maxScoreNeededInTotal = 10;
@@ -17,6 +29,10 @@ public class TwoDGameManager : MonoBehaviour {
 	//Change scenes
 	GameObject sceneBoss;
 	GameBossCode sceneControl;
+
+	//Calls Sound script
+	GameObject soundObj;
+	SoundScript soundScr;
 
 	//To manage the arrow scripts
 	public GameObject arrowObj;
@@ -36,6 +52,9 @@ public class TwoDGameManager : MonoBehaviour {
 	//SpawnerMaster gives the friends number.
 	int friendMark = -1;
 
+	//To determine what level it is.
+	public LEVEL_2D_NAMES nameOfLevel;
+
 	// Use this for initialization
 	void Start () {
 
@@ -45,19 +64,26 @@ public class TwoDGameManager : MonoBehaviour {
 		sceneBoss = GameObject.FindGameObjectWithTag ("GameController");
 		sceneControl = sceneBoss.GetComponent<GameBossCode> ();
 
+		soundObj = GameObject.FindGameObjectWithTag ("SoundControllerTag");
+		soundScr = soundObj.GetComponent<SoundScript> ();
+
 		arrowScr = arrowObj.GetComponent<ArrowTurnScript>();
-		arrowScrFrd = arrowObjFriend.GetComponent<ArrowTurnScript> ();
+		//If it isn't level 2 or 3, get the arrow's script of the friend.
+		if (nameOfLevel != LEVEL_2D_NAMES.STAGE_2 || nameOfLevel != LEVEL_2D_NAMES.STAGE_3) {
+			arrowScrFrd = arrowObjFriend.GetComponent<ArrowTurnScript> ();
+		}
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (Score >= maxScoreFriend && friendSprOn == false) {
-			callSprScr.TurnOnFriendSpr ();
-			ArrowOn = true;
-			friendSprOn = true;
-			friendenter.Play ();
+		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1) {
+			if (Score >= maxScoreFriend && friendSprOn == false) {
+				callSprScr.TurnOnFriendSpr ();
+				ArrowOn = true;
+				friendSprOn = true;
+				friendenter.Play ();
+			}
 		}
 
 		if (Score >= maxScoreNeededInTotal) {
@@ -100,7 +126,8 @@ public class TwoDGameManager : MonoBehaviour {
 			}
 		}
 		arrowScr.disableArrow ();
-		arrowScrFrd.disableArrow ();
+		if(nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
+			arrowScrFrd.disableArrow ();
 	}
 
 	//New score func that checks on the arrow type now
@@ -116,7 +143,8 @@ public class TwoDGameManager : MonoBehaviour {
 			}
 		}
 		arrowScr.disableArrow ();
-		arrowScrFrd.disableArrow ();
+		if(nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
+			arrowScrFrd.disableArrow ();
 	}
 
 	//A call from the arrow script to give the angle of the arrow.
@@ -146,5 +174,25 @@ public class TwoDGameManager : MonoBehaviour {
 			return KeyCode.RightArrow;
 
 		return KeyCode.A;
+	}
+
+	//Gets the sound and plays it. Mainly for the correct and incorrect notes.
+	public void SendSoundToPlayAtSoundScript(int binaryRightWrong)
+	{
+		//Wrong
+		if (binaryRightWrong == 0) {
+			soundScr.PlayWrong ();
+		}
+		//right
+		else {
+			soundScr.PlayCorrect ();
+		}
+	}
+
+
+	//Gives the level's name
+	public LEVEL_2D_NAMES GetLevelName()
+	{
+		return nameOfLevel;
 	}
 }

@@ -54,8 +54,13 @@ public class ArrowTurnScript : MonoBehaviour
 	public void TurnArrow(int arrowTurn)
 	{
 		float turnDegree = 90;
-
-		ownRender.enabled = true;
+		if (arrowTag == ARROW_TYPE.CLASS)
+			ownRender.enabled = true;
+		else if (arrowTag == ARROW_TYPE.FRIEND && TwoDGameManScr.GetLevelName() == TwoDGameManager.LEVEL_2D_NAMES.STAGE_1 ) {
+			if (TwoDGameManScr.SetArrowOn () == true) {
+				ownRender.enabled = true;
+			}
+		}
 
 		turnDegree *= arrowTurn;
 
@@ -80,6 +85,12 @@ public class ArrowTurnScript : MonoBehaviour
 
 		TwoDGameManScr.IncreaseScore (arrowTag);
 		callSprScr.masterPlayerSpriteChange (arrowNumber, arrowTag);
+		if (arrowTag == ARROW_TYPE.CLASS) {
+			TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
+		}
+		else if (arrowTag == ARROW_TYPE.FRIEND) {
+			TwoDGameManScr.SendSoundToPlayAtSoundScript (1);
+		}
 
 	}
 
@@ -87,6 +98,7 @@ public class ArrowTurnScript : MonoBehaviour
 	{
 		// Do something when user hits incorrect input
 		//Debug.Log("Miss");
+		TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
 
 	}
 
@@ -94,6 +106,7 @@ public class ArrowTurnScript : MonoBehaviour
 	{
 		// Do something when beat times out
 		//Debug.Log("Timeout");
+		TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
 
 	}
 
