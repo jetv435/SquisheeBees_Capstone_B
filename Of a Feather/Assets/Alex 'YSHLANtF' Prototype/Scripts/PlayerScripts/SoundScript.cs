@@ -38,4 +38,8 @@ public class SoundScript : MonoBehaviour {
 			wrongnote.Play ();
 		}
 	}
+
+	public void ResumePlay(){
+		Maudio.UnPause ();
+	}
 }

@@ -154,10 +154,12 @@ public class TwoDGameManager : MonoBehaviour {
 		if (arrowClass == ARROW_TYPE.FRIEND) {
 			friendArrNumPrev = change;
 			callSprScr.FriendChange (friendArrNumPrev);
+			soundScr.ResumePlay ();
 		}
 		else if (arrowClass == ARROW_TYPE.CLASS) {
 			classArrNumPrev = change;
 			callSprScr.ClassChange (classArrNumPrev);
+			soundScr.ResumePlay ();
 		} 
 	}
 
