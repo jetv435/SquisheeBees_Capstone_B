@@ -51,10 +51,12 @@ public class RhythmCore : MonoBehaviour
     private bool bBeatQueued = false;
 
 	//Code that allows it to call the main control of the game.
+    // NOTE from Garrah: these couple the RhythmCore to game-specific code; needs to be abstracted and decoupled
 	GameObject TwoDGameManObj;
 	TwoDGameManager TwoDGameManScr;
 
 	//Tells what arrow this core controls
+    // NOTE from Garrah: also needs to be decoupled
 	public ARROW_TYPE whatIsCoreOf;
 
     // Use this for initialization
