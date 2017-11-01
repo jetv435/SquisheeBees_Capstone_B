@@ -100,6 +100,8 @@ public class ArrowTurnScript : MonoBehaviour
 		//Debug.Log("Miss");
 		TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
 
+
+
 	}
 
 	public void TimeoutNotify()
@@ -107,6 +109,12 @@ public class ArrowTurnScript : MonoBehaviour
 		// Do something when beat times out
 		//Debug.Log("Timeout");
 		TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
+
+		//If the stage is 2, then it also counts for the score, to make it faster and faster.
+		//Uses all of the game Manager's scripts
+		if (TwoDGameManScr.GetLevelName () == TwoDGameManager.LEVEL_2D_NAMES.STAGE_2) {
+			TwoDGameManScr.IncreaseScore (arrowTag);
+		}
 
 	}
 

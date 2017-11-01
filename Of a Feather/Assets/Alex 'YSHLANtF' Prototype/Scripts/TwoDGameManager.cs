@@ -48,6 +48,12 @@ public class TwoDGameManager : MonoBehaviour {
 	int friendArrNumPrev = -1;
 
 
+	//Calls the Rhythm Script, if it is on level 2. The Rhythm Script is tagged as "RhythmTag"
+	//The two variables, one to get the object. The other gets the RhythmCore script.
+	GameObject rhyGObj;
+	RhythmCore rhyScr;
+
+
 	//This code calls on the friend's mark, allowing it to be sent to the TwoMainCode later.
 	//SpawnerMaster gives the friends number.
 	int friendMark = -1;
@@ -73,6 +79,12 @@ public class TwoDGameManager : MonoBehaviour {
 			arrowScrFrd = arrowObjFriend.GetComponent<ArrowTurnScript> ();
 		}
 
+		//If the enum of nameOfLevel is STAGE_2, then it sets the rhythm object.
+		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
+			rhyGObj = GameObject.FindGameObjectWithTag ("RhythmTag");
+			rhyScr = rhyGObj.GetComponent<RhythmCore>();
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -86,6 +98,7 @@ public class TwoDGameManager : MonoBehaviour {
 			}
 		}
 
+		//Need to change it later, once we get animations
 		if (Score >= maxScoreNeededInTotal) {
 			sceneControl.GoToBasement (1);
 		}
@@ -145,6 +158,10 @@ public class TwoDGameManager : MonoBehaviour {
 		arrowScr.disableArrow ();
 		if(nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
 			arrowScrFrd.disableArrow ();
+
+		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
+			rhyScr.beatWindowDuration--;
+		}
 	}
 
 	//A call from the arrow script to give the angle of the arrow.
