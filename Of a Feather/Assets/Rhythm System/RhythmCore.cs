@@ -44,28 +44,19 @@ public class RhythmCore : MonoBehaviour
     public float beatWindowDuration = 0.5f;
     public GameObject[] promptListenerObjects;
     public GameObject[] feedbackListenerObjects;
-    private readonly ABeatGenerationStrategy beatGenStrat = new RandomArrowGenStrat();
+    private readonly ABeatGenerationStrategy beatGenStrat = new RandArrowNoRepeatStrat();
     private List<IRhythmPromptListener> promptListeners = new List<IRhythmPromptListener>();
     private List<IRhythmFeedbackListener> feedbackListeners = new List<IRhythmFeedbackListener>();
     private RhythmExpectedEventInfo currExpectedEvent;
     private bool bBeatQueued = false;
 
-	//Code that allows it to call the main control of the game.
-    // NOTE from Garrah: these couple the RhythmCore to game-specific code; needs to be abstracted and decoupled
-	GameObject TwoDGameManObj;
-	TwoDGameManager TwoDGameManScr;
-
+    // NOTE from Garrah: couples the RhythmCore to game-specific code; needs to be abstracted and decoupled
 	//Tells what arrow this core controls
-    // NOTE from Garrah: also needs to be decoupled
 	public ARROW_TYPE whatIsCoreOf;
 
     // Use this for initialization
     void Start()
     {
-		//To set it up.
-		TwoDGameManObj = GameObject.FindGameObjectWithTag ("GameControl2D");
-		TwoDGameManScr = TwoDGameManObj.GetComponent<TwoDGameManager> ();
-
         // Adjust the beat window if it exceeds the time between beats
         this.beatWindowDuration = Mathf.Min(this.beatWindowDuration, this.SecondsPerLine());
 
@@ -138,10 +129,6 @@ public class RhythmCore : MonoBehaviour
         // Generate an expected event for this beat frame via a strategy object, and notify listeners
         this.currExpectedEvent = this.beatGenStrat.GenerateExpectedEvent();
 
-
-		while (currExpectedEvent.expectedKey == TwoDGameManScr.GivePrevClassNum()) {
-			currExpectedEvent = beatGenStrat.GenerateExpectedEvent ();
-		}
         this.bBeatQueued = true;
         this.NotifyPromptListeners(this.currExpectedEvent);
         this.Invoke("OffBeat", beatWindowDuration);
