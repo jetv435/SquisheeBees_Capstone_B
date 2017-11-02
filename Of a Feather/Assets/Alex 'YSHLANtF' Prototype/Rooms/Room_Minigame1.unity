@@ -249,7 +249,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 44310cf298965834fba8c1d5578fd304, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 83fa3471d6902ad4bbb07e8ffed16c6a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -634,7 +634,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5ae0a87289a9d734eb3af2f2d15865d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea5c64185633c874e9a1da3b39ed37f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -651,8 +651,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016560337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.11, y: -2.64, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -959,7 +959,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 906001027a9407c4583dffac7c8504b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f34b6d9e48614c84ab67c012ac289c89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -976,8 +976,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381409809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.55, y: -2.53, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1294,6 +1294,78 @@ Prefab:
       propertyPath: friendSprite
       value: 
       objectReference: {fileID: 1381409809}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 84ac6a9e6f63ab84bbab2d423fa79994,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: b16011ba038b66e4bbe88082a1b5e4d6,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 91d896eb933bdc24bbc9720860d105f2,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 19018e54f4fd2a3459e72122a65719cf,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21fffb22daba12c4abea0e0c27fcdf0f,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cf430a256a2aa854aa98c080c03bd019,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ebdf50c79e48c1a48ab50ce874e50072,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 212e7c6e6f9af8748be6d61c0b9bd10d,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e46dd56c4a8e8b44a2946e5ed19cf9a,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 20f1256c17a79e34eb7b1ab66bed97d1,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: b18365f9fd710e248ac07ba79409555b,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ffb09cf1b45e9924a9417fc258216f0e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afb40b9d82a6cab43b0da7d812f7748c, type: 2}
   m_IsPrefabParent: 0
@@ -1345,7 +1417,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 51c426596a02ef44aaad446ae7e8ba98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02b6664cf3df30b4faf5b279ce8ce8f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1362,8 +1434,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042362033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.59, y: -2.77, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1396,7 +1468,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 83fa3471d6902ad4bbb07e8ffed16c6a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 44310cf298965834fba8c1d5578fd304, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -198,6 +198,7 @@ public class TwoDGameManager : MonoBehaviour {
 	//Gets the sound and plays it. Mainly for the correct and incorrect notes.
 	public void SendSoundToPlayAtSoundScript(int binaryRightWrong)
 	{
+		Debug.Log (binaryRightWrong);
 		//Wrong
 		if (binaryRightWrong == 0) {
 			soundScr.PlayWrong ();
