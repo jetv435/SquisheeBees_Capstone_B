@@ -136,6 +136,8 @@ public class TwoDGameManager : MonoBehaviour {
 			if (scoreIncrease == 2) {
 				scoreIncrease = 1;
 				Score += scoreIncrease;
+
+
 			}
 		}
 		arrowScr.disableArrow ();
@@ -153,6 +155,10 @@ public class TwoDGameManager : MonoBehaviour {
 			if(arrowEnum == ARROW_TYPE.FRIEND)
 			{
 				Score++;
+
+				//Due to the fact that this implicitly implies it is stage one,
+				//It calls the particle effect.
+				callSprScr.ActivatePEffect();
 			}
 		}
 		arrowScr.disableArrow ();

@@ -71,3 +71,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 49eafdb7e9493674dbec7d9a1b70783b, type: 3}
   classMoveTrigger: []
   initialDelaySec: 0.5
+  pEffectObj: {fileID: 1675166853216650, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}

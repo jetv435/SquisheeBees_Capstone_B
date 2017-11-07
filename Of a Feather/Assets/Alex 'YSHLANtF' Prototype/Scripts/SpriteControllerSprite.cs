@@ -20,8 +20,16 @@ public class SpriteControllerSprite : MonoBehaviour {
 	//Allows a bool to prevent the class from messing with the friend's sprite change
 	bool friendMove = false;
 
+	//A public bool, to get a particle effect from the world that can be changed later.
+	//This effect is only played when the TwoDGameManager says so
+	public GameObject pEffectObj;
+	ParticleSystem pEffectControl;
+
 	// Use this for initialization
 	void Start () {
+
+		//OBJECT NEEDS TO BE IN THE SCENE
+		pEffectControl = pEffectObj.GetComponent<ParticleSystem> ();
 		
 		
 	}
@@ -108,5 +116,11 @@ public class SpriteControllerSprite : MonoBehaviour {
 		}
 
 
+	}
+
+	//A void that makes pEffectControl just play
+	public void ActivatePEffect()
+	{
+		pEffectControl.Play ();
 	}
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -108,6 +110,58 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &250891468
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906964364011814, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 198451265530562828, guid: 28a965c4ff7b5e449ae4cae649ac61b5,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198451265530562828, guid: 28a965c4ff7b5e449ae4cae649ac61b5,
+        type: 2}
+      propertyPath: randomSeed
+      value: -750277101
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 28a965c4ff7b5e449ae4cae649ac61b5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &330219044
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +860,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1266039469 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1675166853216650, guid: 28a965c4ff7b5e449ae4cae649ac61b5,
+    type: 2}
+  m_PrefabInternal: {fileID: 250891468}
 --- !u!1 &1266945724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1623,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: ffb09cf1b45e9924a9417fc258216f0e,
         type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: pEffectObj
+      value: 
+      objectReference: {fileID: 1266039469}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afb40b9d82a6cab43b0da7d812f7748c, type: 2}
   m_IsPrefabParent: 0
