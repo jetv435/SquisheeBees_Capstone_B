@@ -6,7 +6,7 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 	//Controls all the sprites. It's like a big sprite sheet
 	public GameObject playerSprite;
-	public GameObject classSprite;
+	public List<GameObject> classSprite = new List<GameObject>();
 	public GameObject friendSprite;
 	public List<Sprite> playerSpriteSheet = new List<Sprite>();
 	//0 Up, 1 Left, 2 Down, 3 Right
@@ -84,9 +84,14 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 	public void ClassChange(int listMark)
 	{
-		SpriteRenderer temp = classSprite.GetComponent<SpriteRenderer> ();
+		SpriteRenderer temp;
 
-		temp.sprite = classSpriteSheet [listMark];
+		for (int i = 0; i < classSprite.Count; i++) {
+			temp = classSprite [i].GetComponent <SpriteRenderer>();
+			temp.sprite = classSpriteSheet [listMark];
+		}
+
+
 	}
 
 	//A new changing function that either randomizes the player movement, or perfectly matches.
