@@ -50,10 +50,6 @@ public class RhythmCore : MonoBehaviour
     private RhythmExpectedEventInfo currExpectedEvent;
     private bool bBeatQueued = false;
 
-    // NOTE from Garrah: couples the RhythmCore to game-specific code; needs to be abstracted and decoupled
-	//Tells what arrow this core controls
-	public ARROW_TYPE whatIsCoreOf;
-
     // Use this for initialization
     void Start()
     {

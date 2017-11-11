@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowToggle : MonoBehaviour {
+abstract public class ArrowToggle : MonoBehaviour {
 
 	public bool notesOn = false;
 	public GameObject upArrow;
