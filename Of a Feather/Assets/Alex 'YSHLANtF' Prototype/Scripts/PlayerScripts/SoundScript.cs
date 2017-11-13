@@ -25,18 +25,14 @@ public class SoundScript : MonoBehaviour {
 
 	public void PlayCorrect()
 	{
-		if (Maudio.isPlaying == true) {
-			Maudio.Pause ();
-			correctnote.Play ();
-		}
+		correctnote.Play ();
+
 	}
 
 	public void PlayWrong()
 	{
-		if (Maudio.isPlaying == true) {
-			Maudio.Pause ();
-			wrongnote.Play ();
-		}
+		wrongnote.Play ();
+
 	}
 
 	public void ResumePlay(){

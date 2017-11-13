@@ -4,7 +4,12 @@ using UnityEngine.SceneManagement;
 
 
 public class GameBossCode : MonoBehaviour {
-	
+
+	private MainMenuManager MM;
+
+	void Start(){
+		MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
+	}
 	// Update is called once per frame
 	void Update () {
 
@@ -28,6 +33,6 @@ public class GameBossCode : MonoBehaviour {
 
 	public void GoToBasement(int RoomNum)
 	{
-		SceneManager.LoadScene ("Room_1");
+		StartCoroutine (MM.Transition ());
 	}
 }

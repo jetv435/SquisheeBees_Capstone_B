@@ -61,6 +61,8 @@ public class TwoDGameManager : MonoBehaviour {
 	//To determine what level it is.
 	public LEVEL_2D_NAMES nameOfLevel;
 
+	private MainMenuManager MM;
+
 	// Use this for initialization
 	void Start () {
 
@@ -78,6 +80,7 @@ public class TwoDGameManager : MonoBehaviour {
 		if (nameOfLevel != LEVEL_2D_NAMES.STAGE_2 || nameOfLevel != LEVEL_2D_NAMES.STAGE_3) {
 			arrowScrFrd = arrowObjFriend.GetComponent<ArrowTurnScript> ();
 		}
+		MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 
 		//If the enum of nameOfLevel is STAGE_2, then it sets the rhythm object.
 		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
@@ -177,12 +180,10 @@ public class TwoDGameManager : MonoBehaviour {
 		if (arrowClass == ARROW_TYPE.FRIEND) {
 			friendArrNumPrev = change;
 			callSprScr.FriendChange (friendArrNumPrev);
-			soundScr.ResumePlay ();
 		}
 		else if (arrowClass == ARROW_TYPE.CLASS) {
 			classArrNumPrev = change;
 			callSprScr.ClassChange (classArrNumPrev);
-			soundScr.ResumePlay ();
 		} 
 	}
 

@@ -9,6 +9,8 @@ TagManager:
   - NoteToggleTag
   - SoundControllerTag
   - RhythmTag
+  - FadeManager
+  - MManager
   layers:
   - Default
   - TransparentFX
