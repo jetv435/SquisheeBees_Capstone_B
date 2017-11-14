@@ -36,7 +36,7 @@ public class MainMenuManager : MonoBehaviour {
 	public IEnumerator Transition(){
 		fm.FadeIn (FadeInOutPanel, 1f);
 		yield return new WaitForSeconds (1f);
-		SceneManager.LoadScene ("Room_1");
+		SceneManager.LoadScene ("Room_3");
 	}
 
 	private IEnumerator Fadeout(){

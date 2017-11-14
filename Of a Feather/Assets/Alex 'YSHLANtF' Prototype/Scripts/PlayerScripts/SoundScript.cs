@@ -10,6 +10,8 @@ public class SoundScript : MonoBehaviour {
 	GameObject MCamera;
 	AudioSource Maudio;
 
+	bool playingCorrect = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -31,11 +33,24 @@ public class SoundScript : MonoBehaviour {
 
 	public void PlayWrong()
 	{
-		wrongnote.Play ();
+		if (playingCorrect == false) {
+			wrongnote.Play ();
+		}
 
 	}
 
 	public void ResumePlay(){
 		Maudio.UnPause ();
 	}
+
+	public void CorrectSet(bool setVar)
+	{
+		playingCorrect = setVar;
+	}
+
+	public bool CorrectGive()
+	{
+		return playingCorrect;
+	}
+		
 }
