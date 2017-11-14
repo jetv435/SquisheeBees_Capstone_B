@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_Minigame1.unity
+- path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_3.unity
   isLoaded: 1
   isActive: 1
