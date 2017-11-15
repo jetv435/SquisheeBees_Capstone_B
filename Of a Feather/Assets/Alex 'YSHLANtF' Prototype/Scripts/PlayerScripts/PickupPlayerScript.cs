@@ -15,10 +15,13 @@ public class PickupPlayerScript : MonoBehaviour {
 	public float distance = 3;
 	public float smooth = 4;
 
+	private MainMenuManager mm;
+
 	// Use this for initialization
 	void Start () {
 		MainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		mainCamCamObj = MainCamera.GetComponent<Camera> ();
+		mm = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 		
 	}
 	
@@ -28,8 +31,13 @@ public class PickupPlayerScript : MonoBehaviour {
 		if (carrying) {
 			carryFunc (carriedObj);
 			checkDropFunc ();
+			if (carrying && carriedObj.tag == "MManager") {
+				StartCoroutine (mm.SGCorutine ());
+			}
+
 		} else {
 			pickUpFunc ();
+
 		}
 		
 	}
@@ -59,6 +67,8 @@ public class PickupPlayerScript : MonoBehaviour {
 					cObjRBody.useGravity = false;
 				}
 			}
+
+	
 		}
 	}
 
