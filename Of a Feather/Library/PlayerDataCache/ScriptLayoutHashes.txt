@@ -1,4 +1,5 @@
 WindowsStandalone
+cab211a80d9740b37f9c3a9dd90f91c5 Assembly-CSharp.dll:.MainMenuManager
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -109,12 +110,14 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FadeManager
 8c9943fa90ad96c612d54568a7514e24 Assembly-CSharp.dll:.ArrowTurnScript
-a4b9eea23df15b43e8b72c294c42ecf1 Assembly-CSharp.dll:.RhythmCore
+99c8e2d3876811cf29a4e86298b1cc38 Assembly-CSharp.dll:.RhythmCore
 4b7e8f008fdcf5405e001c2722fd8b7d Assembly-CSharp.dll:.PlayerControlScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NullCommand
 eced3d06cd8b8e5053734990adeae73d Assembly-CSharp.dll:.SpawnerScript
 8681355e4d17152d88b949c1e264d009 Assembly-CSharp.dll:.TwoDMainCode
+32e8fe00b63ed946490b898f6024a2f2 Facebook.Unity.Settings.dll:Facebook.Unity.Settings.FacebookSettings
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -130,6 +133,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 2ba75e4a3c064e4304fe6581e55d8aac Assembly-CSharp.dll:.SpawnerMasterScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PickupableScript
 418c43b829c29b0c60ac2d1da5ba93d5 Assembly-CSharp.dll:.TwoDGameManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NullRhythmFeedbackListener
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
@@ -140,9 +144,10 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
+fe6b83676532bd746e1e0585e47ea6b4 Assembly-CSharp.dll:.MinigameManager_MG1
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.NotesScript
+4b3df7f33db1a7757a565e2d85db3009 Assembly-CSharp.dll:.PickupPlayerScript
 036efdc4605c98172977727a7920098b Assembly-CSharp.dll:.TestRhythmCube
 2657290e6613f96c17012bfa57ef1541 Assembly-CSharp.dll:.SoundScript
-e31aa3bde4fd3efa80015afc02a4d6a7 Assembly-CSharp.dll:.ArrowToggle
-6ee234fc7e2391ba7b374449dd306dc6 Assembly-CSharp.dll:.SpriteControllerSprite
+c0b553c505dc4890db01f1d2f92040a5 Assembly-CSharp.dll:.SpriteControllerSprite
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker

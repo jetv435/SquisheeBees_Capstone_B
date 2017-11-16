@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_Minigame1.unity
-    guid: 9455a0a674bf91c4287795639da78e61
-  - enabled: 1
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_1.unity
     guid: f50d2235676630741b03fcb7fa97bd4f
+  - enabled: 1
+    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_Minigame1.unity
+    guid: 9455a0a674bf91c4287795639da78e61
   - enabled: 1
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Room_3.unity
     guid: 8a43308e9af21344c9487afbf1c7b9a9
