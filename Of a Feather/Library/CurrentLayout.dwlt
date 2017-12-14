@@ -23,6 +23,9 @@ MonoBehaviour:
     y: 42
     width: 1920
     height: 998
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_ShowMode: 4
   m_Title: 
@@ -49,8 +52,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 950
     height: 988
+=======
+    width: 1920
+    height: 998
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     width: 1920
     height: 998
@@ -74,7 +82,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 950
+=======
+    width: 1920
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     width: 1920
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
@@ -98,8 +110,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 968
     width: 950
+=======
+    y: 978
+    width: 1920
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     y: 978
     width: 1920
@@ -127,12 +144,21 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 950
     height: 938
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 14281
+=======
+    width: 1920
+    height: 948
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 1363
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     width: 1920
     height: 948
@@ -160,12 +186,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 439
     height: 938
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
   controlID: 14385
+=======
+    width: 887
+    height: 948
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 1364
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     width: 887
     height: 948
@@ -191,8 +226,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 439
     height: 585
+=======
+    width: 887
+    height: 591
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     width: 887
     height: 591
@@ -222,9 +262,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 585
     width: 439
     height: 353
+=======
+    y: 591
+    width: 887
+    height: 357
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     y: 591
     width: 887
@@ -254,6 +300,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 439
     y: 0
     width: 234
@@ -262,6 +309,16 @@ MonoBehaviour:
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
   controlID: 14361
+=======
+    x: 887
+    y: 0
+    width: 473
+    height: 948
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
+  vertical: 1
+  controlID: 1386
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     x: 887
     y: 0
@@ -289,15 +346,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 234
     height: 515
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     width: 473
     height: 511
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_ActualView: {fileID: 17}
   m_Panes:
@@ -320,9 +383,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 515
     width: 234
     height: 423
+=======
+    y: 511
+    width: 473
+    height: 437
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     y: 511
     width: 473
@@ -350,15 +419,21 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 673
     y: 0
     width: 277
     height: 938
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     x: 1360
     y: 0
     width: 560
     height: 948
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -390,17 +465,23 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1
     y: 685
     width: 437
     height: 332
   m_MaximizeOnPlay: 1
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     x: 0
     y: 682
     width: 885
     height: 336
   m_MaximizeOnPlay: 0
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_Gizmos: 0
   m_Stats: 0
@@ -430,15 +511,21 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 437
       height: 315
     m_Scale: {x: 1.0825707, y: 1.0825707}
     m_Translation: {x: 218.5, y: 157.49998}
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
       width: 885
       height: 319
     m_Scale: {x: 0.4153646, y: 0.4153646}
     m_Translation: {x: 442.5, y: 159.5}
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -446,6 +533,7 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -201.8344
       y: -145.48703
@@ -457,6 +545,8 @@ MonoBehaviour:
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 437, y: 332}
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
       x: -1065.3291
       y: -384
       width: 2130.6582
@@ -466,6 +556,9 @@ MonoBehaviour:
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 885, y: 336}
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -502,6 +595,9 @@ MonoBehaviour:
     y: 91
     width: 885
     height: 570
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_SceneLighting: 1
   lastFramingTime: 2924.065782887592
@@ -510,9 +606,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -52.052, y: 16.5, z: 3.3999977}
     speed: 2
     m_Value: {x: -52.052, y: 16.5, z: 3.3999977}
+=======
+    m_Target: {x: 512, y: 384, z: 0}
+    speed: 2
+    m_Value: {x: 512, y: 384, z: 0}
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     m_Target: {x: 512, y: 384, z: 0}
     speed: 2
@@ -541,6 +643,7 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.29380402, y: -0.27551493, z: 0.088965975, w: -0.9110081}
     speed: 2
     m_Value: {x: -0.29380402, y: -0.27551493, z: 0.088965975, w: -0.9110082}
@@ -548,6 +651,15 @@ MonoBehaviour:
     m_Target: 165.80281
     speed: 2
     m_Value: 165.80281
+=======
+    m_Target: {x: 0.08238989, y: -0.023608686, z: 0.0018889303, w: 0.9963337}
+    speed: 2
+    m_Value: {x: 0.08238866, y: -0.023608334, z: 0.0018889022, w: 0.9963189}
+  m_Size:
+    m_Target: 789.3291
+    speed: 2
+    m_Value: 789.3291
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     m_Target: {x: 0.08238989, y: -0.023608686, z: 0.0018889303, w: 0.9963337}
     speed: 2
@@ -642,6 +754,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 442
     y: 100
     width: 230
@@ -652,6 +765,8 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: 004af9ffea4af9ff364cf9ff584cf9ff5e4cf9ff1256f9fff856f9ff4458f9ff4a58f9ff6c58f9ff4e6cf9ff1270f9fffef7f9ffb882faff386ffbff42c7feffdadbffff00000000f82f0000fe3000001e3100000032000088b1000066cb0000bacb000028cc00009ccc000096e2000014e3000012ff0000
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     x: 889
     y: 91
     width: 469
@@ -661,6 +776,9 @@ MonoBehaviour:
     m_SelectedIDs: 142d0000
     m_LastClickedID: 11540
     m_ExpandedIDs: 8af5ffff00000000b42d0000
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -707,15 +825,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 442
     y: 615
     width: 230
     height: 402
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     x: 889
     y: 602
     width: 469
     height: 416
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_SearchFilter:
     m_NameFilter: 
@@ -730,7 +854,11 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Alex 'YSHLANtF' Prototype/Rooms
+=======
+    - Assets/Alex 'YSHLANtF' Prototype/Scripts/GameManagers
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     - Assets/Alex 'YSHLANtF' Prototype/Scripts/GameManagers
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
@@ -739,8 +867,12 @@ MonoBehaviour:
   m_LastFolders: []
   m_LastFoldersGridSize: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastProjectPath: C:\Users\shepi\Desktop\Capstone Clone\SquisheeBees_Capstone_B\Of
     a Feather
+=======
+  m_LastProjectPath: E:\GitHub\SquisheeBees_Capstone_B\Of a Feather
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
   m_LastProjectPath: E:\GitHub\SquisheeBees_Capstone_B\Of a Feather
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
@@ -750,7 +882,11 @@ MonoBehaviour:
     m_SelectedIDs: f0260000
     m_LastClickedID: 9968
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a62d0000b22d0000142e00002c2e0000442e0000502e00005c2e00006e2e0000e82e0000ec2e0000002f0000022f0000122f00002c2f0000422f0000ae330000b0330000b2330000b4330000b633000038c30000
+=======
+    m_ExpandedIDs: 000000000c290000e8290000ee290000da2a0000ea2a0000022b00001e2b0000902b0000922b0000ac2b0000be2b0000d02b0000d42b00007032000072320000743200007632000078320000
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
 =======
     m_ExpandedIDs: 000000000c290000e8290000ee290000da2a0000ea2a0000022b00001e2b0000902b0000922b0000ac2b0000be2b0000d02b0000d42b00007032000072320000743200007632000078320000
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
@@ -779,15 +915,21 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 720}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 00000000a62d0000b22d0000142e00002c2e0000442e0000502e00005c2e00006e2e0000e82e0000ec2e0000002f0000022f0000122f00002c2f0000422f0000ae330000b0330000b2330000b4330000b633000038c30000
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     scrollPos: {x: 0, y: 70}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 000000000c290000e8290000ee290000da2a0000ea2a0000022b00001e2b0000902b0000922b0000ac2b0000be2b0000d02b0000d42b00007032000072320000743200007632000078320000
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -866,15 +1008,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 676
     y: 100
     width: 275
     height: 917
 =======
+=======
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
     x: 1362
     y: 91
     width: 558
     height: 927
+<<<<<<< HEAD
+>>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
+=======
 >>>>>>> parent of 4696e31... changed bits of lighting n added arrow art
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
