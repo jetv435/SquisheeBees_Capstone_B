@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567204748784340}
   m_Layer: 0
-  m_Name: Couch
+  m_Name: Couch_oldV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
