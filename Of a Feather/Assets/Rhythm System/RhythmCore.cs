@@ -205,4 +205,14 @@ public class RhythmCore : MonoBehaviour
 
         return (60.0f * this.beatTiming.ticksPerLine) / (24.0f * this.beatTiming.beatsPerMinute);
     }
+
+
+	/////
+	/// This code is merely for the prototyping of the speedup
+	/// Will delete later
+	/////
+	public bool ReturnBeatQueue()
+	{
+		return (bBeatQueued);
+	}
 }
