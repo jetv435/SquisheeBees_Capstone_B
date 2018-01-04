@@ -167,10 +167,6 @@ public class TwoDGameManager : MonoBehaviour {
 		arrowScr.disableArrow ();
 		if(nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
 			arrowScrFrd.disableArrow ();
-
-		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
-			rhyScr.beatWindowDuration--;
-		}
 	}
 
 	//A call from the arrow script to give the angle of the arrow.

@@ -105,6 +105,9 @@ public class SpriteControllerSprite : MonoBehaviour {
 			temp.sprite = playerSpriteSheet [listMark];
 		}*/
 		//If arrow_type is class, it is randomized
+        // GARRAH: What does friendMove indicate? What does this code do?
+        //  If friendMove is true, our player moves according to key-press
+        //  If friendMove is false, the player's movement is randomized
 		if (arrowClassification == ARROW_TYPE.CLASS && friendMove == false) {
 			int rand = Random.Range (0, 4);
 
