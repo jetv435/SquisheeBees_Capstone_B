@@ -126,6 +126,15 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 	}
 
+	//The same gross method in ProtoMG_DarkScript, allows the player to control their own moves.
+	public void PlayerSpriteChangeMG3(int listMark)
+	{
+		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
+
+		temp.sprite = playerSpriteSheet [listMark];
+
+	}
+
 	//A void that makes pEffectControl just play
 	public void ActivatePEffect()
 	{
