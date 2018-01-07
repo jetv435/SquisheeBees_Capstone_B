@@ -27,6 +27,9 @@ public class ProtoMG_DarkScript : MonoBehaviour {
 	//Will make another script and object if we have more than one saying
 	public string defeatestSaying;
 
+	//Just for the test arrow.
+	public GameObject arrowObject;
+
 	//How many times we want the player to struggle with the resistance until we hand them control.
 	public int resistMaximum = 5;
 	int resistVariable = 0;
@@ -58,16 +61,16 @@ public class ProtoMG_DarkScript : MonoBehaviour {
 
 			//ALEX: A gross, but simple way to test out minigame three. Shall change later after my crash course on coding.
 			if (Input.GetKeyDown (KeyCode.UpArrow)) {
-				ProtoSpriteControllerScript.PlayerSpriteChangeMG3 (0);
+				UpdateArrowAndPlayerSprites (0);
 				BackgroundFadeBackIn ();
 			} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				ProtoSpriteControllerScript.PlayerSpriteChangeMG3 (1);
+				UpdateArrowAndPlayerSprites (1);
 				BackgroundFadeBackIn ();
 			} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
-				ProtoSpriteControllerScript.PlayerSpriteChangeMG3 (2);
+				UpdateArrowAndPlayerSprites (2);
 				BackgroundFadeBackIn ();
 			} else if (Input.GetKeyDown (KeyCode.RightArrow)) {
-				ProtoSpriteControllerScript.PlayerSpriteChangeMG3 (3);
+				UpdateArrowAndPlayerSprites (3);
 				BackgroundFadeBackIn ();
 			}
 		}
@@ -86,6 +89,13 @@ public class ProtoMG_DarkScript : MonoBehaviour {
 		resistVariable++;
 	}
 
+	//A simple code that both changes the player's sprite and changes the arrow direction.
+	void UpdateArrowAndPlayerSprites(int newVar)
+	{
+		ProtoSpriteControllerScript.PlayerSpriteChangeMG3 (newVar);
+		TurnArrow (newVar);
+	}
+
 	//This is the code we can use to slowly fade back in as the player continues within the minigame.
 	//We can probably keep this in, even when cleaned up.
 	void BackgroundFadeBackIn ()
@@ -97,5 +107,18 @@ public class ProtoMG_DarkScript : MonoBehaviour {
 		deltaColor.b += changeColorValues;
 
 		BackgroundSpriteRenderer.color = deltaColor;
+	}
+
+	//Lazily done turn code. WILL CHANGE
+	public void TurnArrow(int arrowTurn)
+	{
+		float turnDegree = 90;
+
+
+		turnDegree *= arrowTurn;
+
+		arrowObject.transform.eulerAngles = new Vector3 (arrowObject.transform.eulerAngles.x, arrowObject.transform.eulerAngles.y, turnDegree);
+
+
 	}
 }
