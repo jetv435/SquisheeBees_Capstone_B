@@ -94,7 +94,7 @@ public class TwoDGameManager : MonoBehaviour {
 	void Update () {
 		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1) {
 			if (Score >= maxScoreFriend && friendSprOn == false) {
-				callSprScr.TurnOnFriendSpr ();
+				callSprScr.EnableFriendSprite ();
 				ArrowOn = true;
 				friendSprOn = true;
 				friendenter.Play ();
@@ -110,15 +110,15 @@ public class TwoDGameManager : MonoBehaviour {
 		
 	}
 
-	public bool SetArrowOn()
+	public bool getArrowOn()
 	{
 		return ArrowOn;
 	}
 
 	//Gets the arrow number from the SpawnerMaster also changes friend's sprite.
-	public void SetFriendsNumber(int setMark)
+    public void setFriendSpriteIndex(int index)
 	{
-		friendCurrSpriteIndex = setMark;
+		friendCurrSpriteIndex = index;
 		callSprScr.FriendChange (friendCurrSpriteIndex);
 
 	}
@@ -161,7 +161,7 @@ public class TwoDGameManager : MonoBehaviour {
 
 				//Due to the fact that this implicitly implies it is stage one,
 				//It calls the particle effect.
-				callSprScr.ActivatePEffect();
+				callSprScr.ActivateParticleEffect();
 			}
 		}
 		arrowScr.disableArrow ();
@@ -184,7 +184,7 @@ public class TwoDGameManager : MonoBehaviour {
 	}
 
 	//Gives the randomizer code in Rhythmcore the previous number of the class
-	public KeyCode GivePrevClassNum()
+    public KeyCode getClassPosePrevKey()
 	{
 		if (classPosePrev == 0)
 			return KeyCode.UpArrow;

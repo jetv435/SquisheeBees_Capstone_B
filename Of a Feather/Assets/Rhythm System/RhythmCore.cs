@@ -211,7 +211,7 @@ public class RhythmCore : MonoBehaviour
 	/// This code is merely for the prototyping of the speedup
 	/// Will delete later
 	/////
-	public bool ReturnBeatQueue()
+	public bool IsBeatQueued()
 	{
 		return (bBeatQueued);
 	}

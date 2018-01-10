@@ -28,8 +28,8 @@ public class SpawnerMasterScript : MonoBehaviour {
 	TwoDGameManager gameBosScr;
 
 	//To prevent repeats of the same direction of the arrows
-	int prevCall = 2;
-	int prevCallFriend = 1;
+    int prevClassPose = 2;
+    int prevFriendPose = 1;
 
 	//used to get the audio source, instead of requesting a public audiosource
 	GameObject MCamera;
@@ -69,25 +69,25 @@ public class SpawnerMasterScript : MonoBehaviour {
 			int randFriend = Random.Range (0, playerArrowList.Count);
 			Maudio.UnPause ();
 
-			while (randSpawner == prevCall) {
+			while (randSpawner == prevClassPose) {
 				randSpawner = Random.Range (0, playerArrowList.Count);
 			}
-			while (randFriend == prevCallFriend || randFriend == randSpawner || randFriend == prevCall) {
+			while (randFriend == prevFriendPose || randFriend == randSpawner || randFriend == prevClassPose) {
 				randFriend = Random.Range (0, playerArrowList.Count);
 			}
 
-			prevCall = randSpawner;
-			prevCallFriend = randFriend;
+			prevClassPose = randSpawner;
+			prevFriendPose = randFriend;
 
 			mainNote.transform.position = playerArrowList [randSpawner].transform.position;
 			callSprScr.ClassChange (randSpawner);
 
 			arrowScr.TurnArrow (randSpawner);
-			if (gameBosScr.SetArrowOn () == true) {
+			if (gameBosScr.getArrowOn () == true) {
 				arrowScrFrnd.TurnArrow (randFriend);
 			}
 
-			gameBosScr.SetFriendsNumber (randFriend);
+			gameBosScr.setFriendSpriteIndex (randFriend);
 
 		}
 			

@@ -42,60 +42,60 @@ public class SpriteControllerSprite : MonoBehaviour {
 		
 	}
 
-	public void TurnOnFriendSpr ()
+	public void EnableFriendSprite ()
 	{
 		SpriteRenderer temp = friendSprite.GetComponent<SpriteRenderer> ();
 		temp.enabled = true;
 	}
 
 	//This has the player rapidly change instead of waiting for the delay
-	public void PlayerInstantChange(int listMark)
+    public void PlayerInstantChange(int spriteIndex)
 	{
 		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
 
-		temp.sprite = playerSpriteSheet [listMark];
+		temp.sprite = playerSpriteSheet [spriteIndex];
 	}
 
-	public void PlayerChange(int listMark)
+    public void PlayerChange(int spriteIndex)
 	{
 		
 
-		StartCoroutine ("ActualChange", listMark);
+		StartCoroutine ("ActualChange", spriteIndex);
 	}
 
-	IEnumerator ActualChange (int listMark)
+    IEnumerator ActualChange (int spriteIndex)
 	{
 		yield return new WaitForSeconds (initialDelaySec);
 
 		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
 
 
-		temp.sprite = playerSpriteSheet [listMark];
+		temp.sprite = playerSpriteSheet [spriteIndex];
 
 
 
 	}
 
-	public void FriendChange(int listMark)
+    public void FriendChange(int spriteIndex)
 	{
 		SpriteRenderer temp = friendSprite.GetComponent<SpriteRenderer> ();
-		temp.sprite = friendSpriteSheet [listMark];
+		temp.sprite = friendSpriteSheet [spriteIndex];
 	}
 
-	public void ClassChange(int listMark)
+    public void ClassChange(int spriteIndex)
 	{
 		SpriteRenderer temp;
 
 		for (int i = 0; i < classSprite.Count; i++) {
 			temp = classSprite [i].GetComponent <SpriteRenderer>();
-			temp.sprite = classSpriteSheet [listMark];
+			temp.sprite = classSpriteSheet [spriteIndex];
 		}
 
 
 	}
 
 	//A new changing function that either randomizes the player movement, or perfectly matches.
-	public void masterPlayerSpriteChange(int listMark, ARROW_TYPE arrowClassification)
+    public void masterPlayerSpriteChange(int spriteIndex, ARROW_TYPE arrowClassification)
 	{
 
 		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
@@ -111,14 +111,14 @@ public class SpriteControllerSprite : MonoBehaviour {
 		if (arrowClassification == ARROW_TYPE.CLASS && friendMove == false) {
 			int rand = Random.Range (0, 4);
 
-			while (rand == listMark)
+			while (rand == spriteIndex)
 				rand = Random.Range (0, 4);
 
 			temp.sprite = playerSpriteSheet [rand];
 		}
 		else if (arrowClassification == ARROW_TYPE.FRIEND)
 		{
-			temp.sprite = playerSpriteSheet [listMark];
+			temp.sprite = playerSpriteSheet [spriteIndex];
 			friendMove = true;
 
 		}
@@ -127,16 +127,16 @@ public class SpriteControllerSprite : MonoBehaviour {
 	}
 
 	//The same gross method in ProtoMG_DarkScript, allows the player to control their own moves.
-	public void PlayerSpriteChangeMG3(int listMark)
+    public void PlayerSpriteChangeMG3(int spriteIndex)
 	{
 		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
 
-		temp.sprite = playerSpriteSheet [listMark];
+		temp.sprite = playerSpriteSheet [spriteIndex];
 
 	}
 
 	//A void that makes pEffectControl just play
-	public void ActivatePEffect()
+	public void ActivateParticleEffect()
 	{
 		pEffectControl.Play ();
 	}

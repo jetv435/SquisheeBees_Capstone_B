@@ -19,7 +19,7 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow) || 
 			Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.RightArrow)) {
 
-			if (BeatScrCall.ReturnBeatQueue () == true) {
+			if (BeatScrCall.IsBeatQueued () == true) {
 
 				BeatScrCall.beatTiming.beatsPerMinute += 5;
 				BeatScrCall.beatTiming.ticksPerLine -= 1;

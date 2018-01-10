@@ -43,12 +43,12 @@ public class SoundScript : MonoBehaviour {
 		Maudio.UnPause ();
 	}
 
-	public void CorrectSet(bool setVar)
+    public void setPlayingCorrect(bool setVar)
 	{
 		playingCorrect = setVar;
 	}
 
-	public bool CorrectGive()
+    public bool getPlayingCorrect()
 	{
 		return playingCorrect;
 	}

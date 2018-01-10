@@ -118,11 +118,11 @@ public class TwoDMainCode : MonoBehaviour {
 	}
 
 	//A function to clean up a little bit
-	void SpriteChangerFunc(int sendListMark)
+    void SpriteChangerFunc(int spriteIndex)
 	{
 		//If friend's number and PC's number match, instantly change
-		if (gameBosScr.getFriendCurrSpriteIndex() == sendListMark) {
-			callSprScr.PlayerInstantChange (sendListMark);
+		if (gameBosScr.getFriendCurrSpriteIndex() == spriteIndex) {
+			callSprScr.PlayerInstantChange (spriteIndex);
 			gameBosScr.IncreaseScore (2);
 			if (Maudio.isPlaying == true) {
 				Maudio.Pause ();
@@ -132,7 +132,7 @@ public class TwoDMainCode : MonoBehaviour {
 		}
 		//Or else delay
 		else {
-			callSprScr.PlayerChange (sendListMark);
+			callSprScr.PlayerChange (spriteIndex);
 			if (Maudio.isPlaying == true) {
 				Maudio.Pause ();
 				if (gameBosScr.friendenter.isPlaying == true) {

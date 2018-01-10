@@ -42,7 +42,7 @@ public class MinigameManager_MG1 : AOAFMinigameManager
         // activate friend
         if (this.GetScore() >= this.maxScoreFriend && this._bFriendSpriteOn == false)
         {
-            this.GetSpriteController().TurnOnFriendSpr();
+            this.GetSpriteController().EnableFriendSprite();
             this._bFriendArrowOn = true;
             this._bFriendSpriteOn = true;
             this.friendEntranceSoundSource.Play();
@@ -54,7 +54,7 @@ public class MinigameManager_MG1 : AOAFMinigameManager
             this.GetSceneChangeManager().GoToBasement(1);
         }
 
-        this.GetSpriteController().ActivatePEffect();
+        this.GetSpriteController().ActivateParticleEffect();
         this._friendArrowScript.disableArrow();
     }
 

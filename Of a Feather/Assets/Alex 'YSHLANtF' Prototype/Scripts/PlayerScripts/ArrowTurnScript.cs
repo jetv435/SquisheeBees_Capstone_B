@@ -57,7 +57,7 @@ public class ArrowTurnScript : MonoBehaviour
 		if (arrowTag == ARROW_TYPE.CLASS)
 			ownRender.enabled = true;
 		else if (arrowTag == ARROW_TYPE.FRIEND && TwoDGameManScr.GetLevelName() == TwoDGameManager.LEVEL_2D_NAMES.STAGE_1 ) {
-			if (TwoDGameManScr.SetArrowOn () == true) {
+			if (TwoDGameManScr.getArrowOn () == true) {
 				ownRender.enabled = true;
 			}
 		}
