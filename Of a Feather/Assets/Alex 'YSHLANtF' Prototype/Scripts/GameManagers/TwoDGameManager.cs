@@ -44,8 +44,8 @@ public class TwoDGameManager : MonoBehaviour {
 	bool ArrowOn = false;
 
 	//Previous calls from the arrows
-	int classArrNumPrev = 0;
-	int friendArrNumPrev = -1;
+    int classPosePrev = 0;
+	int friendPosePrev = -1;
 
 
 	//Calls the Rhythm Script, if it is on level 2. The Rhythm Script is tagged as "RhythmTag"
@@ -56,7 +56,7 @@ public class TwoDGameManager : MonoBehaviour {
 
 	//This code calls on the friend's mark, allowing it to be sent to the TwoMainCode later.
 	//SpawnerMaster gives the friends number.
-	int friendMark = -1;
+    int friendCurrSpriteIndex = -1;
 
 	//To determine what level it is.
 	public LEVEL_2D_NAMES nameOfLevel;
@@ -118,15 +118,15 @@ public class TwoDGameManager : MonoBehaviour {
 	//Gets the arrow number from the SpawnerMaster also changes friend's sprite.
 	public void SetFriendsNumber(int setMark)
 	{
-		friendMark = setMark;
-		callSprScr.FriendChange (friendMark);
+		friendCurrSpriteIndex = setMark;
+		callSprScr.FriendChange (friendCurrSpriteIndex);
 
 	}
 
 	//Sends the friend's number
-	public int SendFriendsNumber()
+	public int getFriendCurrSpriteIndex()
 	{
-		return friendMark;
+		return friendCurrSpriteIndex;
 	}
 
 	//Changes "score" as well as disables the arrows
@@ -174,25 +174,25 @@ public class TwoDGameManager : MonoBehaviour {
 	public void ChangeArrowNumber(int change, ARROW_TYPE arrowClass)
 	{
 		if (arrowClass == ARROW_TYPE.FRIEND) {
-			friendArrNumPrev = change;
-			callSprScr.FriendChange (friendArrNumPrev);
+			friendPosePrev = change;
+			callSprScr.FriendChange (friendPosePrev);
 		}
 		else if (arrowClass == ARROW_TYPE.CLASS) {
-			classArrNumPrev = change;
-			callSprScr.ClassChange (classArrNumPrev);
+			classPosePrev = change;
+			callSprScr.ClassChange (classPosePrev);
 		} 
 	}
 
 	//Gives the randomizer code in Rhythmcore the previous number of the class
 	public KeyCode GivePrevClassNum()
 	{
-		if (classArrNumPrev == 0)
+		if (classPosePrev == 0)
 			return KeyCode.UpArrow;
-		else if (classArrNumPrev == 1)
+		else if (classPosePrev == 1)
 			return KeyCode.LeftArrow;
-		else if (classArrNumPrev == 2)
+		else if (classPosePrev == 2)
 			return KeyCode.DownArrow;
-		else if (classArrNumPrev == 3)
+		else if (classPosePrev == 3)
 			return KeyCode.RightArrow;
 
 		return KeyCode.A;

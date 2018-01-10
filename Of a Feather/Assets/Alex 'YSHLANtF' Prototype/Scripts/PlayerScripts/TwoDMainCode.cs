@@ -121,7 +121,7 @@ public class TwoDMainCode : MonoBehaviour {
 	void SpriteChangerFunc(int sendListMark)
 	{
 		//If friend's number and PC's number match, instantly change
-		if (gameBosScr.SendFriendsNumber() == sendListMark) {
+		if (gameBosScr.getFriendCurrSpriteIndex() == sendListMark) {
 			callSprScr.PlayerInstantChange (sendListMark);
 			gameBosScr.IncreaseScore (2);
 			if (Maudio.isPlaying == true) {

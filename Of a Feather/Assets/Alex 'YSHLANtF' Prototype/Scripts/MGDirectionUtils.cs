@@ -15,7 +15,8 @@ public static class MGDirectionUtils
         UP,
         DOWN,
         LEFT,
-        RIGHT
+        RIGHT,
+        UNSET
     }
 
     static public UnityEngine.KeyCode KeyFromDirection(MGDirection dir)
