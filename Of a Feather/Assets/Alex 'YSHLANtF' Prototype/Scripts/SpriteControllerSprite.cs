@@ -63,18 +63,18 @@ public class SpriteControllerSprite : MonoBehaviour {
 		StartCoroutine ("ActualChange", spriteIndex);
 	}
 
-    IEnumerator ActualChange (int spriteIndex)
-	{
-		yield return new WaitForSeconds (initialDelaySec);
+ //   IEnumerator ActualChange (int spriteIndex)
+	//{
+	//	yield return new WaitForSeconds (initialDelaySec);
 
-		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
-
-
-		temp.sprite = playerSpriteSheet [spriteIndex];
+	//	SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
 
 
+	//	temp.sprite = playerSpriteSheet [spriteIndex];
 
-	}
+
+
+	//}
 
     public void FriendChange(int spriteIndex)
 	{

@@ -183,21 +183,6 @@ public class TwoDGameManager : MonoBehaviour {
 		} 
 	}
 
-	//Gives the randomizer code in Rhythmcore the previous number of the class
-    public KeyCode getClassPosePrevKey()
-	{
-		if (classPosePrev == 0)
-			return KeyCode.UpArrow;
-		else if (classPosePrev == 1)
-			return KeyCode.LeftArrow;
-		else if (classPosePrev == 2)
-			return KeyCode.DownArrow;
-		else if (classPosePrev == 3)
-			return KeyCode.RightArrow;
-
-		return KeyCode.A;
-	}
-
     public void PlayCorrectSound()
     {
         Debug.Log("Playing Correct Sound...");
