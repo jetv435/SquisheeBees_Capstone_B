@@ -46,7 +46,7 @@ abstract public class AOAFMinigameManager : AScoredGameManager
         this._mainArrowScript.disableArrow();
     }
 
-    public void SetMainArrowDirection(MGArrowUtils.MGArrowDirection dir)
+    public void SetMainArrowDirection(MGDirectionUtils.MGDirection dir)
     {
         // TODO: refactor sprite manager to take MGArrowDirection, and refactor
         //  the following line to take "dir":

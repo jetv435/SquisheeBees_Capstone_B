@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
 // -----------------------------------------------------------------------------
-// MGArrowUtils
+// MGDirectionUtils
 //
-// Description: Provides utilities for unifying arrow definitions/conversions
-//  for the dance minigames.
+// Description: Provides utilities for unifying direction
+//  definitions/conversions.
 // -----------------------------------------------------------------------------
 
-public static class MGArrowUtils
+public static class MGDirectionUtils
 {
     [System.Serializable]
-    public enum MGArrowDirection
+    public enum MGDirection
     {
         UP,
         DOWN,
@@ -18,28 +18,28 @@ public static class MGArrowUtils
         RIGHT
     }
 
-    static public UnityEngine.KeyCode KeyFromDirection(MGArrowDirection dir)
+    static public UnityEngine.KeyCode KeyFromDirection(MGDirection dir)
     {
         UnityEngine.KeyCode ret = UnityEngine.KeyCode.UpArrow;
 
         switch(dir)
         {
-            case MGArrowDirection.UP:
+            case MGDirection.UP:
                 {
                     ret = UnityEngine.KeyCode.UpArrow;
                     break;
                 }
-            case MGArrowDirection.DOWN:
+            case MGDirection.DOWN:
                 {
                     ret = UnityEngine.KeyCode.DownArrow;
                     break;
                 }
-            case MGArrowDirection.LEFT:
+            case MGDirection.LEFT:
                 {
                     ret = UnityEngine.KeyCode.LeftArrow;
                     break;
                 }
-            case MGArrowDirection.RIGHT:
+            case MGDirection.RIGHT:
                 {
                     ret = UnityEngine.KeyCode.RightArrow;
                     break;
@@ -53,30 +53,30 @@ public static class MGArrowUtils
         return ret;
     }
 
-    static public MGArrowDirection DirectionFromKey(UnityEngine.KeyCode key)
+    static public MGDirection DirectionFromKey(UnityEngine.KeyCode key)
     {
-        MGArrowDirection ret = MGArrowDirection.UP;
+        MGDirection ret = MGDirection.UP;
 
         switch (key)
         {
             case UnityEngine.KeyCode.UpArrow:
                 {
-                    ret = MGArrowDirection.UP;
+                    ret = MGDirection.UP;
                     break;
                 }
             case UnityEngine.KeyCode.DownArrow:
                 {
-                    ret = MGArrowDirection.DOWN;
+                    ret = MGDirection.DOWN;
                     break;
                 }
             case UnityEngine.KeyCode.LeftArrow:
                 {
-                    ret = MGArrowDirection.LEFT;
+                    ret = MGDirection.LEFT;
                     break;
                 }
             case UnityEngine.KeyCode.RightArrow:
                 {
-                    ret = MGArrowDirection.RIGHT;
+                    ret = MGDirection.RIGHT;
                     break;
                 }
             default:

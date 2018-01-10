@@ -77,7 +77,7 @@ public class MinigameManager_MG1 : AOAFMinigameManager
         return this._friendCurrentSpriteFrame;
     }
 
-    public void SetFriendArrowDirection(MGArrowUtils.MGArrowDirection dir)
+    public void SetFriendArrowDirection(MGDirectionUtils.MGDirection dir)
     {
         // TODO: refactor sprite manager to take MGArrowDirection, and refactor
         //  the following line to take "dir":
