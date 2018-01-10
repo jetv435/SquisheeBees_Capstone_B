@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwoDGameManager : MonoBehaviour {
-
+public class TwoDGameManager : MonoBehaviour
+{
 	//So we can keep the base code with some levels, as well as have some
 	//new stuff leading to the next.
 	public enum LEVEL_2D_NAMES
@@ -13,8 +13,6 @@ public class TwoDGameManager : MonoBehaviour {
 		STAGE_3,
 		STAGE_4,
 	}
-
-
 
 	int Score = 0;
 	public int maxScoreFriend = 3;
@@ -47,12 +45,10 @@ public class TwoDGameManager : MonoBehaviour {
     int classPosePrev = 0;
 	int friendPosePrev = -1;
 
-
 	//Calls the Rhythm Script, if it is on level 2. The Rhythm Script is tagged as "RhythmTag"
 	//The two variables, one to get the object. The other gets the RhythmCore script.
 	GameObject rhyGObj;
 	RhythmCore rhyScr;
-
 
 	//This code calls on the friend's mark, allowing it to be sent to the TwoMainCode later.
 	//SpawnerMaster gives the friends number.
@@ -64,8 +60,8 @@ public class TwoDGameManager : MonoBehaviour {
 	private MainMenuManager MM;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
 		callSpriteBoss = GameObject.FindGameObjectWithTag ("SpriteController");
 		callSprScr = callSpriteBoss.GetComponent<SpriteControllerSprite> ();
 
@@ -76,24 +72,31 @@ public class TwoDGameManager : MonoBehaviour {
 		soundScr = soundObj.GetComponent<SoundScript> ();
 
 		arrowScr = arrowObj.GetComponent<ArrowTurnScript>();
+
 		//If it isn't level 2 or 3, get the arrow's script of the friend.
-		if (nameOfLevel != LEVEL_2D_NAMES.STAGE_2 || nameOfLevel != LEVEL_2D_NAMES.STAGE_3) {
+		if (nameOfLevel != LEVEL_2D_NAMES.STAGE_2 || nameOfLevel != LEVEL_2D_NAMES.STAGE_3)
+        {
 			arrowScrFrd = arrowObjFriend.GetComponent<ArrowTurnScript> ();
 		}
+
+        // Main Menu Manager
 		MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 
 		//If the enum of nameOfLevel is STAGE_2, then it sets the rhythm object.
-		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
+		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2)
+        {
 			rhyGObj = GameObject.FindGameObjectWithTag ("RhythmTag");
 			rhyScr = rhyGObj.GetComponent<RhythmCore>();
 		}
-
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1) {
-			if (Score >= maxScoreFriend && friendSprOn == false) {
+	void Update ()
+    {
+		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
+        {
+			if (Score >= maxScoreFriend && friendSprOn == false)
+            {
 				callSprScr.EnableFriendSprite ();
 				bFriendArrowEnabled = true;
 				friendSprOn = true;
@@ -102,12 +105,10 @@ public class TwoDGameManager : MonoBehaviour {
 		}
 
 		//Need to change it later, once we get animations
-		if (Score >= maxScoreNeededInTotal) {
+		if (Score >= maxScoreNeededInTotal)
+        {
 			sceneControl.GoToBasement (1);
 		}
-
-
-		
 	}
 
 	public bool IsFriendArrowEnabled()
@@ -120,41 +121,46 @@ public class TwoDGameManager : MonoBehaviour {
 	{
 		friendCurrSpriteIndex = index;
 		callSprScr.FriendChange (friendCurrSpriteIndex);
-
 	}
 
-	//Sends the friend's number
-	public int getFriendCurrSpriteIndex()
-	{
-		return friendCurrSpriteIndex;
-	}
+    public void setFriendPose(MGDirectionUtils.MGDirection poseDirection)
+    {
+        // TODO Replace this implementation to remove cast
+        this.setFriendSpriteIndex((int)poseDirection);
+    }
 
 	//Changes "score" as well as disables the arrows
 	public void IncreaseScore(int scoreIncrease)
 	{
-
-		if (friendSprOn == false) {
+		if (friendSprOn == false)
+        {
 			Score += scoreIncrease;
-		} else {
-			if (scoreIncrease == 2) {
+		}
+        else
+        {
+			if (scoreIncrease == 2)
+            {
 				scoreIncrease = 1;
 				Score += scoreIncrease;
-
-
 			}
 		}
+
 		arrowScr.disableArrow ();
-		if(nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
-			arrowScrFrd.disableArrow ();
+
+        if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
+        {
+            arrowScrFrd.disableArrow();
+        }
 	}
 
 	//New score func that checks on the arrow type now
 	public void IncreaseScore(ARROW_TYPE arrowEnum)
 	{
-
-		if (friendSprOn == false) {
+		if (friendSprOn == false)
+        {
 			Score++;
-		} else {
+		} else
+        {
 			if(arrowEnum == ARROW_TYPE.FRIEND)
 			{
 				Score++;
@@ -164,34 +170,46 @@ public class TwoDGameManager : MonoBehaviour {
 				callSprScr.ActivateParticleEffect();
 			}
 		}
+
 		arrowScr.disableArrow ();
-		if(nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
-			arrowScrFrd.disableArrow ();
+
+        if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
+        {
+            arrowScrFrd.disableArrow();
+        }
 	}
 
 	//A call from the arrow script to give the angle of the arrow.
 	//Can be reused with the ARROW_TYPE enum, with it also changing the friend arrow previous arrow.
 	public void ChangeArrowNumber(int change, ARROW_TYPE arrowClass)
 	{
-		if (arrowClass == ARROW_TYPE.FRIEND) {
+		if (arrowClass == ARROW_TYPE.FRIEND)
+        {
 			friendPosePrev = change;
 			callSprScr.FriendChange (friendPosePrev);
 		}
-		else if (arrowClass == ARROW_TYPE.CLASS) {
+		else if (arrowClass == ARROW_TYPE.CLASS)
+        {
 			classPosePrev = change;
 			callSprScr.ClassChange (classPosePrev);
 		} 
 	}
 
+    public void ChangeCharacterPose(MGDirectionUtils.MGDirection poseDirection, ARROW_TYPE arrowType)
+    {
+        // TODO Replace this implementation to remove cast
+        this.ChangeArrowNumber((int)poseDirection, arrowType);
+    }
+
     public void PlayCorrectSound()
     {
-        Debug.Log("Playing Correct Sound...");
+        Debug.Log("Playing \"Correct Key\" Sound...");
         soundScr.PlayCorrect();
     }
 
     public void PlayWrongSound()
     {
-        Debug.Log("Playing Wrong Sound...");
+        Debug.Log("Playing \"Wrong Key\" Sound...");
         soundScr.PlayWrong();
     }
 

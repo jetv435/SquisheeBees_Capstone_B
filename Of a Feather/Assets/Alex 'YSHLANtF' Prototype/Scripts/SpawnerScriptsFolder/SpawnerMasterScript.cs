@@ -87,7 +87,9 @@ public class SpawnerMasterScript : MonoBehaviour {
 				arrowScrFrnd.TurnArrow (randFriend);
 			}
 
-			gameBosScr.setFriendSpriteIndex (randFriend);
+            // TODO Replace this implementation to remove cast
+			//gameBosScr.setFriendSpriteIndex (randFriend);
+            gameBosScr.setFriendPose((MGDirectionUtils.MGDirection)randFriend);
 
 		}
 			

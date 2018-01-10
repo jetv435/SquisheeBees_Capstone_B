@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿// -----------------------------------------------------------------------------
+// NOTE: As far as I know, this script is no longer used in our current
+//  prototype. Should it be removed completely? -Garrah
+// -----------------------------------------------------------------------------
+
+/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -128,7 +134,6 @@ public class TwoDMainCode : MonoBehaviour {
 				Maudio.Pause ();
 				correctnote.Play ();
 			}
-
 		}
 		//Or else delay
 		else {
@@ -142,7 +147,5 @@ public class TwoDMainCode : MonoBehaviour {
 			}
 		}
 	}
-		
-
-
 }
+*/
