@@ -83,7 +83,7 @@ public class SpawnerMasterScript : MonoBehaviour {
 			callSprScr.ClassChange (randSpawner);
 
 			arrowScr.TurnArrow (randSpawner);
-			if (gameBosScr.getArrowOn () == true) {
+			if (gameBosScr.IsFriendArrowEnabled () == true) {
 				arrowScrFrnd.TurnArrow (randFriend);
 			}
 

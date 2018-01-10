@@ -41,7 +41,7 @@ public class TwoDGameManager : MonoBehaviour {
 	ArrowTurnScript arrowScrFrd;
 
 	//A bool to send to SpawnMaster.
-	bool ArrowOn = false;
+	bool bFriendArrowEnabled = false;
 
 	//Previous calls from the arrows
     int classPosePrev = 0;
@@ -95,7 +95,7 @@ public class TwoDGameManager : MonoBehaviour {
 		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1) {
 			if (Score >= maxScoreFriend && friendSprOn == false) {
 				callSprScr.EnableFriendSprite ();
-				ArrowOn = true;
+				bFriendArrowEnabled = true;
 				friendSprOn = true;
 				friendenter.Play ();
 			}
@@ -110,9 +110,9 @@ public class TwoDGameManager : MonoBehaviour {
 		
 	}
 
-	public bool getArrowOn()
+	public bool IsFriendArrowEnabled()
 	{
-		return ArrowOn;
+        return bFriendArrowEnabled;
 	}
 
 	//Gets the arrow number from the SpawnerMaster also changes friend's sprite.
@@ -198,20 +198,17 @@ public class TwoDGameManager : MonoBehaviour {
 		return KeyCode.A;
 	}
 
-	//Gets the sound and plays it. Mainly for the correct and incorrect notes.
-	public void SendSoundToPlayAtSoundScript(int binaryRightWrong)
-	{
-		Debug.Log (binaryRightWrong);
-		//Wrong
-		if (binaryRightWrong == 0) {
-			soundScr.PlayWrong ();
-		}
-		//right
-		else {
-			soundScr.PlayCorrect ();
-		}
-	}
+    public void PlayCorrectSound()
+    {
+        Debug.Log("Playing Correct Sound...");
+        soundScr.PlayCorrect();
+    }
 
+    public void PlayWrongSound()
+    {
+        Debug.Log("Playing Wrong Sound...");
+        soundScr.PlayWrong();
+    }
 
 	//Gives the level's name
 	public LEVEL_2D_NAMES GetLevelName()

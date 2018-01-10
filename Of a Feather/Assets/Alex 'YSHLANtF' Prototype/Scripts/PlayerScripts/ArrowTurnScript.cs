@@ -57,7 +57,7 @@ public class ArrowTurnScript : MonoBehaviour
 		if (arrowTag == ARROW_TYPE.CLASS)
 			ownRender.enabled = true;
 		else if (arrowTag == ARROW_TYPE.FRIEND && TwoDGameManScr.GetLevelName() == TwoDGameManager.LEVEL_2D_NAMES.STAGE_1 ) {
-			if (TwoDGameManScr.getArrowOn () == true) {
+			if (TwoDGameManScr.IsFriendArrowEnabled () == true) {
 				ownRender.enabled = true;
 			}
 		}
@@ -81,15 +81,14 @@ public class ArrowTurnScript : MonoBehaviour
 	public void HitNotify()
 	{
 		// Do something when user hits correct input
-		//Debug.Log("Hit");
 
 		TwoDGameManScr.IncreaseScore (arrowTag);
 		callSprScr.masterPlayerSpriteChange (arrowNumber, arrowTag);
 		if (arrowTag == ARROW_TYPE.CLASS) {
-			TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
+            TwoDGameManScr.PlayWrongSound();
 		}
 		else if (arrowTag == ARROW_TYPE.FRIEND) {
-			TwoDGameManScr.SendSoundToPlayAtSoundScript (1);
+            TwoDGameManScr.PlayCorrectSound();
 		}
 
 	}
@@ -97,18 +96,13 @@ public class ArrowTurnScript : MonoBehaviour
 	public void MissNotify()
 	{
 		// Do something when user hits incorrect input
-		//Debug.Log("Miss");
-		TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
-
-
-
+        TwoDGameManScr.PlayWrongSound();
 	}
 
 	public void TimeoutNotify()
 	{
-		// Do something when beat times out
-		//Debug.Log("Timeout");
-		TwoDGameManScr.SendSoundToPlayAtSoundScript (0);
+        // Do something when beat times out
+        TwoDGameManScr.PlayWrongSound();
 
 		//If the stage is 2, then it also counts for the score, to make it faster and faster.
 		//Uses all of the game Manager's scripts
