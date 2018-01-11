@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 4159918523463928}
   - component: {fileID: 33471244205511090}
   - component: {fileID: 23826748295784812}
+  - component: {fileID: 65629973267315958}
   m_Layer: 0
   m_Name: cubby_cabinet
   m_TagString: Untagged
@@ -1993,3 +1994,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1422276032144488}
   m_Mesh: {fileID: 4300074, guid: 03f43871124360043bf0fe93f452c907, type: 3}
+--- !u!65 &65629973267315958
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1263277593567032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.114006504, y: 0.04922905, z: 0.021404097}
+  m_Center: {x: 0, y: 0, z: 9.313226e-10}
