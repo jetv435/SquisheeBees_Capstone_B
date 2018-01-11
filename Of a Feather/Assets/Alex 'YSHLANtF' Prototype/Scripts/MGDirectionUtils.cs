@@ -56,7 +56,7 @@ public static class MGDirectionUtils
 
     static public MGDirection DirectionFromKey(UnityEngine.KeyCode key)
     {
-        MGDirection ret = MGDirection.UP;
+        MGDirection ret = MGDirection.UNSET;
 
         switch (key)
         {
@@ -87,5 +87,15 @@ public static class MGDirectionUtils
                 }
         }
         return ret;
+    }
+
+    static public int IntFromDirection(MGDirection dir)
+    {
+        return (int)dir;
+    }
+
+    static public MGDirection DirectionFromInt(int val)
+    {
+        return (MGDirection)val;
     }
 }

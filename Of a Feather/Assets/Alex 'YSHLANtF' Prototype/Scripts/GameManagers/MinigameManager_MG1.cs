@@ -17,6 +17,7 @@
 //  AOAFMinigameManager script, rather than through this script.
 // -----------------------------------------------------------------------------
 
+/*
 public class MinigameManager_MG1 : AOAFMinigameManager
 {
     public int maxScoreFriend = 3;
@@ -87,3 +88,4 @@ public class MinigameManager_MG1 : AOAFMinigameManager
         this.GetSoundController().ResumePlay();
     }
 }
+*/

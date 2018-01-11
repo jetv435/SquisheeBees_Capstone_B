@@ -7,12 +7,13 @@ public class GameBossCode : MonoBehaviour {
 
 	private MainMenuManager MM;
 
-	void Start(){
+	void Start()
+    {
 		MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 	}
 	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+    {
 		if (Input.GetKeyDown (KeyCode.Keypad1)) {
 			SceneManager.LoadScene ("Room_1");
 		}

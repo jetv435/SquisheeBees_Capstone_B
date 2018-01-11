@@ -42,8 +42,8 @@ public class TwoDGameManager : MonoBehaviour
 	bool bFriendArrowEnabled = false;
 
 	//Previous calls from the arrows
-    int classPosePrev = 0;
-	int friendPosePrev = -1;
+    MGDirectionUtils.MGDirection classPosePrev = MGDirectionUtils.MGDirection.UNSET;
+    MGDirectionUtils.MGDirection friendPosePrev = MGDirectionUtils.MGDirection.UNSET;
 
 	//Calls the Rhythm Script, if it is on level 2. The Rhythm Script is tagged as "RhythmTag"
 	//The two variables, one to get the object. The other gets the RhythmCore script.
@@ -52,7 +52,7 @@ public class TwoDGameManager : MonoBehaviour
 
 	//This code calls on the friend's mark, allowing it to be sent to the TwoMainCode later.
 	//SpawnerMaster gives the friends number.
-    int friendCurrSpriteIndex = -1;
+    MGDirectionUtils.MGDirection friendCurrPose = MGDirectionUtils.MGDirection.UNSET;
 
 	//To determine what level it is.
 	public LEVEL_2D_NAMES nameOfLevel;
@@ -116,17 +116,11 @@ public class TwoDGameManager : MonoBehaviour
         return bFriendArrowEnabled;
 	}
 
-	//Gets the arrow number from the SpawnerMaster also changes friend's sprite.
-    public void setFriendSpriteIndex(int index)
-	{
-		friendCurrSpriteIndex = index;
-		callSprScr.FriendChange (friendCurrSpriteIndex);
-	}
-
+    // Sets Friend's pose
     public void setFriendPose(MGDirectionUtils.MGDirection poseDirection)
     {
-        // TODO Replace this implementation to remove cast
-        this.setFriendSpriteIndex((int)poseDirection);
+        friendCurrPose = poseDirection;
+        callSprScr.setFriendPose(poseDirection);
     }
 
 	//Changes "score" as well as disables the arrows
@@ -179,26 +173,18 @@ public class TwoDGameManager : MonoBehaviour
         }
 	}
 
-	//A call from the arrow script to give the angle of the arrow.
-	//Can be reused with the ARROW_TYPE enum, with it also changing the friend arrow previous arrow.
-	public void ChangeArrowNumber(int change, ARROW_TYPE arrowClass)
-	{
-		if (arrowClass == ARROW_TYPE.FRIEND)
-        {
-			friendPosePrev = change;
-			callSprScr.FriendChange (friendPosePrev);
-		}
-		else if (arrowClass == ARROW_TYPE.CLASS)
-        {
-			classPosePrev = change;
-			callSprScr.ClassChange (classPosePrev);
-		} 
-	}
-
     public void ChangeCharacterPose(MGDirectionUtils.MGDirection poseDirection, ARROW_TYPE arrowType)
     {
-        // TODO Replace this implementation to remove cast
-        this.ChangeArrowNumber((int)poseDirection, arrowType);
+        if (arrowType == ARROW_TYPE.FRIEND)
+        {
+            friendPosePrev = poseDirection;
+            callSprScr.setFriendPose (friendPosePrev);
+        }
+        else if (arrowType == ARROW_TYPE.CLASS)
+        {
+            classPosePrev = poseDirection;
+            callSprScr.setClassPose (classPosePrev);
+        } 
     }
 
     public void PlayCorrectSound()

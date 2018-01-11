@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿// -----------------------------------------------------------------------------
+// NOTE: As far as I know, this script is no longer used in our current
+//  prototype. Should it be removed completely? -Garrah
+// -----------------------------------------------------------------------------
+
+/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -61,18 +67,24 @@ public class SpawnerMasterScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-		if (mainTimer <= 0) {
+	void Update ()
+    {
+        // TODO limit calls to DirectionFromInt() to 1 or 2 cases for each
+        //  randomized value
+		if (mainTimer <= 0)
+        {
 			mainTimer = timerCoolDownSecret + Random.Range (3, 5);
 			int randSpawner = Random.Range (0, playerArrowList.Count);
 			int randFriend = Random.Range (0, playerArrowList.Count);
 			Maudio.UnPause ();
 
-			while (randSpawner == prevClassPose) {
+			while (randSpawner == prevClassPose)
+            {
 				randSpawner = Random.Range (0, playerArrowList.Count);
 			}
-			while (randFriend == prevFriendPose || randFriend == randSpawner || randFriend == prevClassPose) {
+
+			while (randFriend == prevFriendPose || randFriend == randSpawner || randFriend == prevClassPose)
+            {
 				randFriend = Random.Range (0, playerArrowList.Count);
 			}
 
@@ -80,22 +92,18 @@ public class SpawnerMasterScript : MonoBehaviour {
 			prevFriendPose = randFriend;
 
 			mainNote.transform.position = playerArrowList [randSpawner].transform.position;
-			callSprScr.ClassChange (randSpawner);
+            callSprScr.setClassPose(MGDirectionUtils.DirectionFromInt(randSpawner));
 
-			arrowScr.TurnArrow (randSpawner);
-			if (gameBosScr.IsFriendArrowEnabled () == true) {
-				arrowScrFrnd.TurnArrow (randFriend);
+            arrowScr.TurnArrow (MGDirectionUtils.DirectionFromInt(randSpawner));
+			if (gameBosScr.IsFriendArrowEnabled () == true)
+            {
+                arrowScrFrnd.TurnArrow (MGDirectionUtils.DirectionFromInt(randFriend));
 			}
 
-            // TODO Replace this implementation to remove cast
-			//gameBosScr.setFriendSpriteIndex (randFriend);
-            gameBosScr.setFriendPose((MGDirectionUtils.MGDirection)randFriend);
-
+            gameBosScr.setFriendPose(MGDirectionUtils.DirectionFromInt(randFriend));
 		}
-			
-
-		mainTimer -= Time.deltaTime;
 		
-
+		mainTimer -= Time.deltaTime;
 	}
 }
+*/

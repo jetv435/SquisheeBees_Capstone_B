@@ -13,33 +13,31 @@ public class SoundScript : MonoBehaviour {
 	bool playingCorrect = false;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
 		MCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		Maudio = MCamera.GetComponent<AudioSource> ();
-		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {}
 
 	public void PlayCorrect()
 	{
 		correctnote.Play ();
-
 	}
 
 	public void PlayWrong()
 	{
-		if (playingCorrect == false) {
+		if (playingCorrect == false)
+        {
 			wrongnote.Play ();
 		}
-
 	}
 
-	public void ResumePlay(){
+	public void ResumePlay()
+    {
 		Maudio.UnPause ();
 	}
 
@@ -52,5 +50,4 @@ public class SoundScript : MonoBehaviour {
 	{
 		return playingCorrect;
 	}
-		
 }
