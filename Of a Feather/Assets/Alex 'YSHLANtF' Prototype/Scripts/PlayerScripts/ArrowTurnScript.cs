@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public enum ARROW_TYPE
 {
 	CLASS,
 	FRIEND,
-	SELF
+	SELF,
+    UNSET
 }
 
 public class ArrowTurnScript : MonoBehaviour 
-
 , IRhythmFeedbackListener
 , IRhythmPromptListener
 {
@@ -33,7 +32,6 @@ public class ArrowTurnScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-
 		TwoDGameManObj = GameObject.FindGameObjectWithTag ("GameControl2D");
 		TwoDGameManScr = TwoDGameManObj.GetComponent<TwoDGameManager> ();
 
@@ -43,7 +41,6 @@ public class ArrowTurnScript : MonoBehaviour
 		ownRender = gameObject.GetComponent<SpriteRenderer> ();
 
 		ownRender.enabled = false;
-		
 	}
 	
 	// Update is called once per frame
@@ -82,7 +79,9 @@ public class ArrowTurnScript : MonoBehaviour
     public void TurnArrow(MGDirectionUtils.MGDirection direction)
     {
         if (arrowTag == ARROW_TYPE.CLASS)
+        {
             ownRender.enabled = true;
+        }
         else if (arrowTag == ARROW_TYPE.FRIEND && TwoDGameManScr.GetLevelName() == TwoDGameManager.LEVEL_2D_NAMES.STAGE_1)
         {
             if (TwoDGameManScr.IsFriendArrowEnabled() == true)
@@ -104,7 +103,6 @@ public class ArrowTurnScript : MonoBehaviour
 	{
 		ownRender.enabled = false;
 	}
-
 
 	public void HitNotify()
 	{
@@ -144,7 +142,6 @@ public class ArrowTurnScript : MonoBehaviour
 	public void PromptNotify(RhythmCore.RhythmExpectedEventInfo eventInfo)
 	{
         // Do something when a beat is queued up (we enter a beat window)
-        //Debug.Log("Prompt");
         TurnArrow(MGDirectionUtils.DirectionFromKey(eventInfo.expectedKey));
 	}
 }

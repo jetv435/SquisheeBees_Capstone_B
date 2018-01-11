@@ -123,30 +123,6 @@ public class TwoDGameManager : MonoBehaviour
         callSprScr.setFriendPose(poseDirection);
     }
 
-	//Changes "score" as well as disables the arrows
-	public void IncreaseScore(int scoreIncrease)
-	{
-		if (friendSprOn == false)
-        {
-			Score += scoreIncrease;
-		}
-        else
-        {
-			if (scoreIncrease == 2)
-            {
-				scoreIncrease = 1;
-				Score += scoreIncrease;
-			}
-		}
-
-		arrowScr.disableArrow ();
-
-        if (nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
-        {
-            arrowScrFrd.disableArrow();
-        }
-	}
-
 	//New score func that checks on the arrow type now
 	public void IncreaseScore(ARROW_TYPE arrowEnum)
 	{

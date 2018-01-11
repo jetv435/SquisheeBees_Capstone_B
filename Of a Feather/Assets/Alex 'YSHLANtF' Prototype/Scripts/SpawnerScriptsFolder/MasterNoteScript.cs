@@ -1,6 +1,13 @@
-﻿using System.Collections;
+﻿// -----------------------------------------------------------------------------
+// NOTE: As far as I know, this script is no longer used in our current
+//  prototype. Should it be removed completely? -Garrah
+// -----------------------------------------------------------------------------
+
+/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class MasterNoteScript : MonoBehaviour {
 
@@ -53,3 +60,4 @@ public class MasterNoteScript : MonoBehaviour {
 
 	}
 }
+*/
