@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class PickupableScript : MonoBehaviour {
 
+	//Calls its own rigidbody
+	Rigidbody ownRB;
+
 	// Use this for initialization
 	void Start () {
+
+		ownRB = this.gameObject.GetComponent<Rigidbody> ();
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	// FixedUpdate
+	void FixedUpdate () {
+
+
 		
 	}
+
+	public void SetVelocity_PutDown (Vector3 newVelocity)
+	{
+
+		ownRB.velocity = newVelocity;
+
+	}
+		
 }

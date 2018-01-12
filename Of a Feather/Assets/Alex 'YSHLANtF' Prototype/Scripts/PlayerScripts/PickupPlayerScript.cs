@@ -26,7 +26,7 @@ public class PickupPlayerScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		if (carrying) {
 			carryFunc (carriedObj);
@@ -81,7 +81,15 @@ public class PickupPlayerScript : MonoBehaviour {
 
 	void dropObject()
 	{
+		//Allows the other object to get a new velocity
+		PickupableScript callVelocityFunction;
+		callVelocityFunction = cObjRBody.GetComponent<PickupableScript> ();
+
+
 		carrying = false;
+
+		//Sets a new velocity
+		callVelocityFunction.SetVelocity_PutDown(cObjRBody.velocity);
 
 		cObjRBody.useGravity = true;
 		cObjRBody = null;

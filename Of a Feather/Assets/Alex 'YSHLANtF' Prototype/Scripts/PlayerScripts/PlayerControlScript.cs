@@ -8,6 +8,8 @@ public class PlayerControlScript : MonoBehaviour {
 	public GameObject cameraMain;
 	CameraControlScr cameraMainScr;
 
+
+
 	Quaternion rotCam;
 
 	// Use this for initialization
@@ -43,4 +45,37 @@ public class PlayerControlScript : MonoBehaviour {
 		transform.position += direction;
 
 	}
+
+	//If player impacts other object, that has rigidbody, it gets pushed away.
+	void OnCollisionEnter(Collision other)
+	{
+		if (other.rigidbody != null) {
+			Rigidbody objectRigidBody = other.rigidbody;
+
+			Vector3 forceAway;
+
+			forceAway = other.transform.position - transform.position;
+
+			forceAway.y = other.transform.position.y;
+
+			objectRigidBody.AddForce (forceAway * 20 * objectRigidBody.mass);
+		}
+	}
+
+	void OnCollisionStay(Collision other)
+	{
+		if (other.rigidbody != null) {
+			Rigidbody objectRigidBody = other.rigidbody;
+
+			Vector3 forceAway;
+
+			forceAway = other.transform.position - transform.position;
+
+			forceAway.y = other.transform.position.y;
+
+			objectRigidBody.AddForce (forceAway * 20 * objectRigidBody.mass);
+		}
+	}
+
+
 }

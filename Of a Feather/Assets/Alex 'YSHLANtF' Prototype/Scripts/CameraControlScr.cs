@@ -29,6 +29,8 @@ public class CameraControlScr : MonoBehaviour {
 
 	Quaternion originalRotation;
 
+	public GameObject physicalBody;
+
 	void Update ()
 	{
 		if (axes == RotationAxes.MouseXAndY)
@@ -109,6 +111,15 @@ public class CameraControlScr : MonoBehaviour {
 			Quaternion yQuaternion = Quaternion.AngleAxis (rotAverageY, Vector3.left);
 			transform.localRotation = originalRotation * yQuaternion;
 		}
+
+
+		TurnPhysicalBody ();
+	}
+
+	void FixedUpdate()
+	{
+		
+
 	}
 
 	void Start ()
@@ -136,6 +147,14 @@ public class CameraControlScr : MonoBehaviour {
 	public Quaternion giveRotations()
 	{
 		return transform.localRotation;
+	}
+
+
+	//Alex's code
+	void TurnPhysicalBody()
+	{
+		physicalBody.transform.rotation *= Quaternion.Euler (0f, Input.GetAxis ("Mouse X") * sensitivityX, 0f);
+
 	}
 }
 
