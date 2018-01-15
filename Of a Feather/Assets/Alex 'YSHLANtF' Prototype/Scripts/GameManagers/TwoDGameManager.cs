@@ -175,6 +175,12 @@ public class TwoDGameManager : MonoBehaviour
         soundScr.PlayWrong();
     }
 
+	//A function to give whether or not the friend sprite is on.
+	public bool Get_friendSprOn()
+	{
+		return friendSprOn;
+	}
+
 	//Gives the level's name
 	public LEVEL_2D_NAMES GetLevelName()
 	{

@@ -112,7 +112,8 @@ public class ArrowTurnScript : MonoBehaviour
         callSprScr.setPlayerSpritePose (arrowDirection, arrowTag);
 		if (arrowTag == ARROW_TYPE.CLASS)
         {
-            TwoDGameManScr.PlayWrongSound();
+			if(TwoDGameManScr.Get_friendSprOn() == false)
+            	TwoDGameManScr.PlayWrongSound();
 		}
 		else if (arrowTag == ARROW_TYPE.FRIEND)
         {
@@ -123,7 +124,10 @@ public class ArrowTurnScript : MonoBehaviour
 	public void MissNotify()
 	{
 		// Do something when user hits incorrect input
-        TwoDGameManScr.PlayWrongSound();
+		if (arrowTag != ARROW_TYPE.CLASS && TwoDGameManScr.Get_friendSprOn () == false)
+			TwoDGameManScr.PlayWrongSound ();
+		else if (arrowTag == ARROW_TYPE.FRIEND)
+			TwoDGameManScr.PlayWrongSound ();
 	}
 
 	public void TimeoutNotify()
