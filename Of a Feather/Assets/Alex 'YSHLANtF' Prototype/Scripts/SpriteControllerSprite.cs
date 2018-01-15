@@ -153,4 +153,13 @@ public class SpriteControllerSprite : MonoBehaviour {
 	{
 		pEffectControl.Play ();
 	}
+
+
+	//A function which grabs the list of classmates and sends it. For MG1_ClassMove
+	public List<GameObject> getListGameClass()
+	{
+
+		return classSprite;
+
+	}
 }

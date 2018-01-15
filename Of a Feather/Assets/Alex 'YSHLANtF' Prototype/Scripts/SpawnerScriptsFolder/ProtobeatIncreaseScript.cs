@@ -7,9 +7,14 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 	public GameObject BeatObjCall;
 	RhythmCore BeatScrCall;
 
+	public GameObject lightControllerObject;
+	LightControlMG2Script lightControlScript;
+
 	// Use this for initialization
 	void Start () {
 		BeatScrCall = BeatObjCall.GetComponent<RhythmCore> ();
+
+		lightControlScript = lightControllerObject.GetComponent<LightControlMG2Script> ();
 
 	}
 	
@@ -26,6 +31,8 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 
 				if (BeatScrCall.beatTiming.ticksPerLine <= 0)
 					BeatScrCall.beatTiming.ticksPerLine = 1;
+
+				lightControlScript.UpdateLightsAndBackground ();
 			}
 		}
 		
