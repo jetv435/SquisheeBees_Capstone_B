@@ -524,6 +524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeInOutPanel: {fileID: 1691055026}
   Introfade: {fileID: 972197133}
+  previous: 0
+  nextroom: 0
 --- !u!65 &150573939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -990,6 +992,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeInOutPanel: {fileID: 1691055026}
   Introfade: {fileID: 972197133}
+  previous: 0
+  nextroom: 1
 --- !u!114 &350973250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,8 +1030,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0050687427, y: 0.00982625, z: 0.00808292}
-  m_Center: {x: 0.0003982382, y: 0.003620684, z: 0.0027490265}
+  m_Size: {x: 0.0074906712, y: 0.00982625, z: 0.009027854}
+  m_Center: {x: -0.00081270013, y: 0.003620684, z: 0.0032214795}
 --- !u!1 &387386764
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,19 +24,31 @@ public class GameBossCode : MonoBehaviour {
 			SceneManager.LoadScene ("Basement0");
 		}
 		else if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			SceneManager.LoadScene ("Room_Minigame1");
-		}
-		else if (Input.GetKeyDown (KeyCode.Alpha3)) {
 			SceneManager.LoadScene ("Basement1");
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha4)) {
-			SceneManager.LoadScene ("Room_Minigame2");
+		else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			SceneManager.LoadScene ("Room_Minigame1");
 		}
-		else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+		else if (Input.GetKeyDown (KeyCode.Alpha4)) {
 			SceneManager.LoadScene ("Basement2");
 		}
+		else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			SceneManager.LoadScene ("Basement3");
+		}
 		else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			SceneManager.LoadScene ("Room_Minigame2");
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+			SceneManager.LoadScene ("Basement4");
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha8)) {
 			SceneManager.LoadScene ("Room_Minigame3");
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha9)) {
+			SceneManager.LoadScene ("Basement5");
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha0)) {
+			SceneManager.LoadScene ("Room_Minigame4");
 		}
 	}
 
