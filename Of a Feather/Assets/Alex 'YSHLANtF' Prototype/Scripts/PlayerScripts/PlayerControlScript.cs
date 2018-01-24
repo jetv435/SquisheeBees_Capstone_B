@@ -8,7 +8,7 @@ public class PlayerControlScript : MonoBehaviour {
 	public GameObject cameraMain;
 	CameraControlScr cameraMainScr;
 
-
+	CursorLockMode wantedMode;
 
 	Quaternion rotCam;
 
@@ -16,14 +16,27 @@ public class PlayerControlScript : MonoBehaviour {
 	void Start () {
 
 		cameraMainScr = cameraMain.GetComponent<CameraControlScr> ();
+
+		wantedMode = CursorLockMode.Locked;
+
+		SetCursorState ();
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		SetCursorState ();
 		rotCam = cameraMainScr.giveRotations ();
 		TranslateMovement ();
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (wantedMode == CursorLockMode.Locked) {
+				wantedMode = CursorLockMode.None;
+			} else if (wantedMode == CursorLockMode.None) {
+				wantedMode = CursorLockMode.Locked;
+
+			}
+		}
 		
 	}
 
@@ -74,6 +87,17 @@ public class PlayerControlScript : MonoBehaviour {
 			forceAway.y = other.transform.position.y;
 
 			objectRigidBody.AddForce (forceAway * 20 * objectRigidBody.mass);
+		}
+	}
+
+	void SetCursorState()
+	{
+		Cursor.lockState = wantedMode;
+		// Hide cursor when locking
+
+		Cursor.visible = (CursorLockMode.Locked != wantedMode);
+		if (wantedMode != CursorLockMode.Locked) {
+			Cursor.visible = true;
 		}
 	}
 
