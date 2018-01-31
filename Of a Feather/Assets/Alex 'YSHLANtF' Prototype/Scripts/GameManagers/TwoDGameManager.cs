@@ -135,6 +135,10 @@ public class TwoDGameManager : MonoBehaviour
 			{
 				Score++;
 
+				//Some lazy code for the arrow to disappear, Sorry Garrah.
+				arrowObj.GetComponent<SpriteRenderer>().color -= new Color (0,0,0,0.2f);
+
+
 				//Due to the fact that this implicitly implies it is stage one,
 				//It calls the particle effect.
 				callSprScr.ActivateParticleEffect();

@@ -36,7 +36,9 @@ public class PickupPlayerScript : MonoBehaviour {
 			}
 
 		} else {
+			haloActivation ();
 			pickUpFunc ();
+
 
 		}
 		
@@ -51,7 +53,7 @@ public class PickupPlayerScript : MonoBehaviour {
 
 	void pickUpFunc()
 	{
-		if (Input.GetKeyDown (KeyCode.E)) {
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 
@@ -74,7 +76,7 @@ public class PickupPlayerScript : MonoBehaviour {
 
 	void checkDropFunc()
 	{
-		if (Input.GetKeyDown (KeyCode.E)) {
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			dropObject ();
 		}
 	}
@@ -95,6 +97,24 @@ public class PickupPlayerScript : MonoBehaviour {
 		cObjRBody = null;
 
 		carriedObj = null;
+	}
+
+	//Calls the HaloScript
+	void haloActivation()
+	{
+		int x = Screen.width / 2;
+		int y = Screen.height / 2;
+
+		Ray rayCheck = mainCamCamObj.ScreenPointToRay(new Vector3(x,y));
+		RaycastHit hitCheck;
+		if (Physics.Raycast (rayCheck, out hitCheck)) {
+			HaloControllerPickupScript h = hitCheck.collider.GetComponent<HaloControllerPickupScript> ();
+			if (h != null) {
+				h.HaloActivation (true);
+				
+			}
+		}
+
 	}
 }
 

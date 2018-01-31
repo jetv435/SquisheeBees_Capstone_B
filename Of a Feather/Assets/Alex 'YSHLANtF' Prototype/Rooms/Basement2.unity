@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -316,6 +318,8 @@ GameObject:
   - component: {fileID: 75343921}
   - component: {fileID: 75343920}
   - component: {fileID: 75343919}
+  - component: {fileID: 75343923}
+  - component: {fileID: 75343922}
   m_Layer: 0
   m_Name: notebook02_green1
   m_TagString: Untagged
@@ -420,6 +424,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &75343922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75343915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &75343923
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75343915}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &124313941
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +460,8 @@ GameObject:
   - component: {fileID: 124313947}
   - component: {fileID: 124313946}
   - component: {fileID: 124313945}
+  - component: {fileID: 124313949}
+  - component: {fileID: 124313948}
   m_Layer: 0
   m_Name: notebook02_red3 (1)
   m_TagString: Untagged
@@ -536,6 +564,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &124313948
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124313941}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &124313949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124313941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &134642566
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +600,8 @@ GameObject:
   - component: {fileID: 134642572}
   - component: {fileID: 134642571}
   - component: {fileID: 134642570}
+  - component: {fileID: 134642574}
+  - component: {fileID: 134642573}
   m_Layer: 0
   m_Name: notebook02_blue2 (1)
   m_TagString: Untagged
@@ -652,6 +704,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &134642573
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134642566}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &134642574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134642566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &138023381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1718,8 @@ GameObject:
   - component: {fileID: 301639233}
   - component: {fileID: 301639232}
   - component: {fileID: 301639231}
+  - component: {fileID: 301639235}
+  - component: {fileID: 301639234}
   m_Layer: 0
   m_Name: notebook01_blue5
   m_TagString: Untagged
@@ -1748,6 +1824,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &301639234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301639227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &301639235
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301639227}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &304799979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1857,11 @@ GameObject:
   - component: {fileID: 304799980}
   - component: {fileID: 304799982}
   - component: {fileID: 304799981}
+  - component: {fileID: 304799985}
+  - component: {fileID: 304799984}
+  - component: {fileID: 304799983}
+  - component: {fileID: 304799986}
+  - component: {fileID: 304799987}
   m_Layer: 0
   m_Name: balletShoes_0010:pCube1
   m_TagString: Untagged
@@ -1821,6 +1924,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 304799979}
   m_Mesh: {fileID: 4300094, guid: 03f43871124360043bf0fe93f452c907, type: 3}
+--- !u!114 &304799983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304799979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &304799984
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304799979}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &304799985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304799979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701156d9d8b5044468d457fef1734c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &304799986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304799979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005068741, y: 0.00982625, z: 0.005683746}
+  m_Center: {x: 0.00039821793, y: 0.0036206953, z: 0.0015494344}
+--- !u!54 &304799987
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304799979}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &306777095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1998,8 @@ GameObject:
   - component: {fileID: 306777101}
   - component: {fileID: 306777100}
   - component: {fileID: 306777099}
+  - component: {fileID: 306777103}
+  - component: {fileID: 306777102}
   m_Layer: 0
   m_Name: notebook02_blue3 (1)
   m_TagString: Untagged
@@ -1937,6 +2102,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &306777102
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306777095}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &306777103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306777095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318055486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,6 +3025,8 @@ GameObject:
   - component: {fileID: 567346358}
   - component: {fileID: 567346357}
   - component: {fileID: 567346356}
+  - component: {fileID: 567346360}
+  - component: {fileID: 567346359}
   m_Layer: 0
   m_Name: notebook01_blue2 (1)
   m_TagString: Untagged
@@ -2942,6 +3131,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &567346359
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567346352}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &567346360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567346352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &593043017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,6 +3672,8 @@ GameObject:
   - component: {fileID: 719031590}
   - component: {fileID: 719031589}
   - component: {fileID: 719031588}
+  - component: {fileID: 719031592}
+  - component: {fileID: 719031591}
   m_Layer: 0
   m_Name: notebook02_blue1 (1)
   m_TagString: Untagged
@@ -3563,6 +3776,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &719031591
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719031584}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &719031592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719031584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727782931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,6 +3844,8 @@ GameObject:
   - component: {fileID: 769056878}
   - component: {fileID: 769056877}
   - component: {fileID: 769056876}
+  - component: {fileID: 769056880}
+  - component: {fileID: 769056879}
   m_Layer: 0
   m_Name: notebook02_red2 (1)
   m_TagString: Untagged
@@ -3711,6 +3948,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &769056879
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769056872}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &769056880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769056872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &784401753
 GameObject:
   m_ObjectHideFlags: 0
@@ -4656,6 +4915,8 @@ GameObject:
   - component: {fileID: 1102394308}
   - component: {fileID: 1102394307}
   - component: {fileID: 1102394306}
+  - component: {fileID: 1102394310}
+  - component: {fileID: 1102394309}
   m_Layer: 0
   m_Name: notebook02_purple8
   m_TagString: Untagged
@@ -4758,6 +5019,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1102394309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102394302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &1102394310
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102394302}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &1103763028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,6 +5430,8 @@ GameObject:
   - component: {fileID: 1382755676}
   - component: {fileID: 1382755675}
   - component: {fileID: 1382755674}
+  - component: {fileID: 1382755678}
+  - component: {fileID: 1382755677}
   m_Layer: 0
   m_Name: notebook02_green2 (1)
   m_TagString: Untagged
@@ -5251,6 +5536,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &1382755677
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382755670}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &1382755678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382755670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485201677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5505,6 +5812,11 @@ GameObject:
   - component: {fileID: 1559578895}
   - component: {fileID: 1559578897}
   - component: {fileID: 1559578896}
+  - component: {fileID: 1559578900}
+  - component: {fileID: 1559578899}
+  - component: {fileID: 1559578898}
+  - component: {fileID: 1559578901}
+  - component: {fileID: 1559578902}
   m_Layer: 0
   m_Name: balletShoes_0010:pCube2
   m_TagString: Untagged
@@ -5567,6 +5879,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1559578894}
   m_Mesh: {fileID: 4300096, guid: 03f43871124360043bf0fe93f452c907, type: 3}
+--- !u!114 &1559578898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559578894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &1559578899
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559578894}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &1559578900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559578894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701156d9d8b5044468d457fef1734c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1559578901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559578894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0050523374, y: 0.010058739, z: 0.006114101}
+  m_Center: {x: 0.0006525951, y: 0.0035201483, z: -0.00089661626}
+--- !u!54 &1559578902
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559578894}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1571777132
 GameObject:
   m_ObjectHideFlags: 0
@@ -6172,6 +6544,8 @@ GameObject:
   - component: {fileID: 1736920454}
   - component: {fileID: 1736920453}
   - component: {fileID: 1736920452}
+  - component: {fileID: 1736920456}
+  - component: {fileID: 1736920455}
   m_Layer: 0
   m_Name: notebook01_blue4
   m_TagString: Untagged
@@ -6276,6 +6650,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1736920455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736920448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &1736920456
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736920448}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &1752393450
 GameObject:
   m_ObjectHideFlags: 0
@@ -6367,6 +6763,8 @@ GameObject:
   - component: {fileID: 1773375812}
   - component: {fileID: 1773375811}
   - component: {fileID: 1773375810}
+  - component: {fileID: 1773375814}
+  - component: {fileID: 1773375813}
   m_Layer: 0
   m_Name: notebook02_purple9
   m_TagString: Untagged
@@ -6469,6 +6867,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1773375813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773375806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &1773375814
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773375806}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &1792094349
 GameObject:
   m_ObjectHideFlags: 0
@@ -7051,6 +7471,8 @@ GameObject:
   - component: {fileID: 1975183556}
   - component: {fileID: 1975183555}
   - component: {fileID: 1975183554}
+  - component: {fileID: 1975183558}
+  - component: {fileID: 1975183557}
   m_Layer: 0
   m_Name: notebook02_green4 (1)
   m_TagString: Untagged
@@ -7155,6 +7577,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &1975183557
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975183550}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!114 &1975183558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975183550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2028589076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,6 +7656,8 @@ GameObject:
   - component: {fileID: 2068352990}
   - component: {fileID: 2068352989}
   - component: {fileID: 2068352988}
+  - component: {fileID: 2068352992}
+  - component: {fileID: 2068352991}
   m_Layer: 0
   m_Name: photobook
   m_TagString: Untagged
@@ -7316,6 +7762,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2068352991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068352984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &2068352992
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068352984}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &2071534691
 GameObject:
   m_ObjectHideFlags: 0

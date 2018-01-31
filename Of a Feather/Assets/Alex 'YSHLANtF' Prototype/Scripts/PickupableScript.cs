@@ -7,6 +7,7 @@ public class PickupableScript : MonoBehaviour {
 	//Calls its own rigidbody
 	Rigidbody ownRB;
 
+
 	// Use this for initialization
 	void Start () {
 

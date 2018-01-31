@@ -31,7 +31,7 @@ public class MG3and4_MovementScript : MonoBehaviour {
 
 		//Correction_Passive ();
 
-		if(Input.anyKeyDown == true)
+		if(Input.anyKey == true)
 			Move_Generic ();
 		
 		
@@ -66,13 +66,13 @@ public class MG3and4_MovementScript : MonoBehaviour {
 	PLAYER_MOVEMENT InputSet()
 	{
 
-		if (Input.GetKeyDown (KeyCode.UpArrow))
+		if (Input.GetKey (KeyCode.UpArrow))
 			return PLAYER_MOVEMENT.UP_PLAYER;
-		else if (Input.GetKeyDown (KeyCode.DownArrow))
+		else if (Input.GetKey (KeyCode.DownArrow))
 			return PLAYER_MOVEMENT.DOWN_PLAYER;
-		else if (Input.GetKeyDown (KeyCode.LeftArrow))
+		else if (Input.GetKey (KeyCode.LeftArrow))
 			return PLAYER_MOVEMENT.LEFT_PLAYER;
-		else if (Input.GetKeyDown (KeyCode.RightArrow))
+		else if (Input.GetKey (KeyCode.RightArrow))
 			return PLAYER_MOVEMENT.RIGHT_PLAYER;
 
 		return PLAYER_MOVEMENT.NO_INPUT;
@@ -84,20 +84,21 @@ public class MG3and4_MovementScript : MonoBehaviour {
 
 		//If the keycode is left or down, the vector gets flipped.
 		if (keyCheck_forMovement == PLAYER_MOVEMENT.LEFT_PLAYER || keyCheck_forMovement == PLAYER_MOVEMENT.DOWN_PLAYER) {
-			newTranslation = movementVar * -1 * playerMovement;
+			newTranslation = movementVar * -1 * playerMovement * .1f;
 		} else {
-			newTranslation = movementVar * playerMovement;
+			newTranslation = movementVar * playerMovement* .1f;
 		}
 
 		transform.position += newTranslation;
 
 	}
 
-	void OnCollisionStay2D(Collision2D other)
+	/*void OnCollisionStay2D(Collision2D other)
 	{
-
+		
 		BoxCollider2D sizeOfHitBox = other.gameObject.GetComponent<BoxCollider2D> ();
 
+		Debug.Log ("Bump");
 
 		//If our x is where the other hit box is...
 		if (transform.position.x >= other.transform.position.x - sizeOfHitBox.size.x /2 && 
@@ -140,7 +141,7 @@ public class MG3and4_MovementScript : MonoBehaviour {
 
 		Correction_Passive ();
 
-	}
+	}*/
 
 
 
