@@ -59,8 +59,14 @@ public class TwoDGameManager : MonoBehaviour
 
 	private MainMenuManager MM;
 
-	// Use this for initialization
-	void Start ()
+    private void Awake()
+    {
+        // regenerates 2 new unique randomized prompts for the RhythmCore
+        DualRandArrowNoRepeatManager.Regenerate();
+    }
+
+    // Use this for initialization
+    void Start ()
     {
 		callSpriteBoss = GameObject.FindGameObjectWithTag ("SpriteController");
 		callSprScr = callSpriteBoss.GetComponent<SpriteControllerSprite> ();
@@ -111,7 +117,13 @@ public class TwoDGameManager : MonoBehaviour
 		}
 	}
 
-	public bool IsFriendArrowEnabled()
+    private void LateUpdate()
+    {
+        // regenerates 2 new unique randomized prompts for the RhythmCore
+        DualRandArrowNoRepeatManager.Regenerate();
+    }
+
+    public bool IsFriendArrowEnabled()
 	{
         return bFriendArrowEnabled;
 	}

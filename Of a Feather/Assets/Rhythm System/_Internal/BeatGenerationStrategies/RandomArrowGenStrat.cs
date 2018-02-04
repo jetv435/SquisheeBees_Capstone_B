@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class RandomArrowGenStrat : ABeatGenerationStrategy
 {
-    override public RhythmCore.RhythmExpectedEventInfo GenerateExpectedEvent()
+    static public RhythmCore.RhythmExpectedEventInfo GenerateExpectedEventStatic()
     {
         int keyRandomizer = Random.Range(0, 4);
 
         KeyCode selectedKey = KeyCode.UpArrow;
-        switch(keyRandomizer)
+        switch (keyRandomizer)
         {
             case 0:
                 {
@@ -44,5 +44,10 @@ public class RandomArrowGenStrat : ABeatGenerationStrategy
         {
             expectedKey = selectedKey
         };
+    }
+
+    override public RhythmCore.RhythmExpectedEventInfo GenerateExpectedEvent()
+    {
+        return GenerateExpectedEventStatic();
     }
 }

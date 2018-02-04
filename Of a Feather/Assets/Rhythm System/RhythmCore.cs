@@ -44,7 +44,7 @@ public class RhythmCore : MonoBehaviour
     public float beatWindowDuration = 0.5f;
     public GameObject[] promptListenerObjects;
     public GameObject[] feedbackListenerObjects;
-    private readonly ABeatGenerationStrategy beatGenStrat = new RandArrowNoRepeatStrat();
+    private readonly ABeatGenerationStrategy beatGenStrat = new DualRandArrowNoRepeatStrat();
     private List<IRhythmPromptListener> promptListeners = new List<IRhythmPromptListener>();
     private List<IRhythmFeedbackListener> feedbackListeners = new List<IRhythmFeedbackListener>();
     private RhythmExpectedEventInfo currExpectedEvent;

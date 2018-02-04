@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RandArrowNoRepeatStrat : ABeatGenerationStrategy
 {
-    private readonly RandomArrowGenStrat randArrowStrat = new RandomArrowGenStrat();
     private RhythmCore.RhythmExpectedEventInfo prevInfo;
 
     public RandArrowNoRepeatStrat()
@@ -15,10 +14,10 @@ public class RandArrowNoRepeatStrat : ABeatGenerationStrategy
     override public RhythmCore.RhythmExpectedEventInfo GenerateExpectedEvent()
     {
         // Generate a non-repeating prompt arrow direction
-        RhythmCore.RhythmExpectedEventInfo retInfo = this.randArrowStrat.GenerateExpectedEvent();
+        RhythmCore.RhythmExpectedEventInfo retInfo = RandomArrowGenStrat.GenerateExpectedEventStatic();
         while(retInfo.expectedKey == this.prevInfo.expectedKey)
         {
-            retInfo = this.randArrowStrat.GenerateExpectedEvent();
+            retInfo = RandomArrowGenStrat.GenerateExpectedEventStatic();
         }
 
         // Set this.prevInfo to track the previous key this strategy generated
