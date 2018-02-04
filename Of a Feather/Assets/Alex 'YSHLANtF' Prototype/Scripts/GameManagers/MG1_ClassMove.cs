@@ -21,12 +21,17 @@ public class MG1_ClassMove : MonoBehaviour {
 	//A public variable that we can change to mess with how far one goes.
 	public float moveAwayDistance = 0.3f;
 
+	//Calls it lose Script
+	MG1LoseScript ownLoseScript_Call;
+
 	// Use this for initialization
 	void Start () {
 
 		managerScript = managerObject.GetComponent<TwoDGameManager> ();
 		spriteControlObjectScript = spriteControllerObject.GetComponent<SpriteControllerSprite> ();
-		
+
+
+		ownLoseScript_Call = GetComponent<MG1LoseScript> ();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +44,11 @@ public class MG1_ClassMove : MonoBehaviour {
 				gameClassMoveFunction ();
 
 			}
+
+			//else if()
+			//{
+
+			//}
 		}
 		
 	}
@@ -47,9 +57,9 @@ public class MG1_ClassMove : MonoBehaviour {
 	{
 		List<GameObject> gameClassList = spriteControlObjectScript.getListGameClass ();
 
-		if (managerScript.Get_friendSprOn() == false) {
+		//if (managerScript.Get_friendSprOn() == false) {
 
-			Debug.Log ("Workin'");
+			//Debug.Log ("Workin'");
 								
 			for (int i = 0; i < gameClassList.Count; i++) {
 				Vector3 newPosition = gameClassList [i].transform.position;
@@ -62,8 +72,15 @@ public class MG1_ClassMove : MonoBehaviour {
 					newPosition.x -= moveAwayDistance;
 				}
 
+			//For the Lose Script, since they share a similar function
+			//If the friend sprite is on, the player starts to lose.
+			if (managerScript.Get_friendSprOn ()) {
+
+				ownLoseScript_Call.LoseCountdownFunction ();
+			}
+
 				gameClassList [i].transform.position = newPosition;
 			}
-		}
+		//}
 	}
 }
