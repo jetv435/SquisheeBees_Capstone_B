@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class DualRandArrowNoRepeatStrat : ABeatGenerationStrategy
 {
-    private readonly DualRandArrowNoRepeatManager.PromptSelect prompt = DualRandArrowNoRepeatManager.PromptSelect.NONE_AVAILABLE;
+    private readonly DualRandArrowNoRepeatManager.PromptSelect promptKey = DualRandArrowNoRepeatManager.PromptSelect.UNSET;
 
     public DualRandArrowNoRepeatStrat()
     {
         DualRandArrowNoRepeatManager.PromptSelect claimRet = DualRandArrowNoRepeatManager.Claim();
-        if (claimRet != DualRandArrowNoRepeatManager.PromptSelect.NONE_AVAILABLE)
+        if (claimRet != DualRandArrowNoRepeatManager.PromptSelect.UNSET)
         {
-            this.prompt = claimRet;
+            this.promptKey = claimRet;
         }
     }
 
     override public RhythmCore.RhythmExpectedEventInfo GenerateExpectedEvent()
     {
-        return DualRandArrowNoRepeatManager.GetPrompt(this.prompt);
+        return DualRandArrowNoRepeatManager.GetPrompt(this.promptKey);
     }
 }

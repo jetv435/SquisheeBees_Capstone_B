@@ -9,7 +9,7 @@ static public class DualRandArrowNoRepeatManager
     {
         PROMPT_0,
         PROMPT_1,
-        NONE_AVAILABLE
+        UNSET
     }
 
     private enum GeneratorClaimState
@@ -26,11 +26,13 @@ static public class DualRandArrowNoRepeatManager
     // generate first set of unique prompts at startup
     static DualRandArrowNoRepeatManager()
     {
+        Debug.Log("Statically constructing DualRandArrowNoRepeatManager");
         claimState = GeneratorClaimState.BOTH_AVAILABLE;
     }
 
     static public void Regenerate()
     {
+        Debug.Log("Regenerating prompts in DualRandArrowNoRepeatManager...");
         // generate a non-repeating prompt arrow direction for 0
         _randomPrompts[0] = RandomArrowGenStrat.GenerateExpectedEventStatic();
         while (_randomPrompts[0].expectedKey == _prevPrompts[0].expectedKey)
@@ -52,6 +54,9 @@ static public class DualRandArrowNoRepeatManager
 
         // track the previous key generated for 1
         _prevPrompts[1] = _randomPrompts[1];
+
+        // reset claim-tracking state
+        claimState = GeneratorClaimState.BOTH_AVAILABLE;
     }
 
     static public RhythmCore.RhythmExpectedEventInfo GetPrompt(PromptSelect sel)
@@ -72,27 +77,32 @@ static public class DualRandArrowNoRepeatManager
 
     static public PromptSelect Claim()
     {
-        PromptSelect ret = PromptSelect.NONE_AVAILABLE;
+        PromptSelect ret = PromptSelect.UNSET;
 
+        Debug.Log("Claiming Prompt...");
         switch(claimState)
         {
             case GeneratorClaimState.BOTH_AVAILABLE:
                 {
+                    Debug.Log("    BOTH_AVAILABLE");
                     ret = PromptSelect.PROMPT_0;
                     claimState = GeneratorClaimState.ONLY_SECOND_AVAILABLE;
                 } break;
             case GeneratorClaimState.ONLY_SECOND_AVAILABLE:
                 {
+                    Debug.Log("    ONLY_SECOND_AVAILABLE");
                     ret = PromptSelect.PROMPT_1;
                     claimState = GeneratorClaimState.NONE_AVAILABLE;
                 } break;
             case GeneratorClaimState.NONE_AVAILABLE:
                 {
-                    //Debug.LogError("Too many attempt to claim unique dual-prompt");
-                    ret = PromptSelect.NONE_AVAILABLE;
+                    Debug.Log("    NONE_AVAILABLE");
+                    Debug.LogError("Too many attempts to claim unique dual-prompt");
+                    ret = PromptSelect.UNSET;
                 } break;
             default:
                 {
+                    Debug.Log("    DEFAULT");
                     Debug.LogError("Unexpected value for claimState in DualRandArrowGenManager.Claim");
                 } break;
         }
