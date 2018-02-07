@@ -14,6 +14,10 @@ public class MG3and4_MovementScript : MonoBehaviour {
 		NO_INPUT,
 	}
 
+	//Things that allow the keys to be pressed.
+	bool allowUp = false;
+	bool allowRight = false;
+	bool allowLeft = false;
 
 
 	public float playerMovement = 1.0f;
@@ -66,13 +70,13 @@ public class MG3and4_MovementScript : MonoBehaviour {
 	PLAYER_MOVEMENT InputSet()
 	{
 
-		if (Input.GetKey (KeyCode.UpArrow))
+		if (Input.GetKey (KeyCode.UpArrow) && allowUp)
 			return PLAYER_MOVEMENT.UP_PLAYER;
 		else if (Input.GetKey (KeyCode.DownArrow))
 			return PLAYER_MOVEMENT.DOWN_PLAYER;
-		else if (Input.GetKey (KeyCode.LeftArrow))
+		else if (Input.GetKey (KeyCode.LeftArrow) && allowLeft)
 			return PLAYER_MOVEMENT.LEFT_PLAYER;
-		else if (Input.GetKey (KeyCode.RightArrow))
+		else if (Input.GetKey (KeyCode.RightArrow) && allowRight)
 			return PLAYER_MOVEMENT.RIGHT_PLAYER;
 
 		return PLAYER_MOVEMENT.NO_INPUT;
@@ -183,6 +187,17 @@ public class MG3and4_MovementScript : MonoBehaviour {
 		}
 
 
+	}
+
+	public void ActivateKey(string keyToActivate)
+	{
+		if (keyToActivate == "Right") {
+			allowRight = true;
+		} else if (keyToActivate == "Left") {
+			allowLeft = true;
+		} else if (keyToActivate == "Up") {
+			allowUp = true;
+		}
 	}
 
 
