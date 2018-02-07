@@ -77,17 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -1528,13 +1526,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 551f0b38849e48a49be88b396aa39a57, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.28
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 235
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2166,7 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeInOutPanel: {fileID: 1064366450}
   Introfade: {fileID: 1064366450}
-  nextroom: 0
+  nextroom: 7
 --- !u!224 &401527849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7568,9 +7566,93 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 57774c2cc92f3044aab46ea6358544b9, type: 2}
+    - target: {fileID: 1322395262986196, guid: 43c347ba2dde19242936e0fc99e24687, type: 2}
+      propertyPath: m_TagString
+      value: MManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705119981694014, guid: 43c347ba2dde19242936e0fc99e24687, type: 2}
+      propertyPath: m_TagString
+      value: MManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43c347ba2dde19242936e0fc99e24687, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1501553340 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1705119981694014, guid: 43c347ba2dde19242936e0fc99e24687,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501553339}
+--- !u!1 &1501553341 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1322395262986196, guid: 43c347ba2dde19242936e0fc99e24687,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501553339}
+--- !u!114 &1501553342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501553340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701156d9d8b5044468d457fef1734c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1501553343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501553340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1501553344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501553341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701156d9d8b5044468d457fef1734c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1501553345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501553341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &1501553347
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501553340}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
+--- !u!122 &1501553351
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501553341}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290164406
+  m_Size: 3
 --- !u!1 &1520991738
 GameObject:
   m_ObjectHideFlags: 0

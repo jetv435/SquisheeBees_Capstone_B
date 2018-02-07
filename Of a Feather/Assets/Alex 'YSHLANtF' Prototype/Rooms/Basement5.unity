@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeInOutPanel: {fileID: 1691055026}
   Introfade: {fileID: 972197133}
-  nextroom: 0
+  nextroom: 9
 --- !u!114 &350973250
 MonoBehaviour:
   m_ObjectHideFlags: 0
