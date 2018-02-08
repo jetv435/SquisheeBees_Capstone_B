@@ -16,12 +16,18 @@ public class PickupPlayerScript : MonoBehaviour {
 	public float smooth = 4;
 
 	private MainMenuManager mm;
+	GameObject storytrig;
+	DialogManager dialogue;
+	StoryTrigger story;
 
 	// Use this for initialization
 	void Start () {
 		MainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		mainCamCamObj = MainCamera.GetComponent<Camera> ();
 		mm = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
+		//storytrig = GameObject.FindGameObjectWithTag ("ST");
+		//story = storytrig.GetComponent<StoryTrigger> ();
+		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
 		
 	}
 	
@@ -64,6 +70,8 @@ public class PickupPlayerScript : MonoBehaviour {
 				if (p != null) {
 					carrying = true;
 					carriedObj = p.gameObject;
+					//story.triggerstory ();
+					//dialogue.dialogbox.SetActive (true);
 
 					cObjRBody = p.gameObject.GetComponent<Rigidbody> ();
 					cObjRBody.useGravity = false;
@@ -97,6 +105,7 @@ public class PickupPlayerScript : MonoBehaviour {
 		cObjRBody = null;
 
 		carriedObj = null;
+		//dialogue.dialogbox.SetActive (false);
 	}
 
 	//Calls the HaloScript

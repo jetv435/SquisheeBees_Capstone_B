@@ -11,6 +11,7 @@ TagManager:
   - RhythmTag
   - FadeManager
   - MManager
+  - ST
   layers:
   - Default
   - TransparentFX
