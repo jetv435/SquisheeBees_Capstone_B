@@ -3,18 +3,80 @@ guid: 27f6abae2a5e74041aa4dd311942f13f
 timeCreated: 1510813293
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: drawer1
+    100004: drawer10
+    100006: drawer2
+    100008: drawer3
+    100010: drawer4
+    100012: drawer5
+    100014: drawer6
+    100016: drawer7
+    100018: drawer9
+    100020: dresser_base
+    100022: Dresser_vanity
     400000: //RootNode
+    400002: drawer1
+    400004: drawer10
+    400006: drawer2
+    400008: drawer3
+    400010: drawer4
+    400012: drawer5
+    400014: drawer6
+    400016: drawer7
+    400018: drawer9
+    400020: dresser_base
+    400022: Dresser_vanity
     2300000: //RootNode
+    2300002: drawer1
+    2300004: drawer10
+    2300006: drawer2
+    2300008: drawer3
+    2300010: drawer4
+    2300012: drawer5
+    2300014: drawer6
+    2300016: drawer7
+    2300018: drawer9
+    2300020: dresser_base
+    2300022: Dresser_vanity
     3300000: //RootNode
+    3300002: drawer1
+    3300004: drawer10
+    3300006: drawer2
+    3300008: drawer3
+    3300010: drawer4
+    3300012: drawer5
+    3300014: drawer6
+    3300016: drawer7
+    3300018: drawer9
+    3300020: dresser_base
+    3300022: Dresser_vanity
     4300000: dresser
+    4300002: Dresser_vanity
+    4300004: drawer1
+    4300006: drawer2
+    4300008: drawer6
+    4300010: drawer9
+    4300012: drawer5
+    4300014: drawer7
+    4300016: drawer10
+    4300018: drawer3
+    4300020: drawer4
+    4300022: dresser_base
     9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dresserVanity
+    second: {fileID: 2100000, guid: 3e11b875cc89d6c44ac983750a3ae17b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -27,6 +89,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
