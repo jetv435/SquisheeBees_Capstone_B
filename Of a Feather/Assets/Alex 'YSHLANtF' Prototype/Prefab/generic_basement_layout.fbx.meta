@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: 03f43871124360043bf0fe93f452c907
-timeCreated: 1509694542
+timeCreated: 1518459531
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: balletShoes_0010:pCube1
     100002: balletShoes_0010:pCube2
@@ -307,10 +307,172 @@ ModelImporter:
     4300110: mirror1
     4300112: desktop1
     9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Chair_Main
+    second: {fileID: 2100000, guid: 4293292c06ad65143b4588582c0ce2ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Chair_Secondary
+    second: {fileID: 2100000, guid: 4293292c06ad65143b4588582c0ce2ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mirror
+    second: {fileID: 2100000, guid: de6a62591421cd74bbf98affc64395b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface11
+    second: {fileID: 2100000, guid: 9ea98d7a7b0d2c74597f7bb3bd7b0577, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface22
+    second: {fileID: 2100000, guid: e3836db5ba00fcd43bb8562195edfde1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: balletshoes
+    second: {fileID: 2100000, guid: 3522b850ae8d0f14482fd3c1e1418791, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 494bd4858fd180e4a8389df910333249, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue1
+    second: {fileID: 2100000, guid: 3ac6c5ecd216c7343a4d7759cf8a2775, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coffeeTable
+    second: {fileID: 2100000, guid: 72034601f8be4a145a6a0a1b83cbc809, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: compChair
+    second: {fileID: 2100000, guid: 4820f7488eed66a4b977897586617e5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: computerdesk
+    second: {fileID: 2100000, guid: b31df46bb381da445b3a39b40568f6e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: couch
+    second: {fileID: 2100000, guid: 0c31e3bc6e94a044fb48b445594f6350, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_brown
+    second: {fileID: 2100000, guid: bef0e9d296b4d7b46a23992b436d3484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desktop
+    second: {fileID: 2100000, guid: b9ae077921100a24d86ae3943912e783, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dresserVanity
+    second: {fileID: 2100000, guid: 3e11b875cc89d6c44ac983750a3ae17b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green
+    second: {fileID: 2100000, guid: bcc2fdc40a6b2e144b0247e1fbebf737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green1
+    second: {fileID: 2100000, guid: 78f2a5a5ebb6b2248a1e184aa7adfdc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey
+    second: {fileID: 2100000, guid: f068f7b3b974d5d459f52f66600a4605, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: e6160036fb0a9b6499f689aa8af26a96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 9bf9a7eaa815ce74cade3965ba1e3e4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: notebook01_black
+    second: {fileID: 2100000, guid: 7eb6f79e50c0e4f4d8a89a39cbb487a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: notebook01_texture
+    second: {fileID: 2100000, guid: a43099f905879a84fbe1db4ea0b01a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: purple
+    second: {fileID: 2100000, guid: 0fb20747086890141bb39800510cdabe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: radio
+    second: {fileID: 2100000, guid: ee0902f2c9fd24d40936b72dc7d0c814, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: railing
+    second: {fileID: 2100000, guid: 8dbb38e5e22b40a458e4ef3ffd87c754, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 2100000, guid: 0299d7aba59e42f4682ef33ab58eba60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shelfingCubbies
+    second: {fileID: 2100000, guid: 34bc0e0d135c4ca47aa5ec2210d5a88b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: silver
+    second: {fileID: 2100000, guid: 79c63c30e3961374bbe7fab73318bb87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: speakerScreen
+    second: {fileID: 2100000, guid: 525c84452a150d14b866b6dc4a3e9b19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stairs1
+    second: {fileID: 2100000, guid: f60483c3d7d9d474ebfc9a0fe625e391, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: television90
+    second: {fileID: 2100000, guid: f95104dc203ce104d8919486e69ab998, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: 98b9f7f590f288044b7acdcf9a9cb209, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -323,6 +485,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
