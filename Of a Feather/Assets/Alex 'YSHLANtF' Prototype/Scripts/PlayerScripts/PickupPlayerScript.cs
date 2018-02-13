@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupPlayerScript : MonoBehaviour {
-	
+
 	GameObject MainCamera;
 	Camera mainCamCamObj;
 	bool carrying = false;
@@ -16,21 +16,18 @@ public class PickupPlayerScript : MonoBehaviour {
 	public float smooth = 4;
 
 	private MainMenuManager mm;
-	GameObject storytrig;
 	DialogManager dialogue;
-	StoryTrigger story;
+
 
 	// Use this for initialization
 	void Start () {
 		MainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		mainCamCamObj = MainCamera.GetComponent<Camera> ();
 		mm = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
-		//storytrig = GameObject.FindGameObjectWithTag ("ST");
-		//story = storytrig.GetComponent<StoryTrigger> ();
 		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
@@ -46,18 +43,19 @@ public class PickupPlayerScript : MonoBehaviour {
 			pickUpFunc ();
 
 
+
 		}
-		
+
 	}
 
 	void carryFunc (GameObject carryThing)
 	{
-		
+
 
 		cObjRBody.transform.position = Vector3.Lerp(cObjRBody.transform.position,MainCamera.transform.position + MainCamera.transform.forward * distance, Time.deltaTime *smooth);
 	}
 
-	void pickUpFunc()
+	public void pickUpFunc()
 	{
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			int x = Screen.width / 2;
@@ -70,21 +68,34 @@ public class PickupPlayerScript : MonoBehaviour {
 				if (p != null) {
 					carrying = true;
 					carriedObj = p.gameObject;
-					//story.triggerstory ();
-					//dialogue.dialogbox.SetActive (true);
-
 					cObjRBody = p.gameObject.GetComponent<Rigidbody> ();
 					cObjRBody.useGravity = false;
+
+					/* This is where the call goes out to check if the object picked up has a 
+					 * dialogReader script attached to it. If it does, it will return the readlines
+					 * functions and the item description will appear.
+					 * If it doesn't, it will null out but not cause the game to crash.
+					 * *figured it was necessary to implement that in case we forget an object at
+					 * any point. */
+
+					dialogReader itemdescript = carriedObj.gameObject.GetComponent<dialogReader> ();
+					if (itemdescript != null) {
+						itemdescript.readlines ();
+					}
+					else{
+						Debug.Log ("null");
+					}
 				}
+
 			}
 
-	
+
 		}
 	}
 
 	void checkDropFunc()
 	{
-		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+		if (Input.GetKeyDown (KeyCode.Mouse1)) {
 			dropObject ();
 		}
 	}
@@ -105,7 +116,8 @@ public class PickupPlayerScript : MonoBehaviour {
 		cObjRBody = null;
 
 		carriedObj = null;
-		//dialogue.dialogbox.SetActive (false);
+
+		dialogue.deactivateTxtBox ();
 	}
 
 	//Calls the HaloScript
@@ -120,7 +132,7 @@ public class PickupPlayerScript : MonoBehaviour {
 			HaloControllerPickupScript h = hitCheck.collider.GetComponent<HaloControllerPickupScript> ();
 			if (h != null) {
 				h.HaloActivation (true);
-				
+
 			}
 		}
 

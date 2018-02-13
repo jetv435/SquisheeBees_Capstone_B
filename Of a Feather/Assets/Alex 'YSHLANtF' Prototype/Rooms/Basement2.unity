@@ -318,9 +318,10 @@ GameObject:
   - component: {fileID: 75343919}
   - component: {fileID: 75343923}
   - component: {fileID: 75343922}
+  - component: {fileID: 75343924}
   m_Layer: 0
   m_Name: notebook02_green1
-  m_TagString: ST
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,6 +445,21 @@ Halo:
     serializedVersion: 2
     rgba: 4290164406
   m_Size: 3
+--- !u!114 &75343924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75343915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3524181d452ead64081ec31988caba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 4900000, guid: 6d0827c775a50a940bc0ee61b6a6b6a5, type: 3}
+  startline: 2
+  endline: 0
+  DM: {fileID: 0}
 --- !u!1 &124313941
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +478,7 @@ GameObject:
   - component: {fileID: 124313948}
   m_Layer: 0
   m_Name: notebook02_red3 (1)
-  m_TagString: ST
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3040,6 +3056,7 @@ GameObject:
   - component: {fileID: 567346356}
   - component: {fileID: 567346360}
   - component: {fileID: 567346359}
+  - component: {fileID: 567346361}
   m_Layer: 0
   m_Name: notebook01_blue2 (1)
   m_TagString: Untagged
@@ -3166,6 +3183,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301ab9fddc4200f4ca72509c4142ff14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &567346361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567346352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3524181d452ead64081ec31988caba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 4900000, guid: 6d0827c775a50a940bc0ee61b6a6b6a5, type: 3}
+  startline: 40
+  endline: 0
+  DM: {fileID: 0}
 --- !u!1 &593043017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,6 +5289,16 @@ Prefab:
       propertyPath: dialogbox
       value: 
       objectReference: {fileID: 772676465}
+    - target: {fileID: 114783388022184322, guid: 52e4bda0aefadb64f9cb1fbad425ff04,
+        type: 2}
+      propertyPath: textObj
+      value: 
+      objectReference: {fileID: 1219508260}
+    - target: {fileID: 114783388022184322, guid: 52e4bda0aefadb64f9cb1fbad425ff04,
+        type: 2}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 4900000, guid: 6d0827c775a50a940bc0ee61b6a6b6a5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52e4bda0aefadb64f9cb1fbad425ff04, type: 2}
   m_IsPrefabParent: 0
@@ -5407,7 +5449,7 @@ Prefab:
     - target: {fileID: 224759689454037642, guid: 18d6244ade3b9e748a826ebbbea744de,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 224759689454037642, guid: 18d6244ade3b9e748a826ebbbea744de,
         type: 2}
@@ -5443,6 +5485,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114139522242005320, guid: 18d6244ade3b9e748a826ebbbea744de,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18d6244ade3b9e748a826ebbbea744de, type: 2}
@@ -8232,6 +8279,7 @@ GameObject:
   - component: {fileID: 2068352988}
   - component: {fileID: 2068352992}
   - component: {fileID: 2068352991}
+  - component: {fileID: 2068352993}
   m_Layer: 0
   m_Name: photobook
   m_TagString: Untagged
@@ -8358,6 +8406,21 @@ Halo:
     serializedVersion: 2
     rgba: 4290164406
   m_Size: 3
+--- !u!114 &2068352993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068352984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3524181d452ead64081ec31988caba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 4900000, guid: 6d0827c775a50a940bc0ee61b6a6b6a5, type: 3}
+  startline: 14
+  endline: 0
+  DM: {fileID: 0}
 --- !u!1 &2071534691
 GameObject:
   m_ObjectHideFlags: 0
