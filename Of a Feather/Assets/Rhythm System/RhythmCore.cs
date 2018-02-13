@@ -44,7 +44,7 @@ public class RhythmCore : MonoBehaviour
     public float beatWindowDuration = 0.5f;
     public GameObject[] promptListenerObjects;
     public GameObject[] feedbackListenerObjects;
-    private readonly ABeatGenerationStrategy beatGenStrat = new RandArrowNoRepeatStrat();
+    private ABeatGenerationStrategy beatGenStrat = new RandArrowNoRepeatStrat();
     private List<IRhythmPromptListener> promptListeners = new List<IRhythmPromptListener>();
     private List<IRhythmFeedbackListener> feedbackListeners = new List<IRhythmFeedbackListener>();
     private RhythmExpectedEventInfo currExpectedEvent;
@@ -53,6 +53,18 @@ public class RhythmCore : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // Initialize the beat generation strategy, either with one provided
+        //  by another component in this object, or with a hard-coded default
+        ABeatGenerationComponent overridingGenComponent = this.GetComponent<ABeatGenerationComponent>();
+        if(overridingGenComponent != null)
+        {
+            this.beatGenStrat = overridingGenComponent.GetStrategy();
+        }
+        else
+        {
+            this.beatGenStrat = new RandArrowNoRepeatStrat();
+        }
+
         // Adjust the beat window if it exceeds the time between beats
         this.beatWindowDuration = Mathf.Min(this.beatWindowDuration, this.SecondsPerLine());
 
