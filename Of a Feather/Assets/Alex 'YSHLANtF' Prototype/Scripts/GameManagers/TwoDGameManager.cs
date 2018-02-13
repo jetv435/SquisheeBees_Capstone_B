@@ -59,6 +59,12 @@ public class TwoDGameManager : MonoBehaviour
 
 	private MainMenuManager MM;
 
+	//A bool to mess with the LoseScript
+	//Friend hit prevents the game over timer from ticking down.
+	bool friendHit = false;
+	public GameObject classMoveObject_LoseObject;
+	MG1LoseScript loseScriptCall;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -77,6 +83,15 @@ public class TwoDGameManager : MonoBehaviour
 		if (nameOfLevel != LEVEL_2D_NAMES.STAGE_2 || nameOfLevel != LEVEL_2D_NAMES.STAGE_3)
         {
 			arrowScrFrd = arrowObjFriend.GetComponent<ArrowTurnScript> ();
+		}
+
+		//If the level isn't stage one...
+		//Set these null.
+		if (nameOfLevel != LEVEL_2D_NAMES.STAGE_1) {
+			classMoveObject_LoseObject = null;
+			loseScriptCall = null;
+		} else {
+			loseScriptCall = classMoveObject_LoseObject.GetComponent<MG1LoseScript> ();
 		}
 
         // Main Menu Manager
@@ -110,6 +125,14 @@ public class TwoDGameManager : MonoBehaviour
 			sceneControl.GoToBasement (1);
 		}
 	}
+	void LateUpdate()
+	{
+		//Implicily means it's stage one.
+		//Every end of update, it sets friend hit to false.
+		if (friendSprOn == true) {
+			friendHit = false;
+		}
+	}
 
 	public bool IsFriendArrowEnabled()
 	{
@@ -131,17 +154,25 @@ public class TwoDGameManager : MonoBehaviour
 			Score++;
 		} else
         {
-			if(arrowEnum == ARROW_TYPE.FRIEND)
-			{
+			if (arrowEnum == ARROW_TYPE.FRIEND) {
 				Score++;
 
 				//Some lazy code for the arrow to disappear, Sorry Garrah.
-				arrowObj.GetComponent<SpriteRenderer>().color -= new Color (0,0,0,0.2f);
+				arrowObj.GetComponent<SpriteRenderer> ().color -= new Color (0, 0, 0, 0.2f);
 
 
 				//Due to the fact that this implicitly implies it is stage one,
 				//It calls the particle effect.
-				callSprScr.ActivateParticleEffect();
+				callSprScr.ActivateParticleEffect ();
+
+				//Makes it so that the game over timer doesn't tick down.
+				friendHit = true;
+			} 
+			//The actual tick down timer.
+			else if (arrowEnum == ARROW_TYPE.CLASS) {
+				if (friendHit == false) {
+					loseScriptCall.LoseCountdownFunction ();
+				}
 			}
 		}
 

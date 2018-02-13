@@ -196,6 +196,7 @@ MonoBehaviour:
   arrowObj: {fileID: 1137749489}
   arrowObjFriend: {fileID: 907515809}
   nameOfLevel: 0
+  classMoveObject_LoseObject: {fileID: 525935147}
 --- !u!4 &330219046
 Transform:
   m_ObjectHideFlags: 0
@@ -683,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3073b200779b8040b9b0e08638cf55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messUpsAllowed: 1
+  messUpsAllowed: 5
   gameOverDialogue: Please change this!!
   textController: {fileID: 1294803744}
 --- !u!1 &595732349

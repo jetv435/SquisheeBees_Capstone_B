@@ -19,6 +19,8 @@ public class MG1LoseScript : MonoBehaviour {
 	//Public Text grabber
 	public UnityEngine.UI.Text textController;
 
+	bool gameOverBool = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -28,7 +30,8 @@ public class MG1LoseScript : MonoBehaviour {
 		textController.text = gameOverDialogue;
 		textController.enabled = false;
 
-		faderVariable = 1 / messUpsAllowed;
+		faderVariable = 1.0f / messUpsAllowed;
+
 	}
 	
 	// Update is called once per frame
@@ -44,6 +47,7 @@ public class MG1LoseScript : MonoBehaviour {
 
 		if (messUpsAllowed <= 0) {
 			textController.enabled = true;
+			gameOverBool = true;
 		}
 	}
 
@@ -52,5 +56,10 @@ public class MG1LoseScript : MonoBehaviour {
 
 		playerSprite.color = new Color (playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, playerSprite.color.a - faderVariable);
 
+	}
+
+	bool ReturnGameOverBool()
+	{
+		return gameOverBool;
 	}
 }
