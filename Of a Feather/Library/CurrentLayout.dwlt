@@ -40,16 +40,16 @@ MonoBehaviour:
     y: 0
     width: 870
     height: 733
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 12}
   - {fileID: 11}
   - {fileID: 13}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 3
+  m_Selected: 3
+  m_LastSelected: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 733
-  m_MinSize: {x: 713, y: 492}
+  m_MinSize: {x: 613, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 67
@@ -181,8 +181,8 @@ MonoBehaviour:
     y: 0
     width: 293
     height: 389
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -442,8 +442,8 @@ MonoBehaviour:
     height: 368
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 842d0000
-    m_LastClickedID: 11652
+    m_SelectedIDs: 
+    m_LastClickedID: 0
     m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -504,8 +504,7 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/Rhythm System/_Internal/BeatGenerationComponents
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -517,7 +516,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9a260000
     m_LastClickedID: 9882
-    m_ExpandedIDs: 00000000a6260000e22700001c28000050280000602800008c28000094280000b8280000bc2800001c2900002029000038290000402900004429000050290000782900009429000096290000322a00004c2a0000aa2a0000d02a0000382b0000442b00006a2b0000762b00008c2b0000ac2b0000d62b0000f42b0000fe2b0000062c0000222e0000242e0000262e0000282e00002a2e00002c2e00002e2e0000302e0000
+    m_ExpandedIDs: 00000000a0260000dc270000162800004a2800005a280000862800008e280000b2280000b6280000162900001a290000322900003a2900003e2900004a290000722900008e290000902900002c2a0000462a0000a42a0000ca2a0000322b00003e2b0000642b0000702b0000862b0000a62b0000d02b0000ee2b0000f82b0000002c0000202e0000222e0000242e0000262e0000282e00002a2e00002c2e00002e2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,24 +541,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 1363}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a6260000e22700001c28000050280000602800008c28000094280000b8280000bc2800001c2900002029000038290000402900004429000050290000782900009429000096290000322a00004c2a0000aa2a0000d02a0000382b0000442b00006a2b0000762b00008c2b0000ac2b0000d62b0000f42b0000fe2b0000062c0000222e0000242e0000262e0000282e00002a2e00002c2e00002e2e0000302e0000
+    m_ExpandedIDs: 00000000a0260000b6260000dc270000162800004a2800005a280000862800008e280000b2280000b6280000162900001a290000322900003a2900003e2900004a290000722900008e290000902900002c2a0000462a0000a42a0000ca2a0000322b00003e2b0000642b0000702b0000862b0000a62b0000d02b0000ee2b0000f82b0000002c0000202e0000222e0000242e0000262e0000282e00002a2e00002c2e00002e2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: MutexArrowCoordinator
+      m_OriginalName: MutexArrowCoordinator
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11832
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
