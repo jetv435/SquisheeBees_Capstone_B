@@ -14,8 +14,9 @@ public class MutexArrowNoRepeatComponent : ABeatGenerationComponent
 
     public GameObject coordinatorObject = null;
     public CoordinatedGeneratorID generatorID = CoordinatedGeneratorID.UNSET;
+    private ABeatGenerationStrategy _myGenerationStrategy = null;
 
-	void Start ()
+	void Awake ()
     {
         // Update() should not be called on this component
         this.enabled = false;
@@ -27,19 +28,17 @@ public class MutexArrowNoRepeatComponent : ABeatGenerationComponent
             MutexArrowCoordinator coordinatorComponent = this.coordinatorObject.GetComponent<MutexArrowCoordinator>();
             if(coordinatorComponent != null)
             {
-                // ToDo: create our generator instance, to register with the coordinator and to provide to a RhythmCore
-
-                // ToDo: handle the selected generator ID
+                // handle the selected generator ID
                 switch (this.generatorID)
                 {
                     case CoordinatedGeneratorID.GENERATOR_A:
                     {
-                        coordinatorComponent.RegisterGeneratorA(null);
+                        this._myGenerationStrategy = new MutexArrowNoRepeatStrat_A(ref coordinatorComponent);
                     }
                     break;
                     case CoordinatedGeneratorID.GENERATOR_B:
                     {
-                        coordinatorComponent.RegisterGeneratorB(null);
+                        this._myGenerationStrategy = new MutexArrowNoRepeatStrat_B(ref coordinatorComponent);
                     }
                     break;
                     case CoordinatedGeneratorID.UNSET:
@@ -72,8 +71,11 @@ public class MutexArrowNoRepeatComponent : ABeatGenerationComponent
 
     public override ABeatGenerationStrategy GetStrategy()
     {
-        // ToDo: Replace this with design-correct code (return our Mutex strategies)
-        Debug.Log("HORAY: We have successfully provided a custom beat generation strategy to our RhythmCore!");
-        return new RandArrowNoRepeatStrat();
+        if(this._myGenerationStrategy == null)
+        {
+            Debug.LogError("Attempted GetStrategy() on a MutexArrowNoRepeatComponent whose strategy is null");   
+        }
+
+        return this._myGenerationStrategy;
     }
 }

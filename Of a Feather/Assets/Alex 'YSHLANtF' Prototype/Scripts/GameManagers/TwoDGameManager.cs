@@ -48,7 +48,7 @@ public class TwoDGameManager : MonoBehaviour
 	//Calls the Rhythm Script, if it is on level 2. The Rhythm Script is tagged as "RhythmTag"
 	//The two variables, one to get the object. The other gets the RhythmCore script.
 	GameObject rhyGObj;
-	RhythmCore rhyScr;
+	RhythmCore rhyScr = null;
 
 	//This code calls on the friend's mark, allowing it to be sent to the TwoMainCode later.
 	//SpawnerMaster gives the friends number.

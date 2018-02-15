@@ -44,11 +44,25 @@ public class RhythmCore : MonoBehaviour
     public float beatWindowDuration = 0.5f;
     public GameObject[] promptListenerObjects;
     public GameObject[] feedbackListenerObjects;
-    private ABeatGenerationStrategy beatGenStrat = new RandArrowNoRepeatStrat();
+    private ABeatGenerationStrategy beatGenStrat = null;
     private List<IRhythmPromptListener> promptListeners = new List<IRhythmPromptListener>();
     private List<IRhythmFeedbackListener> feedbackListeners = new List<IRhythmFeedbackListener>();
     private RhythmExpectedEventInfo currExpectedEvent;
     private bool bBeatQueued = false;
+
+    //static private int rhythmCoreConstructorCount = 0;
+
+    //public RhythmCore()
+    //{
+    //    rhythmCoreConstructorCount++;
+    //    Debug.Log("Created a RhythmCore - current count: " + rhythmCoreConstructorCount);
+    //}
+
+    //private void OnDestroy()
+    //{
+    //    rhythmCoreConstructorCount--;
+    //    Debug.Log("Destroyed a RhythmCore - current count: " + rhythmCoreConstructorCount);
+    //}
 
     // Use this for initialization
     void Start()
@@ -127,8 +141,6 @@ public class RhythmCore : MonoBehaviour
             }
             this.bBeatQueued = false;
         }
-
-
     }
 
     // Invoked periodically
@@ -178,6 +190,7 @@ public class RhythmCore : MonoBehaviour
 
     private void NotifyPromptListeners(RhythmCore.RhythmExpectedEventInfo eventInfo)
     {
+        Debug.Log("PROMPT");
         foreach(IRhythmPromptListener listenerComponent in this.promptListeners)
         {
             listenerComponent.PromptNotify(eventInfo);
