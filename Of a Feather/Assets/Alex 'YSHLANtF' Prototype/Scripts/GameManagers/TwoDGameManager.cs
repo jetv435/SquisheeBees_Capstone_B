@@ -200,13 +200,13 @@ public class TwoDGameManager : MonoBehaviour
 
     public void PlayCorrectSound()
     {
-        Debug.Log("Playing \"Correct Key\" Sound...");
+        //Debug.Log("Playing \"Correct Key\" Sound...");
         soundScr.PlayCorrect();
     }
 
     public void PlayWrongSound()
     {
-        Debug.Log("Playing \"Wrong Key\" Sound...");
+        //Debug.Log("Playing \"Wrong Key\" Sound...");
         soundScr.PlayWrong();
     }
 

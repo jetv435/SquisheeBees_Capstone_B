@@ -146,6 +146,7 @@ public class RhythmCore : MonoBehaviour
     // Invoked periodically
     private void OnBeat()
     {
+        //Debug.Log("BEAT (time " + Time.fixedTime + ")");
         // Generate an expected event for this beat frame via a strategy object, and notify listeners
         this.currExpectedEvent = this.beatGenStrat.GenerateExpectedEvent();
 
@@ -190,7 +191,7 @@ public class RhythmCore : MonoBehaviour
 
     private void NotifyPromptListeners(RhythmCore.RhythmExpectedEventInfo eventInfo)
     {
-        Debug.Log("PROMPT");
+        //Debug.Log("PROMPT");
         foreach(IRhythmPromptListener listenerComponent in this.promptListeners)
         {
             listenerComponent.PromptNotify(eventInfo);

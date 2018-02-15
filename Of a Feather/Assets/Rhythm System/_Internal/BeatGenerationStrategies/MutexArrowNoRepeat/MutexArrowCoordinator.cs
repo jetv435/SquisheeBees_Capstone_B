@@ -41,7 +41,7 @@ public class MutexArrowCoordinator : MonoBehaviour
             if(this._genStratB != null)
             {
                 this._myState = State.WAITING_FOR_FIRST;
-                Debug.Log("RegisterGenerator_A -> WAITING_FOR_FIRST");
+                //Debug.Log("RegisterGenerator_A -> WAITING_FOR_FIRST");
             }
         }
         else
@@ -60,7 +60,7 @@ public class MutexArrowCoordinator : MonoBehaviour
             if (this._genStratA != null)
             {
                 this._myState = State.WAITING_FOR_FIRST;
-                Debug.Log("RegisterGenerator_B -> WAITING_FOR_FIRST");
+                //Debug.Log("RegisterGenerator_B -> WAITING_FOR_FIRST");
             }
         }
         else
@@ -85,16 +85,16 @@ public class MutexArrowCoordinator : MonoBehaviour
                     this.currInfoA = RandomArrowGenStrat.GenerateExpectedEventStatic();
                 }
                 this._myState = State.A_REQUESTED_B_PENDING;
-                Debug.Log("GenerateExpectedEvent_A -> A_REQUESTED_B_PENDING");
+                //Debug.Log("GenerateExpectedEvent_A -> A_REQUESTED_B_PENDING");
             }
             else if(_myState == State.B_REQUESTED_A_PENDING)
             {
-                while (this.currInfoA.expectedKey == this.prevInfoA.expectedKey && this.currInfoA.expectedKey == this.currInfoB.expectedKey)
+                while (this.currInfoA.expectedKey == this.prevInfoA.expectedKey || this.currInfoA.expectedKey == this.currInfoB.expectedKey)
                 {
                     this.currInfoA = RandomArrowGenStrat.GenerateExpectedEventStatic();
                 }
                 this._myState = State.WAITING_FOR_FIRST;
-                Debug.Log("GenerateExpectedEvent_A -> WAITING_FOR_FIRST");
+                //Debug.Log("GenerateExpectedEvent_A -> WAITING_FOR_FIRST");
             }
             else
             {
@@ -135,16 +135,16 @@ public class MutexArrowCoordinator : MonoBehaviour
                     this.currInfoB = RandomArrowGenStrat.GenerateExpectedEventStatic();
                 }
                 this._myState = State.B_REQUESTED_A_PENDING;
-                Debug.Log("GenerateExpectedEvent_B -> B_REQUESTED_A_PENDING");
+                //Debug.Log("GenerateExpectedEvent_B -> B_REQUESTED_A_PENDING");
             }
             else if (_myState == State.A_REQUESTED_B_PENDING)
             {
-                while (this.currInfoB.expectedKey == this.prevInfoB.expectedKey && this.currInfoB.expectedKey == this.currInfoA.expectedKey)
+                while (this.currInfoB.expectedKey == this.prevInfoB.expectedKey || this.currInfoB.expectedKey == this.currInfoA.expectedKey)
                 {
                     this.currInfoB = RandomArrowGenStrat.GenerateExpectedEventStatic();
                 }
                 this._myState = State.WAITING_FOR_FIRST;
-                Debug.Log("GenerateExpectedEvent_B -> WAITING_FOR_FIRST");
+                //Debug.Log("GenerateExpectedEvent_B -> WAITING_FOR_FIRST");
             }
             else
             {
