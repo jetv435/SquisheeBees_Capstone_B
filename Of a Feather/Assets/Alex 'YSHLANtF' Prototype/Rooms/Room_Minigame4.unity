@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -77,17 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -231,7 +229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f34b6d9e48614c84ab67c012ac289c89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45c06a66710cf5f4995f9c6ad31dc738, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -281,7 +279,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
+    oldSize: {x: 10, y: 12}
     newSize: {x: 10, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -690,6 +688,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 20, y: 20}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -987,6 +999,78 @@ Prefab:
       propertyPath: classSprite.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: aa9f5595fee0a96488fd88b07458498f,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 250d39d2fedc411489161f3c862ad7d1,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 562f62e6f7221dc409060b1f3400b48d,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: playerSpriteSheet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: b82a489c67df7a842b2a9c267675588c,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: be2235b0755caf646b0d85788c1f5df8,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 25732ab46d0c00b4e9d6c51b516bc877,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f4eed068b39d6a4a8135ad2d8de3ae1,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: classSpriteSheet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: f6f57bb8cf8b6514f895b0a5335ab86b,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8708f20ccbe74a442abc7a6a8cb74415,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a73352e8eb3de94da3b792db8c97617,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5df080ff93aaeb54fb31aab7ed8237d4,
+        type: 3}
+    - target: {fileID: 114665534706204676, guid: afb40b9d82a6cab43b0da7d812f7748c,
+        type: 2}
+      propertyPath: friendSpriteSheet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 86f9fe2cf0645cf45b55f4fb2a067f24,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afb40b9d82a6cab43b0da7d812f7748c, type: 2}
   m_IsPrefabParent: 0
@@ -1087,7 +1171,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02b6664cf3df30b4faf5b279ce8ce8f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9ae068ffcc1bfc449a1e496e62e765a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1139,7 +1223,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
+    oldSize: {x: 10, y: 12}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1229,6 +1313,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -1931,6 +2029,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -2111,6 +2223,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
