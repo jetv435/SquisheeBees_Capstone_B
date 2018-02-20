@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3073b200779b8040b9b0e08638cf55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messUpsAllowed: 5
+  messUpsAllowed: 2
   gameOverDialogue: Please change this!!
   textController: {fileID: 1294803744}
 --- !u!1 &595732349

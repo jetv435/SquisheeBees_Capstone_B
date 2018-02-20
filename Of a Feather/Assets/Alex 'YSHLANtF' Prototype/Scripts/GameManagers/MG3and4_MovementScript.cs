@@ -23,6 +23,9 @@ public class MG3and4_MovementScript : MonoBehaviour {
 	public float playerMovement = 1.0f;
 	//This is the grab the background size. To prevent the player from moving away.
 	public GameObject backgroundObject;
+	bool canMove = true;
+
+	public bool isMinigameFour = false;
 
 	// Use this for initialization
 	void Start () {
@@ -35,9 +38,10 @@ public class MG3and4_MovementScript : MonoBehaviour {
 
 		//Correction_Passive ();
 
-		if(Input.anyKey == true)
+		if(Input.anyKey == true && canMove == true)
 			Move_Generic ();
-		
+		if (Input.anyKey == false)
+			canMove = true;
 		
 	}
 
@@ -50,7 +54,9 @@ public class MG3and4_MovementScript : MonoBehaviour {
 	//A simple code that allows for movement
 	void Move_Generic()
 	{
-		
+		if(isMinigameFour == false)
+			canMove = false;
+
 		PLAYER_MOVEMENT playerMoveVar = InputSet ();
 
 		if (playerMoveVar == PLAYER_MOVEMENT.NO_INPUT) {

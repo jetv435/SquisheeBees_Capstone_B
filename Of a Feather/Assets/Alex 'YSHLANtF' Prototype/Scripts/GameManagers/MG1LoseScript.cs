@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MG1LoseScript : MonoBehaviour {
 
@@ -48,6 +49,7 @@ public class MG1LoseScript : MonoBehaviour {
 		if (messUpsAllowed <= 0) {
 			textController.enabled = true;
 			gameOverBool = true;
+			Invoke ("GameOverReset", 3);
 		}
 	}
 
@@ -61,5 +63,12 @@ public class MG1LoseScript : MonoBehaviour {
 	bool ReturnGameOverBool()
 	{
 		return gameOverBool;
+	}
+
+	void GameOverReset()
+	{
+		Scene sceneName = SceneManager.GetActiveScene();
+
+		SceneManager.LoadScene (sceneName.name);
 	}
 }
