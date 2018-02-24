@@ -7,6 +7,11 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 	public GameObject BeatObjCall;
 	RhythmCore BeatScrCall;
 
+	public uint maxBPM = 200;
+	public uint minTPL = 1;
+	public int buttonPressesBeforeQuickening = 7;
+	int buttonPresses = 0;
+
 	public GameObject lightControllerObject;
 	LightControlMG2Script lightControlScript;
 
@@ -26,13 +31,22 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 
 			if (BeatScrCall.IsBeatQueued () == true) {
 
-				BeatScrCall.beatTiming.beatsPerMinute += 5;
-				BeatScrCall.beatTiming.ticksPerLine -= 1;
+				if (buttonPresses >= buttonPressesBeforeQuickening) {
+					
+					if (BeatScrCall.beatTiming.beatsPerMinute < maxBPM) {
+						BeatScrCall.beatTiming.beatsPerMinute += 5;
+					}
+					if (BeatScrCall.beatTiming.ticksPerLine > minTPL) {
+						BeatScrCall.beatTiming.ticksPerLine -= 1;
+					}
 
-				if (BeatScrCall.beatTiming.ticksPerLine <= 0)
-					BeatScrCall.beatTiming.ticksPerLine = 1;
+					if (BeatScrCall.beatTiming.ticksPerLine <= 0)
+						BeatScrCall.beatTiming.ticksPerLine = 1;
 
-				lightControlScript.UpdateLightsAndBackground ();
+					lightControlScript.UpdateLightsAndBackground ();
+				} else {
+					buttonPresses++;
+				}
 			}
 		}
 		

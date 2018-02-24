@@ -39,4 +39,11 @@ public class MG4_FriendGrabScript : MonoBehaviour {
 
 		}
 	}
+
+	public bool GiveFriendMovementBool()
+	{
+
+		return moveWithPlayer;
+
+	}
 }
