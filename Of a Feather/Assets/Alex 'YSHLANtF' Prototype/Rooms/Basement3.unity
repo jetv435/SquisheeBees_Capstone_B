@@ -5594,6 +5594,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52e4bda0aefadb64f9cb1fbad425ff04, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1434353620 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1385633739192422, guid: 52e4bda0aefadb64f9cb1fbad425ff04,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434353619}
+--- !u!114 &1434353621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434353620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dae11594c267347bb97c66661ef36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2000
+  shoes: {fileID: 1501553366}
+  bshoes: {fileID: 1501553365}
 --- !u!1 &1460087692
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,11 +6066,11 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 57774c2cc92f3044aab46ea6358544b9, type: 2}
     - target: {fileID: 1322395262986196, guid: 43c347ba2dde19242936e0fc99e24687, type: 2}
       propertyPath: m_TagString
-      value: MManager
+      value: bshoes
       objectReference: {fileID: 0}
     - target: {fileID: 1705119981694014, guid: 43c347ba2dde19242936e0fc99e24687, type: 2}
       propertyPath: m_TagString
-      value: MManager
+      value: bshoes
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65629973267315958, guid: 43c347ba2dde19242936e0fc99e24687, type: 2}

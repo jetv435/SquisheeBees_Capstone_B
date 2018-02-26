@@ -430,20 +430,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -789,6 +775,10 @@ Prefab:
       propertyPath: Introfade
       value: 
       objectReference: {fileID: 386501002}
+    - target: {fileID: 1971205200032626, guid: 514877b34fb2c9d43b451d7491e0f446, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 514877b34fb2c9d43b451d7491e0f446, type: 2}
   m_IsPrefabParent: 0
@@ -1086,9 +1076,10 @@ GameObject:
   - component: {fileID: 595003921}
   - component: {fileID: 595003920}
   - component: {fileID: 595003923}
+  - component: {fileID: 595003924}
   m_Layer: 0
   m_Name: MG3_RoomSwitch
-  m_TagString: Untagged
+  m_TagString: MManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1162,6 +1153,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &595003924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595003919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3ee4303deef9844940ed8f806fcab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeInOutPanel: {fileID: 1534605831}
+  Introfade: {fileID: 386501002}
+  nextroom: 7
 --- !u!1 &635341451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: 0.5
   backgroundObject: {fileID: 337769707}
+  isMinigameFour: 0
 --- !u!50 &635341455
 Rigidbody2D:
   serializedVersion: 4
@@ -1826,7 +1832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1225244950
 RectTransform:
   m_ObjectHideFlags: 0

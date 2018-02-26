@@ -57,7 +57,7 @@ public class TwoDGameManager : MonoBehaviour
 	//To determine what level it is.
 	public LEVEL_2D_NAMES nameOfLevel;
 
-	private MainMenuManager MM;
+	//private MainMenuManager MM;
 
 	//A bool to mess with the LoseScript
 	//Friend hit prevents the game over timer from ticking down.
@@ -95,7 +95,7 @@ public class TwoDGameManager : MonoBehaviour
 		}
 
         // Main Menu Manager
-		MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
+		//MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 
 		//If the enum of nameOfLevel is STAGE_2, then it sets the rhythm object.
 		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2)

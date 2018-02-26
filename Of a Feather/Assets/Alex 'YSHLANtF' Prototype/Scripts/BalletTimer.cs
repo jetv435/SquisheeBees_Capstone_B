@@ -7,11 +7,12 @@ public class BalletTimer : MonoBehaviour {
 
 	public int timer = 0;
 	public GameObject shoes;
-
+	public GameObject bshoes;
 
 	// Use this for initialization
 	void Start () {
 		shoes.SetActive (false);
+		bshoes.SetActive (false);
 		
 	}
 	
@@ -23,6 +24,7 @@ public class BalletTimer : MonoBehaviour {
 		if (timer <= 0) {
 
 			shoes.SetActive (true);
+			bshoes.SetActive (true);
 			timer = 0;
 		}
 	}

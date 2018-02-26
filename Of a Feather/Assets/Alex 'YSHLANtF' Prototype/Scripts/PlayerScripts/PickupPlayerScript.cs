@@ -34,7 +34,7 @@ public class PickupPlayerScript : MonoBehaviour {
 		if (carrying) {
 			carryFunc (carriedObj);
 			checkDropFunc ();
-			if (carrying && carriedObj.tag == "MManager") {
+			if (carrying && carriedObj.tag == "bshoes") {
 				StartCoroutine (mm.SGCorutine ());
 			}
 
@@ -95,7 +95,7 @@ public class PickupPlayerScript : MonoBehaviour {
 
 	void checkDropFunc()
 	{
-		if (Input.GetKeyDown (KeyCode.Mouse1)) {
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			dropObject ();
 		}
 	}

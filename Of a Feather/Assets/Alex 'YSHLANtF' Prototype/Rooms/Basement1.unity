@@ -2850,6 +2850,39 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &666630062 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1385633739192422, guid: 52e4bda0aefadb64f9cb1fbad425ff04,
+    type: 2}
+  m_PrefabInternal: {fileID: 1025965556}
+--- !u!114 &666630063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 666630062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3ee4303deef9844940ed8f806fcab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeInOutPanel: {fileID: 1064366450}
+  Introfade: {fileID: 1064366450}
+  nextroom: 2
+--- !u!114 &666630064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 666630062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dae11594c267347bb97c66661ef36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1000
+  shoes: {fileID: 1336406105}
+  bshoes: {fileID: 1336406105}
 --- !u!1001 &675307826
 Prefab:
   m_ObjectHideFlags: 0
@@ -3759,6 +3792,10 @@ Prefab:
       propertyPath: storyitem
       value: 
       objectReference: {fileID: 1352997028}
+    - target: {fileID: 1385633739192422, guid: 52e4bda0aefadb64f9cb1fbad425ff04, type: 2}
+      propertyPath: m_TagString
+      value: MManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52e4bda0aefadb64f9cb1fbad425ff04, type: 2}
   m_IsPrefabParent: 0
@@ -4601,13 +4638,12 @@ GameObject:
   - component: {fileID: 1336406106}
   - component: {fileID: 1336406108}
   - component: {fileID: 1336406107}
-  - component: {fileID: 1336406109}
   - component: {fileID: 1336406110}
   - component: {fileID: 1336406112}
   - component: {fileID: 1336406111}
   m_Layer: 0
   m_Name: b_SHOES
-  m_TagString: MManager
+  m_TagString: bshoes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4654,20 +4690,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4862823, y: 2.8191967, z: 1.9810781}
   m_Center: {x: -0.5836563, y: -0.18879223, z: 0.018230915}
---- !u!114 &1336406109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336406105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3ee4303deef9844940ed8f806fcab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeInOutPanel: {fileID: 1064366450}
-  Introfade: {fileID: 1064366450}
-  nextroom: 2
 --- !u!114 &1336406110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5022,6 +5044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 1800
   shoes: {fileID: 1336406105}
+  bshoes: {fileID: 0}
 --- !u!1 &1457420404
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class MG3_RoomSwitcher : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Player") {
-			SceneManager.LoadScene ("Basement5");
+			SceneManager.LoadScene ("Room_Minigame4");
 		}
 
 	}
