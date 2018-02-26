@@ -13,9 +13,9 @@ public class MG4_SetupScript : MonoBehaviour {
 		playerObject = GameObject.FindGameObjectWithTag ("Player");
 		keyAllowanceScript = playerObject.GetComponent<MG3and4_MovementScript> ();
 
-		keyAllowanceScript.ActivateKey ("Right");
-		keyAllowanceScript.ActivateKey ("Up");
-		keyAllowanceScript.ActivateKey ("Left");
+		//keyAllowanceScript.ActivateKey ("Right");
+		//keyAllowanceScript.ActivateKey ("Up");
+		//keyAllowanceScript.ActivateKey ("Left");
 		
 	}
 	

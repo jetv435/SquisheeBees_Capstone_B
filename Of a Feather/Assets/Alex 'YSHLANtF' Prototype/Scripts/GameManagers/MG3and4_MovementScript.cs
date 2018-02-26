@@ -15,9 +15,12 @@ public class MG3and4_MovementScript : MonoBehaviour {
 	}
 
 	//Things that allow the keys to be pressed.
-	bool allowUp = false;
-	bool allowRight = false;
-	bool allowLeft = false;
+	bool allowUp = true;
+	bool allowRight = true;
+	bool allowLeft = true;
+	bool allowDown = true;
+
+	bool keyLock = false;
 
 
 	public float playerMovement = 1.0f;
@@ -65,6 +68,7 @@ public class MG3and4_MovementScript : MonoBehaviour {
 		//Trying to cut back on code. This should save a line or two. Maybe. Both
 		else if (playerMoveVar == PLAYER_MOVEMENT.UP_PLAYER || playerMoveVar == PLAYER_MOVEMENT.DOWN_PLAYER) {
 			Move_Translation (new Vector3 (0, 1, 0), playerMoveVar);
+			//if
 		} else if (playerMoveVar == PLAYER_MOVEMENT.LEFT_PLAYER || playerMoveVar == PLAYER_MOVEMENT.RIGHT_PLAYER) {
 
 			Move_Translation (new Vector3 (1, 0, 0), playerMoveVar);
@@ -78,7 +82,7 @@ public class MG3and4_MovementScript : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.UpArrow) && allowUp)
 			return PLAYER_MOVEMENT.UP_PLAYER;
-		else if (Input.GetKey (KeyCode.DownArrow))
+		else if (Input.GetKey (KeyCode.DownArrow) && allowDown)
 			return PLAYER_MOVEMENT.DOWN_PLAYER;
 		else if (Input.GetKey (KeyCode.LeftArrow) && allowLeft)
 			return PLAYER_MOVEMENT.LEFT_PLAYER;
@@ -195,15 +199,37 @@ public class MG3and4_MovementScript : MonoBehaviour {
 
 	}
 
-	public void ActivateKey(string keyToActivate)
+	public void KeyLocking(string keyException)
 	{
-		if (keyToActivate == "Right") {
-			allowRight = true;
-		} else if (keyToActivate == "Left") {
-			allowLeft = true;
-		} else if (keyToActivate == "Up") {
-			allowUp = true;
+		if (keyException == "Down") {
+			allowUp = false;
+			allowRight = false;
+			allowLeft = false;
 		}
+		else if (keyException == "Up") {
+			allowDown = false;
+			allowRight = false;
+			allowLeft = false;
+		}
+		else if (keyException == "Left") {
+			allowUp = false;
+			allowRight = false;
+			allowDown = false;
+		}
+		else if (keyException == "Right") {
+			allowUp = false;
+			allowDown = false;
+			allowLeft = false;
+		}
+	}
+
+	public void KeyAllower()
+	{
+		allowUp = true;
+		allowDown = true;
+		allowRight = true;
+		allowLeft = true;
+
 	}
 
 

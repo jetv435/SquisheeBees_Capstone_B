@@ -2,11 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ALLOW_OR_PREVENT
+{
+	ALLOW,
+	LOCK
+
+}
+
 public class MG3_KeyActivator : MonoBehaviour {
+
+	//This is to grab game object that are similar to this one, and have the same "exception" key. or similar whichArrowKeyToActivate.
+	public List<GameObject> similarObjectsSameExceptionKey = new List<GameObject>();
 
 	public string whichArrowKeyToActivate = "Right";
 	GameObject playerObject;
 	MG3and4_MovementScript keyAllowanceScript;
+
+	public ALLOW_OR_PREVENT activatorOrDisabler = ALLOW_OR_PREVENT.ALLOW;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +35,15 @@ public class MG3_KeyActivator : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		keyAllowanceScript.ActivateKey (whichArrowKeyToActivate);
+		if (activatorOrDisabler == ALLOW_OR_PREVENT.ALLOW) {
+
+			keyAllowanceScript.KeyAllower ();
+		} else {
+			keyAllowanceScript.KeyLocking (whichArrowKeyToActivate);
+			for (int i = 0; i < similarObjectsSameExceptionKey.Count; i++) {
+				similarObjectsSameExceptionKey [i].SetActive (false);
+			}
+			gameObject.SetActive (false);
+		}
 	}
 }

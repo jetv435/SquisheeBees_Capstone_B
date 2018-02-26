@@ -62,7 +62,6 @@ C:\Users\David\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\De
 C:\Users\David\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\UnityEngine.Analytics.xml
 C:\Users\David\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\David\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\obj\Debug\Assembly-CSharp.pdb
-E:\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\Facebook.Unity.Settings.dll
 C:\Users\David\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\Facebook.Unity.Settings.dll
 C:\Users\Adesmang\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\Adesmang\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\Assembly-CSharp.pdb
