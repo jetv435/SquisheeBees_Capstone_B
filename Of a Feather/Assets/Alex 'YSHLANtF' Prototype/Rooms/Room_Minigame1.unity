@@ -443,7 +443,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8838c839420d34f4fbca55746b7164f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c9c81cb6ecf0c7a4fb8ccdee78bcb343, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -451,7 +451,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 34
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -722,8 +722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3073b200779b8040b9b0e08638cf55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messUpsAllowed: 2
-  gameOverDialogue: Please change this!!
+  messUpsAllowed: 4
+  gameOverDialogue: 
   textController: {fileID: 1294803744}
 --- !u!1 &595732349
 GameObject:

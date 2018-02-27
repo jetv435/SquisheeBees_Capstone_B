@@ -854,11 +854,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c07ea0bf1d88a842b3b91972fc7ddca, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.35
+  m_audioClip: {fileID: 8300000, guid: d4a14e537427a4143bd335741ce22444, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.63
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305635588}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 414828891cac6424ba707034f4efdd24, type: 3}
   m_Name: 
@@ -958,7 +958,7 @@ BoxCollider:
   m_GameObject: {fileID: 305635588}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 17.312754, y: 15.537107, z: 21.92468}
   m_Center: {x: 2.1846437, y: 2.8303442, z: 0.16916561}
