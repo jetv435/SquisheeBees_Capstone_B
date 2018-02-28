@@ -60,6 +60,7 @@ public class MG1_ClassMove : MonoBehaviour {
 		//if (managerScript.Get_friendSprOn() == false) {
 
 			//Debug.Log ("Workin'");
+		ownLoseScript_Call.SpriteEnlarge ();
 								
 			for (int i = 0; i < gameClassList.Count; i++) {
 				Vector3 newPosition = gameClassList [i].transform.position;
@@ -71,6 +72,7 @@ public class MG1_ClassMove : MonoBehaviour {
 				else {
 					newPosition.x -= moveAwayDistance;
 				}
+
 
 			//For the Lose Script, since they share a similar function
 			//If the friend sprite is on, the player starts to lose.

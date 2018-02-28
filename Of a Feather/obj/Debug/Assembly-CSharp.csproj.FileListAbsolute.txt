@@ -96,3 +96,4 @@ C:\Users\Adesmang\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin
 C:\Users\Adesmang\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Adesmang\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\obj\Debug\Assembly-CSharp.dll
 C:\Users\Adesmang\Documents\GitHub\SquisheeBees_Capstone_B\Of a Feather\obj\Debug\Assembly-CSharp.pdb
+E:\GitHub\SquisheeBees_Capstone_B\Of a Feather\Temp\bin\Debug\Facebook.Unity.Settings.dll

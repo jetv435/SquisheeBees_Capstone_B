@@ -15,7 +15,7 @@ public class MG1LoseScript : MonoBehaviour {
 	GameObject playerObject;
 	SpriteRenderer playerSprite;
 
-	float faderVariable;
+	public float enlargingVariable = 1.5f;
 
 	//Public Text grabber
 	public UnityEngine.UI.Text textController;
@@ -31,8 +31,6 @@ public class MG1LoseScript : MonoBehaviour {
 		textController.text = gameOverDialogue;
 		textController.enabled = false;
 
-		faderVariable = 1.0f / messUpsAllowed;
-
 	}
 	
 	// Update is called once per frame
@@ -44,7 +42,7 @@ public class MG1LoseScript : MonoBehaviour {
 	public void LoseCountdownFunction()
 	{
 		messUpsAllowed -= 1;
-		SpriteFade ();
+
 
 		if (messUpsAllowed <= 0) {
 			textController.enabled = true;
@@ -53,10 +51,10 @@ public class MG1LoseScript : MonoBehaviour {
 		}
 	}
 
-	void SpriteFade()
+	public void SpriteEnlarge()
 	{
+		playerObject.transform.localScale *= enlargingVariable;
 
-		playerSprite.color = new Color (playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, playerSprite.color.a - faderVariable);
 
 	}
 
