@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   - {fileID: 444002758}
   - {fileID: 2142026426}
   - {fileID: 403869778}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Right
   activatorOrDisabler: 1
 --- !u!61 &2435780
 BoxCollider2D:
@@ -361,7 +361,7 @@ MonoBehaviour:
   - {fileID: 735154860}
   - {fileID: 794748905}
   - {fileID: 2435778}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Left
   activatorOrDisabler: 1
 --- !u!61 &42720007
 BoxCollider2D:
@@ -528,7 +528,7 @@ MonoBehaviour:
   - {fileID: 2037490179}
   - {fileID: 1391236389}
   - {fileID: 1544798623}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Up
   activatorOrDisabler: 1
 --- !u!61 &193427997
 BoxCollider2D:
@@ -832,7 +832,7 @@ MonoBehaviour:
   - {fileID: 2435778}
   - {fileID: 444002758}
   - {fileID: 465412222}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Right
   activatorOrDisabler: 1
 --- !u!61 &403869780
 BoxCollider2D:
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   - {fileID: 2435778}
   - {fileID: 403869778}
   - {fileID: 794748905}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Right
   activatorOrDisabler: 1
 --- !u!61 &444002760
 BoxCollider2D:
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   - {fileID: 42720005}
   - {fileID: 794748905}
   - {fileID: 403869778}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Left
   activatorOrDisabler: 1
 --- !u!61 &465412224
 BoxCollider2D:
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   - {fileID: 444002758}
   - {fileID: 403869778}
   - {fileID: 735154860}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Right
   activatorOrDisabler: 1
 --- !u!61 &599946181
 BoxCollider2D:
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   - {fileID: 42720005}
   - {fileID: 794748905}
   - {fileID: 599946179}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Left
   activatorOrDisabler: 1
 --- !u!61 &735154862
 BoxCollider2D:
@@ -2219,7 +2219,7 @@ MonoBehaviour:
   - {fileID: 735154860}
   - {fileID: 42720005}
   - {fileID: 403869778}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Left
   activatorOrDisabler: 1
 --- !u!61 &794748907
 BoxCollider2D:
@@ -2732,7 +2732,7 @@ MonoBehaviour:
   - {fileID: 2037490179}
   - {fileID: 193427995}
   - {fileID: 2142026426}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Up
   activatorOrDisabler: 1
 --- !u!61 &1391236391
 BoxCollider2D:
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   - {fileID: 193427995}
   - {fileID: 1391236389}
   - {fileID: 1125823397}
-  whichArrowKeyToActivate: Down
+  whichArrowKeyToActivate: Up
   activatorOrDisabler: 1
 --- !u!61 &2037490181
 BoxCollider2D:

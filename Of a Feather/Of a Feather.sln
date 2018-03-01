@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio for Mac
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Of a Feather", "Of a Feather.csproj", "{709A664B-857C-56F7-12A7-3E7A9B191F4E}"
 EndProject
 Global
