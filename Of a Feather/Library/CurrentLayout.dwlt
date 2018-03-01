@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 96
+  controlID: 9
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 53
+  controlID: 63
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,14 +343,14 @@ MonoBehaviour:
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1070.1967118828288
+  lastFramingTime: 3779.6304114457885
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -18.209612, y: 19.896622, z: 20.165693}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -18.209612, y: 19.896622, z: 20.165693}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -374,13 +374,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.28612038, y: -0.62598693, z: 0.26526275, w: -0.67521197}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.28612038, y: -0.62598693, z: 0.26526275, w: -0.67521197}
   m_Size:
-    m_Target: 19.759346
+    m_Target: 2.0376904
     speed: 2
-    m_Value: 19.759346
+    m_Value: 2.0376904
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -447,10 +447,10 @@ MonoBehaviour:
     height: 489
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 64}
-    m_SelectedIDs: 884b0000
-    m_LastClickedID: 19336
-    m_ExpandedIDs: c87fffff000000006c4a0000be4a0000
+    scrollPos: {x: 0, y: 112}
+    m_SelectedIDs: 94bdfcff
+    m_LastClickedID: -213612
+    m_ExpandedIDs: de3dfbffa0bdfcff0ef3ffff96fbffff00000000fe3b0000c43c0000fc3c0000163d0000643d00009a3d0000ce3d0000ba6c0000e06d00002c6e0000606e0000906e0000d46e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,7 +469,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - Basement1
+  - Basement4
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -512,7 +512,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Alex 'YSHLANtF' Prototype/Rooms
+    - Assets/Alex 'YSHLANtF' Prototype/Scripts/DialogBox
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -524,7 +524,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9a260000
     m_LastClickedID: 9882
-    m_ExpandedIDs: 
+    m_ExpandedIDs: da290000f22900004e2c00006c2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -552,7 +552,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: be440000d0440000924500001a460000
+    m_ExpandedIDs: 00000000da290000f22900006c2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -604,7 +604,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 89}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &16
