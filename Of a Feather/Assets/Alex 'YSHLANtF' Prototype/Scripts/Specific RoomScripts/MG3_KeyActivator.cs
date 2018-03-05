@@ -38,6 +38,11 @@ public class MG3_KeyActivator : MonoBehaviour {
 		if (activatorOrDisabler == ALLOW_OR_PREVENT.ALLOW) {
 
 			keyAllowanceScript.KeyAllower ();
+			for (int i = 0; i < similarObjectsSameExceptionKey.Count; i++) {
+				similarObjectsSameExceptionKey [i].GetComponent<SpriteRenderer> ().enabled = false;
+			}
+			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+
 		} else {
 			keyAllowanceScript.KeyLocking (whichArrowKeyToActivate);
 			for (int i = 0; i < similarObjectsSameExceptionKey.Count; i++) {

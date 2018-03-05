@@ -386,7 +386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &352380219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxScoreFriend: 1
-  maxScoreNeededInTotal: 50
+  maxScoreNeededInTotal: 32
   friendenter: {fileID: 0}
   arrowObj: {fileID: 2052897320}
   arrowObjFriend: {fileID: 378496549}

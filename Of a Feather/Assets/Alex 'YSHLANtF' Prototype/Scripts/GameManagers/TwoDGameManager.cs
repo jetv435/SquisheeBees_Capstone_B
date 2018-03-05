@@ -149,10 +149,10 @@ public class TwoDGameManager : MonoBehaviour
 	//New score func that checks on the arrow type now
 	public void IncreaseScore(ARROW_TYPE arrowEnum)
 	{
-		if (friendSprOn == false)
+		if (friendSprOn == false && nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
         {
 			Score++;
-		} else
+		} else if(friendSprOn == true && nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
         {
 			if (arrowEnum == ARROW_TYPE.FRIEND) {
 				Score++;
@@ -182,6 +182,15 @@ public class TwoDGameManager : MonoBehaviour
         {
             arrowScrFrd.disableArrow();
         }
+
+		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
+			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow) ||
+			    Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.RightArrow)) {
+
+				Score++;
+
+			}
+		}
 	}
 
     public void ChangeCharacterPose(MGDirectionUtils.MGDirection poseDirection, ARROW_TYPE arrowType)

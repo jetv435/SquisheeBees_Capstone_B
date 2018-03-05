@@ -1,15 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Alex 'YSHLANtF' Prototype\Scripts\PlayerScripts\PickupPlayerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\TwoDGameManager.cs">
     <Files>
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\MinigameManager_MG1.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameBossCode.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\HaloControllerPickupScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\PlayerScripts\PickupPlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\MG1LoseScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpawnerScriptsFolder\ProtobeatIncreaseScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpawnerScriptsFolder\ProtobeatIncreaseScript.cs" Line="29" Column="3" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\LightControlMG2Script.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\DialogBox\dialogue.txt" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_KeyActivator.cs" Line="44" Column="63" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\FadeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\MainMenuManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\TwoDGameManager.cs" Line="155" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
