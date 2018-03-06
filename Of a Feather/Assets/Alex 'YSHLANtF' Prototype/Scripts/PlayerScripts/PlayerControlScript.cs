@@ -11,6 +11,7 @@ public class PlayerControlScript : MonoBehaviour {
 	CursorLockMode wantedMode;
 
 	Quaternion rotCam;
+	AudioManager am;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,8 @@ public class PlayerControlScript : MonoBehaviour {
 		wantedMode = CursorLockMode.Locked;
 
 		SetCursorState ();
+
+		am = GameObject.FindObjectOfType<AudioManager> ();
 		
 	}
 	
@@ -28,6 +31,7 @@ public class PlayerControlScript : MonoBehaviour {
 		SetCursorState ();
 		rotCam = cameraMainScr.giveRotations ();
 		TranslateMovement ();
+
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (wantedMode == CursorLockMode.Locked) {
@@ -56,6 +60,11 @@ public class PlayerControlScript : MonoBehaviour {
 		direction.z *= .1f;
 
 		transform.position += direction;
+
+		/*if (am.SoundEffects [2].isPlaying == false) {
+			am.SoundEffects [2].Play ();
+		}
+		*/
 
 	}
 

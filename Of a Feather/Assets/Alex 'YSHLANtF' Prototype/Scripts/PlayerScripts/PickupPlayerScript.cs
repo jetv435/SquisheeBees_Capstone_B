@@ -18,6 +18,8 @@ public class PickupPlayerScript : MonoBehaviour {
 	private MainMenuManager mm;
 	DialogManager dialogue;
 
+	AudioManager am;
+
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +27,7 @@ public class PickupPlayerScript : MonoBehaviour {
 		mainCamCamObj = MainCamera.GetComponent<Camera> ();
 		mm = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
-
+		am = GameObject.FindObjectOfType<AudioManager> ();
 	}
 
 	// Update is called once per frame
@@ -118,6 +120,7 @@ public class PickupPlayerScript : MonoBehaviour {
 		carriedObj = null;
 
 		dialogue.deactivateTxtBox ();
+		am.SoundEffects [3].Play ();
 	}
 
 	//Calls the HaloScript

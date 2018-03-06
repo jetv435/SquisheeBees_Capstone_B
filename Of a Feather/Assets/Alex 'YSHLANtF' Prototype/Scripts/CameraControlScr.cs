@@ -31,6 +31,8 @@ public class CameraControlScr : MonoBehaviour {
 
 	public GameObject physicalBody;
 
+
+
 	void Update ()
 	{
 		if (axes == RotationAxes.MouseXAndY)
@@ -88,7 +90,8 @@ public class CameraControlScr : MonoBehaviour {
 			rotAverageX = ClampAngle (rotAverageX, minimumX, maximumX);
 
 			Quaternion xQuaternion = Quaternion.AngleAxis (rotAverageX, Vector3.up);
-			transform.localRotation = originalRotation * xQuaternion;			
+			transform.localRotation = originalRotation * xQuaternion;	
+
 		}
 		else
 		{			
@@ -128,6 +131,7 @@ public class CameraControlScr : MonoBehaviour {
 		if (rb)
 			rb.freezeRotation = true;
 		originalRotation = transform.localRotation;
+
 	}
 
 	public static float ClampAngle (float angle, float min, float max)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class lightSwitch : MonoBehaviour {
 
 	public List<GameObject> Lights = new List<GameObject>();
-
+	AudioManager am;
 
 	bool ison = true;
 
@@ -13,6 +13,8 @@ public class lightSwitch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		am = GameObject.FindObjectOfType<AudioManager> ();
 		
 	}
 	
@@ -43,6 +45,7 @@ public class lightSwitch : MonoBehaviour {
 
 		}
 		ison = false;
+		am.SoundEffects [1].Play ();
 
 
 	}
@@ -55,6 +58,7 @@ public class lightSwitch : MonoBehaviour {
 
 		}
 		ison = true;
+		am.SoundEffects [0].Play ();
 
 	}
 
@@ -64,12 +68,15 @@ public class lightSwitch : MonoBehaviour {
 
 			inArea = true;
 
+
+
 		}
 	}
 
 	void OnTriggerExit(Collider other){
 
 		inArea = false;
+
 	}
 
 		
