@@ -5,7 +5,9 @@ using UnityEngine;
 public class BalletTimer : MonoBehaviour {
 
 
-	public int timer = 0;
+	//public int timer = 0;
+	public int objectcount = 0;
+	public int balletspawn = 0;
 	public GameObject shoes;
 	public GameObject bshoes;
 
@@ -19,7 +21,12 @@ public class BalletTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		timer--;
+		if (objectcount >= balletspawn) {
+			shoes.SetActive (true);
+			bshoes.SetActive (true);
+		}
+
+		/*timer--;
 		Debug.Log (timer);
 		if (timer <= 0) {
 
@@ -27,5 +34,7 @@ public class BalletTimer : MonoBehaviour {
 			bshoes.SetActive (true);
 			timer = 0;
 		}
+		*/
 	}
+
 }

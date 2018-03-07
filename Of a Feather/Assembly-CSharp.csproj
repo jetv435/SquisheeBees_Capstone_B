@@ -59,6 +59,7 @@
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\DialogBox\DialogManager.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\DialogBox\dialogReader.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\DialogBox\importTex.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\FinalBasementbox.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameBossCode.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\AbstractGameManagers\AOAFMinigameManager.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\AbstractGameManagers\AScoredGameManager.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\MG4_ExitScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\MinigameManager_MG1.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\TwoDGameManager.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Goingupstairs.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\HaloControllerPickupScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\lightSwitch.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\MainMenuManager.cs" />
@@ -113,7 +115,7 @@
      <Compile Include="Assets\Utilities\Command Pattern\NullCommand.cs" />
      <None Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\DialogBox\dialogue.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/shepi/Desktop/git_capstone/SquisheeBees_Capstone_B/Of a Feather/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/David/Documents/GitHub/SquisheeBees_Capstone_B/Of a Feather/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -6,11 +6,11 @@ public class PickupPlayerScript : MonoBehaviour {
 
 	GameObject MainCamera;
 	Camera mainCamCamObj;
-	bool carrying = false;
+	public bool carrying = false;
 
 	Rigidbody cObjRBody;
 
-	GameObject carriedObj;
+	public GameObject carriedObj;
 
 	public float distance = 3;
 	public float smooth = 4;
@@ -20,6 +20,8 @@ public class PickupPlayerScript : MonoBehaviour {
 
 	AudioManager am;
 
+	BalletTimer BT;
+
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +30,8 @@ public class PickupPlayerScript : MonoBehaviour {
 		mm = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
 		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
 		am = GameObject.FindObjectOfType<AudioManager> ();
+		BT = GameObject.FindObjectOfType<BalletTimer> ().GetComponent<BalletTimer> ();
+
 	}
 
 	// Update is called once per frame
@@ -72,6 +76,7 @@ public class PickupPlayerScript : MonoBehaviour {
 					carriedObj = p.gameObject;
 					cObjRBody = p.gameObject.GetComponent<Rigidbody> ();
 					cObjRBody.useGravity = false;
+					//carriedObj.tag = "box";
 
 					/* This is where the call goes out to check if the object picked up has a 
 					 * dialogReader script attached to it. If it does, it will return the readlines
@@ -83,10 +88,12 @@ public class PickupPlayerScript : MonoBehaviour {
 					dialogReader itemdescript = carriedObj.gameObject.GetComponent<dialogReader> ();
 					if (itemdescript != null) {
 						itemdescript.readlines ();
+						BT.objectcount++;
 					}
 					else{
 						Debug.Log ("null");
 					}
+
 				}
 
 			}

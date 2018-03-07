@@ -6,9 +6,15 @@ public class MG4_FriendGrabScript : MonoBehaviour {
 
 	bool moveWithPlayer = false;
 
+	dialogReader dr;
+	DialogManager dialogue;
+
+
+
 	// Use this for initialization
 	void Start () {
-		
+		dr = GameObject.FindObjectOfType<dialogReader> ().GetComponent<dialogReader> ();
+		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
 	}
 	
 	// Update is called once per frame
@@ -38,7 +44,12 @@ public class MG4_FriendGrabScript : MonoBehaviour {
 			gameObject.transform.parent = other.transform;
 
 		}
+	
+
+
 	}
+
+
 
 	public bool GiveFriendMovementBool()
 	{

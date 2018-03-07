@@ -12,6 +12,9 @@ TagManager:
   - FadeManager
   - MManager
   - bshoes
+  - box
+  - cubebox
+  - jar
   layers:
   - Default
   - TransparentFX

@@ -228,7 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dae11594c267347bb97c66661ef36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 2000
+  objectcount: 0
+  balletspawn: 10
   shoes: {fileID: 1501553341}
   bshoes: {fileID: 1501553340}
 --- !u!4 &32701101 stripped
@@ -5866,6 +5867,11 @@ Prefab:
     - target: {fileID: 4999821777738942, guid: 99d8d0fd80e596a41873869a276ec10a, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 160.24901
+      objectReference: {fileID: 0}
+    - target: {fileID: 23549118813471280, guid: 99d8d0fd80e596a41873869a276ec10a,
+        type: 2}
+      propertyPath: m_CastShadows
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99d8d0fd80e596a41873869a276ec10a, type: 2}

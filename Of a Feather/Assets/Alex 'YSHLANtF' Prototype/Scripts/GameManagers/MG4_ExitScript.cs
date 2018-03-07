@@ -28,9 +28,9 @@ public class MG4_ExitScript : MonoBehaviour {
 		//If friendGrab is true, it sends it to the friend basement.
 		friendGrab = friendScript.GiveFriendMovementBool ();
 
-		if (friendGrab == false)
+		if (friendGrab == true && other.tag == "Player")
 			SceneManager.LoadScene ("Basement5");
-		else
-			SceneManager.LoadScene ("Basement5");
-	}
+		//else
+			//SceneManager.LoadScene ("Basement5");
+	} 
 }
