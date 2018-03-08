@@ -1122,14 +1122,13 @@ GameObject:
   - component: {fileID: 350973248}
   - component: {fileID: 350973247}
   - component: {fileID: 350973250}
-  - component: {fileID: 350973249}
   - component: {fileID: 350973251}
   - component: {fileID: 350973252}
   - component: {fileID: 350973254}
   - component: {fileID: 350973253}
   m_Layer: 0
   m_Name: balletShoes_0010:pCube1
-  m_TagString: MManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1190,20 +1189,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 350973245}
   m_Mesh: {fileID: 4300094, guid: 03f43871124360043bf0fe93f452c907, type: 3}
---- !u!114 &350973249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 350973245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3ee4303deef9844940ed8f806fcab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeInOutPanel: {fileID: 1691055026}
-  Introfade: {fileID: 972197133}
-  nextroom: 9
 --- !u!114 &350973250
 MonoBehaviour:
   m_ObjectHideFlags: 0

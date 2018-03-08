@@ -4,10 +4,12 @@
     <Files>
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\TwoDGameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\PlayerScripts\ArrowTurnScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\LightControlMG2Script.cs" Line="45" Column="5" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\LightControlMG2Script.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_KeyActivator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpawnerScriptsFolder\ProtobeatIncreaseScript.cs" Line="64" Column="4" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\MenuManager.cs" Line="34" Column="5" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpawnerScriptsFolder\ProtobeatIncreaseScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\MenuManager.cs" Line="18" Column="35" />
+      <File FileName="Assets\leavingbasemetn.cs" Line="1" Column="1" />
+      <File FileName="Assets\leavingbasement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
