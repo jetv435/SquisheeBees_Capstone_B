@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/MainMenu.unity
+    guid: 2ea0ccc7bd1409a43874de121a5e66da
+  - enabled: 1
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Basement0.unity
     guid: f50d2235676630741b03fcb7fa97bd4f
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Basement5.unity
     guid: 329c6098e47af9b44ac4151be7f77759
+  - enabled: 1
+    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Instructions.unity
+    guid: 706f1fef02ebbc14fa5c509f5481f480
   - enabled: 0
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Basement3.unity
     guid: c364d5641100c0442a6a44f0df1700bb
