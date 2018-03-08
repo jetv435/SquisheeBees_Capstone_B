@@ -7,15 +7,16 @@ public class MG4_FriendGrabScript : MonoBehaviour {
 	bool moveWithPlayer = false;
 	public GameObject haloObject;
 
-	dialogReader dr;
-	DialogManager dialogue;
+	//dialogReader dr;
+	//DialogManager dialogue;
 
+	public AudioSource friend;
 
 
 	// Use this for initialization
 	void Start () {
-		dr = GameObject.FindObjectOfType<dialogReader> ().GetComponent<dialogReader> ();
-		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
+		//dr = GameObject.FindObjectOfType<dialogReader> ().GetComponent<dialogReader> ();
+		//dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +42,7 @@ public class MG4_FriendGrabScript : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 
 			moveWithPlayer = true;
+			friend.Play ();
 
 			gameObject.transform.parent = other.transform;
 			haloObject.SetActive (false);

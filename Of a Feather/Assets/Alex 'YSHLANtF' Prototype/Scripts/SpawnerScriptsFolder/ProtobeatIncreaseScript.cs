@@ -18,6 +18,8 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 	public GameObject sControlObject;
 	SpriteControllerSprite sControlScript;
 
+
+
 	// Use this for initialization
 	void Start () {
 		BeatScrCall = BeatObjCall.GetComponent<RhythmCore> ();
@@ -25,6 +27,8 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 		sControlScript = sControlObject.GetComponent<SpriteControllerSprite> ();
 
 		lightControlScript = lightControllerObject.GetComponent<LightControlMG2Script> ();
+
+
 
 	}
 	

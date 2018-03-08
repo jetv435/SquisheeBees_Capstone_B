@@ -14,11 +14,13 @@ public class LightControlMG2Script : MonoBehaviour {
 	public GameObject backgroundObject;
 	SpriteRenderer backgroundSpriteRenderer;
 
+	SoundScript sound;
+
 	// Use this for initialization
 	void Start () {
 
 		backgroundSpriteRenderer = backgroundObject.GetComponent<SpriteRenderer> ();
-		
+		sound = GameObject.FindObjectOfType<SoundScript> ().GetComponent<SoundScript> ();
 	}
 	
 	// Update is called once per frame
@@ -38,6 +40,9 @@ public class LightControlMG2Script : MonoBehaviour {
 			if (playerLight.intensity < 1.0f) {
 				playerLight.intensity += 0.1f;
 			}
+			if (playerLight.intensity >= 1) {
+				sound.dontplay ();
+			}
 		}
 
 		for (int i = 0; i < missingFriendLightList.Count; i++) {
@@ -46,6 +51,7 @@ public class LightControlMG2Script : MonoBehaviour {
 			if (friendLight.intensity > 0) {
 				friendLight.intensity -= 0.2f;
 			}
+
 		}
 
 		if(areaLightLight.intensity > 0)

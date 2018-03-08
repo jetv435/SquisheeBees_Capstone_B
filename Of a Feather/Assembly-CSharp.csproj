@@ -103,6 +103,8 @@
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_FriendGrabScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_SetupScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\SpriteControllerSprite.cs" />
+     <Compile Include="Assets\leavingbasement.cs" />
+     <Compile Include="Assets\leavingbasemetn.cs" />
      <Compile Include="Assets\Rhythm System\_Internal\BeatGenerationComponents\ABeatGenerationComponent.cs" />
      <Compile Include="Assets\Rhythm System\_Internal\BeatGenerationComponents\MutexArrowNoRepeatComponent.cs" />
      <Compile Include="Assets\Rhythm System\_Internal\BeatGenerationStrategies\ABeatGenerationStrategy.cs" />

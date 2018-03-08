@@ -12,6 +12,8 @@ public class SoundScript : MonoBehaviour {
 
 	bool playingCorrect = false;
 
+	//bool willplay = true;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -49,5 +51,16 @@ public class SoundScript : MonoBehaviour {
     public bool getPlayingCorrect()
 	{
 		return playingCorrect;
+	}
+
+	public void dontplay()
+	{
+		//willplay = false;
+		Maudio.pitch -= .02f;
+		if (Maudio.pitch <= 0) {
+			Maudio.pitch = 0;
+		}
+		Maudio.volume += .01f;
+		wrongnote.mute = true;
 	}
 }

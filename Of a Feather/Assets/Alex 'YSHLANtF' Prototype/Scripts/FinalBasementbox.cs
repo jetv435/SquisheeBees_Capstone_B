@@ -21,7 +21,7 @@ public class FinalBasementbox : MonoBehaviour {
 	public int itemshave;
 	int timer = 200;
 
-	DialogManager dialogue;
+	//DialogManager dialogue;
 	dialogReader dr;
 
 
@@ -31,7 +31,7 @@ public class FinalBasementbox : MonoBehaviour {
 	void Start () {
 
 		PuPs = GameObject.FindObjectOfType<PickupPlayerScript> ().GetComponent<PickupPlayerScript> ();
-		dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
+		//dialogue = GameObject.FindObjectOfType<DialogManager> ().GetComponent<DialogManager> ();
 		dr = GameObject.FindObjectOfType<dialogReader> ().GetComponent<dialogReader> ();
 
 
@@ -68,12 +68,13 @@ public class FinalBasementbox : MonoBehaviour {
 			PuPs.carriedObj.SetActive (false);
 			itemshave++;
 			if (itemshave == 1) {
+				dr.startline = 141;
 				dr.readlines ();
 			} else if (itemshave == 2) {
-				dr.startline = 138;
+				dr.startline = 142;
 				dr.readlines ();
 			} else if (itemshave == 3) {
-				dr.startline = 140;
+				dr.startline = 144;
 				dr.readlines ();
 			}
 
@@ -83,12 +84,13 @@ public class FinalBasementbox : MonoBehaviour {
 			PuPs.carriedObj.SetActive (false);
 			itemshave++;
 			if (itemshave == 1) {
+				dr.startline = 141;
 				dr.readlines ();
 			} else if (itemshave == 2) {
-				dr.startline = 138;
+				dr.startline = 142;
 				dr.readlines ();
 			} else if (itemshave == 3) {
-				dr.startline = 140;
+				dr.startline = 144;
 				dr.readlines ();
 			} 
 
@@ -98,12 +100,13 @@ public class FinalBasementbox : MonoBehaviour {
 			PuPs.carriedObj.SetActive (false);
 			itemshave++;
 			if (itemshave == 1) {
+				dr.startline = 141;
 				dr.readlines ();
 			} else if (itemshave == 2) {
-				dr.startline = 138;
+				dr.startline = 142;
 				dr.readlines ();
 			} else if (itemshave == 3) {
-				dr.startline = 140;
+				dr.startline = 144;
 				dr.readlines ();
 			} 
 		}

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
-	MainMenuManager MM;
+	//MainMenuManager MM;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour {
 	{
 
 		SceneManager.LoadScene ("Basement0");
-		//StartCoroutine (MM.Transition ());
+		//StartCoroutine (MM.SGCorutine ());
 	}
 
 	public void MainMenu()
