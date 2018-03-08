@@ -339,6 +339,7 @@
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\AudioManager.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\FadeManager.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\LightControlMG2Script.cs" />
+    <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\MenuManager.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\MG1_ClassMove.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\MG1LoseScript.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\GameManagers\MG3and4_MovementScript.cs" />
@@ -365,8 +366,13 @@
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\SpawnerScriptsFolder\SpawnerScript.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_BoxBlockRemovalScript.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_BoxBlockScript.cs" />
+    <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_BoxRemoveScriptVersion2.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_KeyActivator.cs" />
+    <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_ObjectDestroy.cs" />
+    <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_PlayerRespawn.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_RoomSwitcher.cs" />
+    <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_WallSpawn.cs" />
+    <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_ClassDanceScript.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_FriendGrabScript.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_SetupScript.cs" />
     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\SpriteControllerSprite.cs" />
