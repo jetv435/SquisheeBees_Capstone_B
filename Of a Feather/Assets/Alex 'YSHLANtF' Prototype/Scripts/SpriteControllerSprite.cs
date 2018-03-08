@@ -15,7 +15,14 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 	public List<GameObject> classMoveTrigger = new List<GameObject> ();
 
+	//Sprites that are the idle forms of the characters.
+	public Sprite playerIdleSprite;
+	public Sprite friendIdleSprite;
+	public Sprite classIdleSprite;
+
 	public float initialDelaySec = 1.0f;
+
+	public float idleTime = 0.2f;
 
 	//Allows a bool to prevent the class from messing with the friend's sprite change
 	bool friendMove = false;
@@ -161,5 +168,56 @@ public class SpriteControllerSprite : MonoBehaviour {
 
 		return classSprite;
 
+	}
+
+	//A function to tell the sprite manager to shift the sprites back to idle.
+	public void IdleInvoker()
+	{
+		CancelInvoke ();
+		Invoke ("IdleClassPlayerFunction", idleTime);
+	}
+
+	//The thing the above invokes.
+	void IdleClassPlayerFunction()
+	{
+		SpriteRenderer temp = playerSprite.GetComponent<SpriteRenderer> ();
+
+		temp.sprite = playerIdleSprite;
+
+		for (int i = 0; i < classSprite.Count; i++)
+		{
+			temp = classSprite[i].GetComponent<SpriteRenderer>();
+			temp.sprite = classIdleSprite;
+		}
+	}
+
+	//Same for the friend
+	public void IdleInvoker_Friend()
+	{
+		CancelInvoke ();
+		Invoke ("IdleFriendFunction", idleTime);
+	}
+
+	void IdleFriendFunction()
+	{
+		SpriteRenderer temp = friendSprite.GetComponent<SpriteRenderer> ();
+
+		temp.sprite = friendIdleSprite;
+
+		temp = playerSprite.GetComponent<SpriteRenderer> ();
+
+		temp.sprite = playerIdleSprite;
+
+		for (int i = 0; i < classSprite.Count; i++)
+		{
+			temp = classSprite[i].GetComponent<SpriteRenderer>();
+			temp.sprite = classIdleSprite;
+		}
+
+	}
+
+	public void CancelInvokingFunction()
+	{
+		CancelInvoke ();
 	}
 }

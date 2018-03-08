@@ -15,9 +15,14 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 	public GameObject lightControllerObject;
 	LightControlMG2Script lightControlScript;
 
+	public GameObject sControlObject;
+	SpriteControllerSprite sControlScript;
+
 	// Use this for initialization
 	void Start () {
 		BeatScrCall = BeatObjCall.GetComponent<RhythmCore> ();
+
+		sControlScript = sControlObject.GetComponent<SpriteControllerSprite> ();
 
 		lightControlScript = lightControllerObject.GetComponent<LightControlMG2Script> ();
 
@@ -25,11 +30,15 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (BeatScrCall.IsBeatQueued () == true) {
 
+			sControlScript.CancelInvokingFunction ();
+
+		}
 		if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow) || 
 			Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.RightArrow)) {
 
-			if (BeatScrCall.IsBeatQueued () == true) {
+			//if (BeatScrCall.IsBeatQueued () == true) {
 
 				if (buttonPresses >= buttonPressesBeforeQuickening) {
 					
@@ -47,7 +56,7 @@ public class ProtobeatIncreaseScript : MonoBehaviour {
 				} else {
 					buttonPresses++;
 				}
-			}
+			//}
 		}
 		
 	}

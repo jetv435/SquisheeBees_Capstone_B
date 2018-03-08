@@ -44,10 +44,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>E:/Unity Stuff/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>E:/Unity Stuff/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -92,8 +92,13 @@
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\SpawnerScriptsFolder\SpawnerScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_BoxBlockRemovalScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_BoxBlockScript.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_BoxRemoveScriptVersion2.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_KeyActivator.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_ObjectDestroy.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_PlayerRespawn.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_RoomSwitcher.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG3_WallSpawn.cs" />
+     <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_ClassDanceScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_FriendGrabScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\Specific RoomScripts\MG4_SetupScript.cs" />
      <Compile Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\SpriteControllerSprite.cs" />
@@ -115,28 +120,28 @@
      <Compile Include="Assets\Utilities\Command Pattern\NullCommand.cs" />
      <None Include="Assets\Alex &apos;YSHLANtF&apos; Prototype\Scripts\DialogBox\dialogue.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/David/Documents/GitHub/SquisheeBees_Capstone_B/Of a Feather/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>E:/GitHub/SquisheeBees_Capstone_B/Of a Feather/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Timeline">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>E:/Unity Stuff/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

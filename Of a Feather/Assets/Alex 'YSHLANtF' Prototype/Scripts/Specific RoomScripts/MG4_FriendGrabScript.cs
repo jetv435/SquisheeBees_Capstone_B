@@ -5,6 +5,7 @@ using UnityEngine;
 public class MG4_FriendGrabScript : MonoBehaviour {
 
 	bool moveWithPlayer = false;
+	public GameObject haloObject;
 
 	dialogReader dr;
 	DialogManager dialogue;
@@ -42,6 +43,7 @@ public class MG4_FriendGrabScript : MonoBehaviour {
 			moveWithPlayer = true;
 
 			gameObject.transform.parent = other.transform;
+			haloObject.SetActive (false);
 
 		}
 	

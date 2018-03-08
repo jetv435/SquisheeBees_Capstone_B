@@ -124,6 +124,7 @@ public class TwoDGameManager : MonoBehaviour
         {
 			sceneControl.GoToBasement (1);
 		}
+			
 	}
 	void LateUpdate()
 	{
@@ -152,6 +153,8 @@ public class TwoDGameManager : MonoBehaviour
 		if (friendSprOn == false && nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
         {
 			Score++;
+			//callSprScr.IdleInvoker ();
+			callSprScr.IdleInvoker_Friend ();
 		} else if(friendSprOn == true && nameOfLevel == LEVEL_2D_NAMES.STAGE_1)
         {
 			if (arrowEnum == ARROW_TYPE.FRIEND) {
@@ -174,6 +177,9 @@ public class TwoDGameManager : MonoBehaviour
 					loseScriptCall.LoseCountdownFunction ();
 				}
 			}
+			//callSprScr.IdleInvoker ();
+			callSprScr.IdleInvoker_Friend ();
+
 		}
 
 		arrowScr.disableArrow ();
@@ -184,12 +190,11 @@ public class TwoDGameManager : MonoBehaviour
         }
 
 		if (nameOfLevel == LEVEL_2D_NAMES.STAGE_2) {
-			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow) ||
-			    Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.RightArrow)) {
 
-				Score++;
+			Score++;
+			callSprScr.IdleInvoker ();
 
-			}
+			
 		}
 	}
 

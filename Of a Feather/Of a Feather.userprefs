@@ -1,13 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_KeyActivator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG4_ClassDanceScript.cs">
     <Files>
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\HaloControllerPickupScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\PlayerScripts\PickupPlayerScript.cs" Line="123" Column="31" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\MG1LoseScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpawnerScriptsFolder\ProtobeatIncreaseScript.cs" Line="29" Column="3" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpawnerScriptsFolder\ProtobeatIncreaseScript.cs" Line="35" Column="45" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\TwoDGameManager.cs" Line="180" Column="6" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\PlayerScripts\ArrowTurnScript.cs" Line="133" Column="44" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\SpriteControllerSprite.cs" Line="207" Column="55" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameManagers\LightControlMG2Script.cs" Line="1" Column="1" />
       <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_KeyActivator.cs" Line="44" Column="63" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\GameBossCode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\MGDirectionUtils.cs" Line="1" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_ObjectDestroy.cs" Line="19" Column="32" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_WallSpawn.cs" Line="23" Column="31" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_PlayerRespawn.cs" Line="27" Column="43" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG3_BoxRemoveScriptVersion2.cs" Line="24" Column="23" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG4_FriendGrabScript.cs" Line="46" Column="33" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\Specific RoomScripts\MG4_ClassDanceScript.cs" Line="41" Column="1" />
+      <File FileName="Assets\Alex 'YSHLANtF' Prototype\Scripts\PlayerScripts\MG3and4SpriteControlScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

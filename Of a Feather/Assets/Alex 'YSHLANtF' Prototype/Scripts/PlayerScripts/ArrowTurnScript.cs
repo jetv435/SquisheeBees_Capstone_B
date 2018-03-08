@@ -128,6 +128,10 @@ public class ArrowTurnScript : MonoBehaviour
 			TwoDGameManScr.PlayWrongSound ();
 		else if (arrowTag == ARROW_TYPE.FRIEND)
 			TwoDGameManScr.PlayWrongSound ();
+		else if (arrowTag == ARROW_TYPE.CLASS && TwoDGameManScr.GetLevelName() == TwoDGameManager.LEVEL_2D_NAMES.STAGE_2) {
+			TwoDGameManScr.PlayWrongSound ();
+			TwoDGameManScr.IncreaseScore (arrowTag);
+		}
 	}
 
 	public void TimeoutNotify()
@@ -139,7 +143,7 @@ public class ArrowTurnScript : MonoBehaviour
 		//Uses all of the game Manager's scripts
 		if (TwoDGameManScr.GetLevelName () == TwoDGameManager.LEVEL_2D_NAMES.STAGE_2)
         {
-			TwoDGameManScr.IncreaseScore (arrowTag);
+			//TwoDGameManScr.IncreaseScore (arrowTag);
 		}
 	}
 
