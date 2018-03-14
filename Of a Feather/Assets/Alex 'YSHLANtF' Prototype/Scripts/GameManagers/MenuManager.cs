@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour {
 	//MainMenuManager MM;
 
+
 	// Use this for initialization
 	void Start () {
 		//MM = GameObject.FindGameObjectWithTag ("MManager").GetComponent<MainMenuManager> ();
+
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 		
 	}
 	
@@ -38,6 +42,11 @@ public class MenuManager : MonoBehaviour {
 	{
 		SceneManager.LoadScene ("MainMenu");
 
+	}
+
+	public void Credits()
+	{
+		SceneManager.LoadScene ("CreditsRoom");
 	}
 
 	public void Quit()

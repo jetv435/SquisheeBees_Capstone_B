@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Instructions.unity
     guid: 706f1fef02ebbc14fa5c509f5481f480
+  - enabled: 1
+    path: Assets/Alex 'YSHLANtF' Prototype/Rooms/CreditsRoom.unity
+    guid: 656e17af2fa28d9478e94d1464afff10
   - enabled: 0
     path: Assets/Alex 'YSHLANtF' Prototype/Rooms/Basement3.unity
     guid: c364d5641100c0442a6a44f0df1700bb

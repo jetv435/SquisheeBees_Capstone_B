@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 112000002, guid: ac30a4511fa7d8c4cacc997a4405dea7,
     type: 2}
   m_UseShadowmask: 0
@@ -5381,7 +5383,7 @@ Prefab:
     - target: {fileID: 224759689454037642, guid: 18d6244ade3b9e748a826ebbbea744de,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -552
+      value: -497
       objectReference: {fileID: 0}
     - target: {fileID: 224759689454037642, guid: 18d6244ade3b9e748a826ebbbea744de,
         type: 2}
@@ -5423,10 +5425,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114139522242005320, guid: 18d6244ade3b9e748a826ebbbea744de,
-        type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 68
+    - target: {fileID: 1187342764100162, guid: 18d6244ade3b9e748a826ebbbea744de, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18d6244ade3b9e748a826ebbbea744de, type: 2}
@@ -5956,15 +5957,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4967695236090174, guid: 662bb96d750454744bf141f29dbdf2a1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 38.64191
+      value: 36.81
       objectReference: {fileID: 0}
     - target: {fileID: 4967695236090174, guid: 662bb96d750454744bf141f29dbdf2a1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.25
+      value: -10.92
       objectReference: {fileID: 0}
     - target: {fileID: 4967695236090174, guid: 662bb96d750454744bf141f29dbdf2a1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.16
+      value: 11.37
       objectReference: {fileID: 0}
     - target: {fileID: 4967695236090174, guid: 662bb96d750454744bf141f29dbdf2a1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6073,8 +6074,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2676802, y: 0.3791439, z: 0.17908566}
-  m_Center: {x: -0.012018036, y: 0.14111806, z: 0.11365233}
+  m_Size: {x: 0.2676802, y: 0.2856327, z: 0.053971495}
+  m_Center: {x: -0.012018033, y: 0.094363935, z: 0.006338069}
 --- !u!54 &1634148637
 Rigidbody:
   m_ObjectHideFlags: 0
