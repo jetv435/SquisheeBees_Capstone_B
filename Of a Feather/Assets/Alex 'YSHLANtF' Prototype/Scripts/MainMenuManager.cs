@@ -10,6 +10,8 @@ public class MainMenuManager : MonoBehaviour {
 	public CanvasGroup Introfade;
 	//public int previous;
 	public int nextroom;
+	public AudioSource ambient;
+	public AudioSource ambient1;
 
 	void Awake(){
 		fm = GameObject.FindGameObjectWithTag ("FadeManager").GetComponent<FadeManager> ();
@@ -36,27 +38,33 @@ public class MainMenuManager : MonoBehaviour {
 
 
 	public IEnumerator Transition(){
-		fm.FadeIn (FadeInOutPanel, 60, .5f);
-		yield return new WaitForSeconds (1f);
-		fm.FadeIn (FadeInOutPanel, 1f);
-		yield return new WaitForSeconds (.5f);
+		fm.FadeIn (FadeInOutPanel, 60, 1f);
+		ambient.Stop ();
+		ambient1.mute = true;
+		yield return new WaitForSeconds (5f);
+		fm.FadeIn (FadeInOutPanel, 120f, 1f);
+		yield return new WaitForSeconds (5f);
 		SceneManager.LoadScene (nextroom);
 	}
 
 
 	private IEnumerator Fadeout(){
 		fm.FadeOut (Introfade, 30f, 1f);
+		ambient.PlayDelayed (4.75f);
+		ambient1.mute = true;
+		yield return new WaitForSeconds (5f);
+		fm.FadeOut (Introfade, 1f);
 		yield return new WaitForSeconds (1f);
-		fm.FadeOut (Introfade, .5f);
-		yield return new WaitForSeconds (1f);
+		ambient1.mute = false;
 	}
 
 	public IEnumerator SGCorutine(){
 		//yield return new WaitForSeconds (3f);
-		fm.FadeIn (FadeInOutPanel, 60f, .5f);
+		fm.FadeIn (FadeInOutPanel, 60f, 1f);
 		yield return new WaitForSeconds (1f);
-		fm.FadeIn (FadeInOutPanel, 1f);
-		yield return new WaitForSeconds (.2f);
+		ambient.Stop ();
+		fm.FadeIn (FadeInOutPanel, 120f, 1f);
+		yield return new WaitForSeconds (5f);
 		SceneManager.LoadScene (nextroom);
 	}
 

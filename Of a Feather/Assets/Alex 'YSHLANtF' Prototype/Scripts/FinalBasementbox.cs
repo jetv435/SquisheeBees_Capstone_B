@@ -19,7 +19,7 @@ public class FinalBasementbox : MonoBehaviour {
 
 	int itemsneeded;
 	public int itemshave;
-	int timer = 200;
+	int timer = 120;
 
 	//DialogManager dialogue;
 	dialogReader dr;

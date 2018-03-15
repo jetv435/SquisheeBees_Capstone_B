@@ -1574,6 +1574,21 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 114122642440190170, guid: 514877b34fb2c9d43b451d7491e0f446,
+        type: 2}
+      propertyPath: ambient
+      value: 
+      objectReference: {fileID: 1536161400}
+    - target: {fileID: 114122642440190170, guid: 514877b34fb2c9d43b451d7491e0f446,
+        type: 2}
+      propertyPath: ambient1
+      value: 
+      objectReference: {fileID: 1536161400}
+    - target: {fileID: 114122642440190170, guid: 514877b34fb2c9d43b451d7491e0f446,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 514877b34fb2c9d43b451d7491e0f446, type: 2}
   m_IsPrefabParent: 0
@@ -3205,6 +3220,8 @@ MonoBehaviour:
   FadeInOutPanel: {fileID: 1534605831}
   Introfade: {fileID: 386501002}
   nextroom: 8
+  ambient: {fileID: 1536161400}
+  ambient1: {fileID: 1536161400}
 --- !u!82 &595003925
 AudioSource:
   m_ObjectHideFlags: 0

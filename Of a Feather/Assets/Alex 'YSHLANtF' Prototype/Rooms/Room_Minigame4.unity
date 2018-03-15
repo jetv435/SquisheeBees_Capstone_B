@@ -399,6 +399,8 @@ MonoBehaviour:
   FadeInOutPanel: {fileID: 392889014}
   Introfade: {fileID: 659282369}
   nextroom: 9
+  ambient: {fileID: 1470223741}
+  ambient1: {fileID: 1470223741}
 --- !u!1 &226027229
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +945,11 @@ Prefab:
     - target: {fileID: 1971205200032626, guid: 514877b34fb2c9d43b451d7491e0f446, type: 2}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114122642440190170, guid: 514877b34fb2c9d43b451d7491e0f446,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 514877b34fb2c9d43b451d7491e0f446, type: 2}
