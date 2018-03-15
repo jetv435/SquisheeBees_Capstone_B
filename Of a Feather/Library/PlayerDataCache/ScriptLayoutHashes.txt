@@ -1,7 +1,7 @@
 WindowsStandalone
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MG4_SetupScript
 ed4565041a6eb608159822d1f9fbbc6f Assembly-CSharp.dll:.MG1LoseScript
-d97e1b0b581cd63883ebb9e69eb325c9 Assembly-CSharp.dll:.MainMenuManager
+41d376d7f101c6d0cfc9a00f97c15464 Assembly-CSharp.dll:.MainMenuManager
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
